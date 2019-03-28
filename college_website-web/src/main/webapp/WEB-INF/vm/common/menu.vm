@@ -1,0 +1,51 @@
+<!-- BEGIN SIDEBAR -->
+		<div class="page-sidebar-wrapper">
+			<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+			<!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+			<div class="page-sidebar navbar-collapse collapse">
+				<!-- BEGIN SIDEBAR MENU accordion或hover-->
+
+				<ul class="page-sidebar-menu page-sidebar-menu-accordion-submenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+					<li class="start active ">
+						<a href="javascript:;" onclick="main.menuGoTo('/main/firstPage','')">
+						<i class="icon-home"></i>
+						
+						<span class="title">首页<!--$DateGenerator.currentTimeMillis() --> </span>
+						<span class="selected"></span>
+						</a>
+					</li>
+                    <li class="start active ">
+                        <a href="javascript:;" onclick="main.menuGoTo('/main/firstPage','')">
+                            <i class="icon-home"></i>
+
+                            <span class="title">首页<!--$DateGenerator.currentTimeMillis() --> </span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+
+				#foreach($functionParent in $functions)
+					#if(!$functionParent.parentId)
+						<li>
+							<a  href="javascript:;" >
+								<i class="$!{functionParent.icon}"></i>
+								<span class="title">${functionParent.name}</span>
+							<span class="arrow "></span>
+						</a>
+							<ul class="sub-menu">
+								#foreach($functionSub in $functions)
+									#if($functionSub.parentId == $functionParent.id)
+                                        <li>
+                                            <a href="javascript:;" onclick="main.menuGoTo('${functionSub.url}','')">
+                                                <i class="$!{functionSub.icon}"></i>${functionSub.name}</a>
+                                        </li>
+									#end
+								#end
+							</ul>
+						</li>
+					#end
+				#end
+				</ul>
+				<!-- END SIDEBAR MENU -->
+			</div>
+		</div>
+		<!-- END SIDEBAR -->

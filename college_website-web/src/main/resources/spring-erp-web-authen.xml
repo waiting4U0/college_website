@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd"
+
+       default-lazy-init="false" default-autowire="byName">
+
+    <!-- 单点登录JSF服务接口 -->
+    <!--<jsf:consumer id="ssoService" interface="com.jd.ssa.service.SsoService" protocol="jsf" alias="v1" timeout="10000" />-->
+
+    <!-- 单点登录拦截器配置 -->
+    <!--<mvc:interceptors>-->
+        <!--&lt;!&ndash;<mvc:interceptor>&ndash;&gt;-->
+            <!--&lt;!&ndash;<mvc:mapping path="/**"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;冰箱内景图下载工具，内部使用，要求不验证登录&ndash;&gt;&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<mvc:exclude-mapping path="/tool/**" />&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash; 单点登录springmvc 拦截器bean &ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;<bean id="springSSOInterceptor" class="com.jd.common.springmvc.interceptor.SpringSSOInterceptor">&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<property name="appDomainName" value="${webapp.domain.name}"/>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<property name="appHomeUrl" value="http://${webapp.domain.name}/"/>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<property name="loginUrl" value="${login.address}"/>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<property name="ssoDomainName" value="${sso.auth.cookie.domain}"/>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<property name="excludePath" value="${sso.exclude.path}"/>&ndash;&gt;&ndash;&gt;-->
+                <!--&lt;!&ndash;&lt;!&ndash;<property name="ssoService" ref="ssoService"/>&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;</bean>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</mvc:interceptor>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<mvc:interceptor>&ndash;&gt;-->
+            <!--&lt;!&ndash;<mvc:mapping path="/**"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<bean id="userAuthInterceptor" class="com.jd.smart_fridge_ops.web.interceptor.UserAuthInterceptor"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</mvc:interceptor>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;权限拦截&ndash;&gt;-->
+        <!--&lt;!&ndash;<mvc:interceptor>&ndash;&gt;-->
+            <!--&lt;!&ndash;<mvc:mapping path="/main" />&ndash;&gt;-->
+            <!--&lt;!&ndash;&lt;!&ndash;<bean id="_AdminLoginTicketInterceptor" class="com.jd.smart_fridge_ops.web.interceptor.AdminLoginTicketInterceptor"/>&ndash;&gt;&ndash;&gt;-->
+        <!--&lt;!&ndash;</mvc:interceptor>&ndash;&gt;-->
+    <!--</mvc:interceptors>-->
+
+</beans>

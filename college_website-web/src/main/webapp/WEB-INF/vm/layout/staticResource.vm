@@ -1,0 +1,7 @@
+#parse("/layout/const.vm")
+<link rel="stylesheet" href="$!{resPath}css/register.css?v=$!{cssversion}"/>
+<script type="text/javascript" src="$!{resPath}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="$!{resPath}js/jquery.md5.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="$!{resPath}js/html5.js"></script>
+<![endif]-->

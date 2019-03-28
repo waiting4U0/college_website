@@ -1,0 +1,50 @@
+<div id="body">
+    <div id="bodyRight">
+##        <img id="backLogo" src="./images/backLogo.png">
+        <div id="focus">
+            <div class="newsTitle">
+                <div class="focusRight">
+                    <h2>新闻聚焦|Focus</h2>
+                    <a href="list?type=10">更多&gt;</a>
+                </div>
+            </div>
+            <div class="focusList">
+                <p>
+                    <span><img src="/images/news_tip.jpg"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="我院李洪伟教授荣获2018年 “中国网络安全与信息产业金智奖”">
+							我院李洪伟教授荣获2018年 “中国网络安全与信息产业金智奖...
+						 </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/images/news_tip.jpg"></span>
+                    <span><a href="view?type=10&amp;id=18947" title="学院隆重举行首届“卓越奖”颁奖仪式">
+							学院隆重举行首届“卓越奖”颁奖仪式
+						</a></span> <span></span> <span id="time">2019-01-21</span>
+                </p>
+
+                <p>
+                    <span><img src="/images/news_tip.jpg"></span>
+                    <span><a href="view?type=10&amp;id=18937" title="我院傅彦教授当选“2018四川十大新经济领军人物”">
+							我院傅彦教授当选“2018四川十大新经济领军人物”
+						</a></span> <span></span> <span id="time">2019-01-17</span>
+                </p>
+
+                <p>
+                    <span><img src="/images/news_tip.jpg"></span>
+                    <span><a href="view?type=10&amp;id=18848" title="人工智能多媒体领域顶级会议ACM Multimedia 2021年将由我院举办">
+							人工智能多媒体领域顶级会议ACM Multimedia 20...
+						 </a></span> <span></span> <span id="time">2018-12-27</span>
+                </p>
+
+                <p>
+                    <span><img src="/images/news_tip.jpg"></span>
+                    <span><a href="view?type=10&amp;id=18715" title="之江杯全球人工智能大赛 申恒涛教授团队获佳绩">
+							之江杯全球人工智能大赛 申恒涛教授团队获佳绩
+						</a></span> <span></span> <span id="time">2018-12-05</span>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</div>

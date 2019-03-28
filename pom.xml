@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>cn.edu.swpu.info</groupId>
+    <artifactId>college_website</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>college_website-dao</module>
+        <module>college_website-web</module>
+        <module>college_website-domain</module>
+        <module>college_website-service</module>
+        <module>college_website-common</module>
+    </modules>
+
+    <properties>
+        <jdk.version>1.8</jdk.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <spring.version>4.1.0.RELEASE</spring.version>
+
+    </properties>
+
+    <profiles>
+    <profile>
+        <!-- 开发环境 -->
+        <id>test</id>
+        <!-- 默认 -->
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <!--jdbc type -->
+            <college_website.jdbc.datasource.type>dbcp</college_website.jdbc.datasource.type>
+            <!-- 数据库 -->
+            <college_website.jdbc.driver>com.mysql.jdbc.Driver</college_website.jdbc.driver>
+            <college_website.jdbc.url>jdbc:MySql://localhost:3306/info_website?characterEncoding=UTF-8</college_website.jdbc.url>
+            <college_website.jdbc.username>root</college_website.jdbc.username>
+            <college_website.jdbc.password>123456</college_website.jdbc.password>
+            <!-- 日志 -->
+            <college_website.log.level>DEBUG</college_website.log.level>
+            <college_website.log.path>/export/logs</college_website.log.path>
+            <!--打包编码 -->
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+            <!--erp及uim相关-->
+            <login.address>http://test.ssa.jd.com/sso/login</login.address>
+        </properties>
+    </profile>
+    </profiles>
+
+    <dependencyManagement>
+        <dependencies>
+
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
+            <!-- LOG4J日志记录 -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.4</version>
+            </dependency>
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.6.4</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+
+            <!-- com.jd.common.ws dependency -->
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.4</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis</artifactId>
+                <version>3.2.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis</groupId>
+                <artifactId>mybatis-spring</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jolbox</groupId>
+                <artifactId>bonecp</artifactId>
+                <version>0.8.0.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.25</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.elasticsearch</groupId>
+                <artifactId>elasticsearch</artifactId>
+                <version>2.1.1</version>
+            </dependency>
+            <!--delete-by-query 插件包，不需要不必引入-->
+            <dependency>
+                <groupId>org.elasticsearch.plugin</groupId>
+                <artifactId>delete-by-query</artifactId>
+                <version>2.0.0-rc1</version>
+            </dependency>
+            <!-- JSON -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.2.25</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.7.2</version>
+            </dependency>
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib-nodep</artifactId>
+                <version>2.1_3</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>1.3.2</version>
+            </dependency>
+
+            <!-- 单元测试 -->
+            <dependency>
+                <groupId>org.testng</groupId>
+                <artifactId>testng</artifactId>
+                <version>6.1.1</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <!-- if you use velocity view in springmvc -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>1.7</version>
+            </dependency>
+
+            <!-- if you use velocity layout view in springmvc -->
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-tools</artifactId>
+                <version>2.0</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.struts</groupId>
+                        <artifactId>struts-core</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.struts</groupId>
+                        <artifactId>struts-taglib</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.struts</groupId>
+                        <artifactId>struts-tiles</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>sslext</groupId>
+                        <artifactId>sslext</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+
+            <dependency>
+                <groupId>pinyin4j</groupId>
+                <artifactId>pinyin4j</artifactId>
+                <version>2.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-validator</artifactId>
+                <version>5.2.4.Final</version>
+            </dependency>
+        </dependencies>
+
+    </dependencyManagement>
+
+
+    <!--<dependencyManagement>-->
+        <!--&lt;!&ndash; 数据库 &ndash;&gt;-->
+        <!--<dependencies>-->
+            <!--<dependency>-->
+                <!--<groupId>org.mybatis</groupId>-->
+                <!--<artifactId>mybatis</artifactId>-->
+                <!--<version>3.2.1</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.mybatis</groupId>-->
+                <!--<artifactId>mybatis-spring</artifactId>-->
+                <!--<version>1.2.2</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>com.jolbox</groupId>-->
+                <!--<artifactId>bonecp</artifactId>-->
+                <!--<version>0.8.0.RELEASE</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>mysql</groupId>-->
+                <!--<artifactId>mysql-connector-java</artifactId>-->
+                <!--<version>5.1.25</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-jdbc</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+
+            <!--&lt;!&ndash; Spring MVC &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-tx</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-webmvc</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-context-support</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-expression</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-web</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-aop</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.springframework</groupId>-->
+                <!--<artifactId>spring-test</artifactId>-->
+                <!--<version>${spring.version}</version>-->
+            <!--</dependency>-->
+
+            <!--&lt;!&ndash;<dependency>&ndash;&gt;-->
+                <!--&lt;!&ndash;<groupId>javax.servlet</groupId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<artifactId>servlet-api</artifactId>&ndash;&gt;-->
+                <!--&lt;!&ndash;<version>3.1.0</version>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;</dependency>&ndash;&gt;-->
+
+            <!--&lt;!&ndash; LOG4J日志记录 &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>org.slf4j</groupId>-->
+                <!--<artifactId>slf4j-api</artifactId>-->
+                <!--<version>1.6.4</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>org.slf4j</groupId>-->
+                <!--<artifactId>slf4j-log4j12</artifactId>-->
+                <!--<version>1.6.4</version>-->
+            <!--</dependency>-->
+            <!--<dependency>-->
+                <!--<groupId>log4j</groupId>-->
+                <!--<artifactId>log4j</artifactId>-->
+                <!--<version>1.2.17</version>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+                <!--<groupId>org.apache.velocity</groupId>-->
+                <!--<artifactId>velocity</artifactId>-->
+                <!--<version>1.7</version>-->
+            <!--</dependency>-->
+
+            <!--&lt;!&ndash; if you use velocity layout view in springmvc &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>org.apache.velocity</groupId>-->
+                <!--<artifactId>velocity-tools</artifactId>-->
+                <!--<version>2.0</version>-->
+                <!--<exclusions>-->
+                    <!--<exclusion>-->
+                        <!--<groupId>org.apache.struts</groupId>-->
+                        <!--<artifactId>struts-core</artifactId>-->
+                    <!--</exclusion>-->
+                    <!--<exclusion>-->
+                        <!--<groupId>org.apache.struts</groupId>-->
+                        <!--<artifactId>struts-taglib</artifactId>-->
+                    <!--</exclusion>-->
+                    <!--<exclusion>-->
+                        <!--<groupId>org.apache.struts</groupId>-->
+                        <!--<artifactId>struts-tiles</artifactId>-->
+                    <!--</exclusion>-->
+                    <!--<exclusion>-->
+                        <!--<groupId>sslext</groupId>-->
+                        <!--<artifactId>sslext</artifactId>-->
+                    <!--</exclusion>-->
+                <!--</exclusions>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+                <!--<groupId>commons-lang</groupId>-->
+                <!--<artifactId>commons-lang</artifactId>-->
+                <!--<version>2.5</version>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+                <!--<groupId>commons-codec</groupId>-->
+                <!--<artifactId>commons-codec</artifactId>-->
+                <!--<version>1.2</version>-->
+            <!--</dependency>-->
+
+            <!--&lt;!&ndash; JSON &ndash;&gt;-->
+            <!--<dependency>-->
+                <!--<groupId>com.alibaba</groupId>-->
+                <!--<artifactId>fastjson</artifactId>-->
+                <!--<version>1.2.25</version>-->
+            <!--</dependency>-->
+
+            <!--<dependency>-->
+                <!--<groupId>commons-fileupload</groupId>-->
+                <!--<artifactId>commons-fileupload</artifactId>-->
+                <!--<version>1.3.2</version>-->
+            <!--</dependency>-->
+        <!--</dependencies>-->
+    <!--</dependencyManagement>-->
+
+    <!-- 插件管理 -->
+    <build>
+        <finalName>college_website-web</finalName>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+            <plugins>
+                <plugin>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.0.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                        <encoding>utf8</encoding>
+                    </configuration>
+                </plugin>
+                <!-- 配置构建时忽略测试用例 -->
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <configuration>
+                        <skipTests>true</skipTests>
+                    </configuration>
+                    <version>2.22.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-install-plugin</artifactId>
+                    <version>2.5.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.8.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
