@@ -4,13 +4,7 @@ import cn.edu.swpu.info.college_website.domain.exception.AppException;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * dao实现类
- * @author J-ONE
- * @since 2015-11-16
- * @param <T> 实体
- * @param <KEY> 主键
- */
+
 public abstract class BaseDaoImpl<T, KEY extends Serializable> extends MyBatisSupport implements BaseDao<T, KEY> {
 	private static final String DEFAULT_INSERT_KEY = "insertEntry";
 	private static final String DEFAULT_INSERT_LAST_SEQUENCE_KEY = "lastSequence";

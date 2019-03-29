@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2013 www.jd.com All rights reserved.
- * 本软件源代码版权归京东成都云平台所有,未经许可不得任意复制与传播.
- */
 package cn.edu.swpu.info.college_website.web.controller;
 
 
@@ -19,12 +15,7 @@ import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * VelocitySupport
- * 
- * @author cfish
- * @since 2013-11-13
- */
+
 public abstract class VelocitySupport {
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
 

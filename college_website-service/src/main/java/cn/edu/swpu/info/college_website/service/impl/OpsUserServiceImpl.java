@@ -1,7 +1,4 @@
-/*
- * Copyright (c) 2015 www.jd.com All rights reserved.
- * 本软件源代码版权归京东智能集团所有,未经许可不得任意复制与传播.
- */
+
 package cn.edu.swpu.info.college_website.service.impl;
 
 import cn.edu.swpu.info.college_website.dao.OpsRoleDao;
@@ -20,12 +17,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
-/**
- * <b>描述：</b> <br/>
- * @author<b>作者：</b> lishuangquan@jd.com<br/>
- * <b>时间：</b>2016/9/29 11:19<br/>
- * <b>Copyright (c)</b> 2015-2016京东智能-版权所有<br/>
- */
+
 @Service
 public class OpsUserServiceImpl implements OpsUserService {
 
@@ -53,7 +45,7 @@ public class OpsUserServiceImpl implements OpsUserService {
 			OpsUser condition = new OpsUser();
 			condition.setErp(opsUser.getErp());
 			condition.setName(opsUser.getName());
-			condition.setGmtCreate(new Date());
+			condition.setCreateDate(new Date());
 			OpsRole opsRole = opsRoleDao.selectEntry(roleId);
 			condition.setRoleName(opsRole.getName());
 			condition.setRoleId(roleId);
@@ -86,7 +78,7 @@ public class OpsUserServiceImpl implements OpsUserService {
 			OpsUser condition = new OpsUser();
 			condition.setErp(opsUser.getErp());
 			condition.setName(opsUser.getName());
-			condition.setGmtCreate(opsUser.getGmtCreate());
+			condition.setCreateDate(opsUser.getCreateDate());
 			OpsRole opsRole = opsRoleDao.selectEntry(roleId);
 			condition.setRoleName(opsRole.getName());
 			condition.setRoleId(roleId);

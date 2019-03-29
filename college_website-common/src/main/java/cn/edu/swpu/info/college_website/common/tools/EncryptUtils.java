@@ -7,9 +7,7 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.*;
 
-/**
- * Created by Shen Jian on 2015/6/16.
- */
+
 public class EncryptUtils {
     // 默认非对称加密算法
     private static final String DEFAULT_ASYM_ALGORITHM = "RSA";

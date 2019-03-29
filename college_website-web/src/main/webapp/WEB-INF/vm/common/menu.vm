@@ -38,6 +38,7 @@
                                             <a href="javascript:;" onclick="main.menuGoTo('${functionSub.url}','')">
                                                 <i class="$!{functionSub.icon}"></i>${functionSub.name}</a>
                                         </li>
+
 									#end
 								#end
 							</ul>

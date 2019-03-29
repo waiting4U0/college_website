@@ -1,7 +1,4 @@
-/*
- * Copyright (c) 2015 www.jd.com All rights reserved.
- * 本软件源代码版权归京东智能集团所有,未经许可不得任意复制与传播.
- */
+
 package cn.edu.swpu.info.college_website.web.aspect;
 
 
@@ -19,12 +16,6 @@ import org.slf4j.LoggerFactory;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * <b>描述：</b> <br/>
- * @author<b>作者：</b> lishuangquan@jd.com<br/>
- * <b>时间：</b>2016/9/27 10:28<br/>
- * <b>Copyright (c)</b> 2015-2016京东智能-版权所有<br/>
- */
 @Aspect
 public class PermissionAspect {
 	public static final Logger LOG = LoggerFactory.getLogger(PermissionAspect.class);
@@ -32,7 +23,7 @@ public class PermissionAspect {
 	@Resource
 	PermissionService permissionService;
 
-//	@Around(value = "execution(public * com.jd.smart_fridge_ops.web..*.*(..))")
+
 	@Around(value = "@within(cn.edu.swpu.info.college_website.web.common.Permission)")
 	public Object check(ProceedingJoinPoint joinPoint) {
 //		String userPin = LoginContext.getLoginContext().getPin();

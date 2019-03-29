@@ -65,21 +65,13 @@
         <artifactId>college_website-service</artifactId>
         <version>${project.parent.version}</version>
     </dependency>
-    <!--<dependency>-->
-    <!--<groupId>com.jd</groupId>-->
-    <!--<artifactId>smart_fridge_ops-rpc</artifactId>-->
-    <!--<version>${project.parent.version}</version>-->
-    <!--</dependency>-->
+
     <dependency>
         <groupId>commons-fileupload</groupId>
         <artifactId>commons-fileupload</artifactId>
     </dependency>
-    <!--erp单点登录升级-->
-    <!--<dependency>-->
-    <!--<groupId>com.jd.common</groupId>-->
-    <!--<artifactId>sso-uim-spring</artifactId>-->
-    <!--<version>1.0.0-SNAPSHOT</version>-->
-    <!--</dependency>-->
+
+
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>
@@ -91,26 +83,13 @@
         <version>4.4</version>
     </dependency>
 
-    <!--<dependency>-->
-    <!--<groupId>android.res</groupId>-->
-    <!--<artifactId>axml-parser</artifactId>-->
-    <!--<version>1.0-SNAPSHOT</version>-->
-    <!--</dependency>-->
+
     <dependency>
         <groupId>xpp3</groupId>
         <artifactId>xpp3_min</artifactId>
         <version>1.1.4c</version>
     </dependency>
-    <!--erp单点登录升级-->
-    <!--<dependency>-->
-    <!--<groupId>com.jd.common</groupId>-->
-    <!--<artifactId>sso-uim-spring</artifactId>-->
-    <!--<version>1.0.0-SNAPSHOT</version>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-    <!--<groupId>com.jd.common</groupId>-->
-    <!--<artifactId>jd-common-springmvc</artifactId>-->
-    <!--</dependency>-->
+
     <dependency>
         <groupId>org.apache.velocity</groupId>
         <artifactId>velocity</artifactId>
@@ -127,19 +106,19 @@
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
     </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>2.9.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-annotations -->
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.2</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -148,88 +127,4 @@
 
     </dependencies>
 
-    <!--<dependencies>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.velocity</groupId>-->
-            <!--<artifactId>velocity</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.velocity</groupId>-->
-            <!--<artifactId>velocity-tools</artifactId>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>javax.servlet</groupId>-->
-                    <!--<artifactId>servlet-api</artifactId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-webmvc</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-web</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>junit</groupId>-->
-            <!--<artifactId>junit</artifactId>-->
-            <!--<version>4.11</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>org.apache.httpcomponents</groupId>-->
-            <!--<artifactId>httpclient</artifactId>-->
-            <!--<version>4.5.1</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.httpcomponents</groupId>-->
-            <!--<artifactId>httpcore</artifactId>-->
-            <!--<version>4.4</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>cn.edu.swpu.info</groupId>-->
-            <!--<artifactId>college_website-domain</artifactId>-->
-            <!--<version>${project.parent.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.httpcomponents</groupId>-->
-            <!--<artifactId>httpclient</artifactId>-->
-            <!--<version>4.5.1</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.httpcomponents</groupId>-->
-            <!--<artifactId>httpcore</artifactId>-->
-            <!--<version>4.4</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>javax.servlet</groupId>-->
-            <!--<artifactId>javax.servlet-api</artifactId>-->
-            <!--<version>3.1.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>cn.edu.swpu.info</groupId>-->
-            <!--<artifactId>college_website-common</artifactId>-->
-            <!--<version>${project.parent.version}</version>-->
-
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>cn.edu.swpu.info</groupId>-->
-            <!--<artifactId>college_website-service</artifactId>-->
-            <!--<version>${project.parent.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>cn.edu.swpu.info</groupId>-->
-            <!--<artifactId>college_website-dao</artifactId>-->
-            <!--<version>${project.parent.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>commons-fileupload</groupId>-->
-            <!--<artifactId>commons-fileupload</artifactId>-->
-        <!--</dependency>-->
-    <!--</dependencies>-->
-
-
-</project>
+    </project>

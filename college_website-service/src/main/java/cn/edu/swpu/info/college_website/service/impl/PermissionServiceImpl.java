@@ -1,7 +1,4 @@
-/*
- * Copyright (c) 2015 www.jd.com All rights reserved.
- * 本软件源代码版权归京东智能集团所有,未经许可不得任意复制与传播.
- */
+
 package cn.edu.swpu.info.college_website.service.impl;
 
 import cn.edu.swpu.info.college_website.dao.OpsFunctionDao;
@@ -20,12 +17,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <b>描述：</b> <br/>
- * @author<b>作者：</b> lishuangquan@jd.com<br/>
- * <b>时间：</b>2016/9/27 15:39<br/>
- * <b>Copyright (c)</b> 2015-2016京东智能-版权所有<br/>
- */
+
 @Service("permissionService")
 public class PermissionServiceImpl implements PermissionService {
 

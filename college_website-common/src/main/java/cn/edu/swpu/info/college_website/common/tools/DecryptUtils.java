@@ -12,9 +12,7 @@ import java.security.PublicKey;
 import java.security.Signature;
 import java.security.spec.X509EncodedKeySpec;
 
-/**
- * Created by Shen Jian on 2015/6/16.
- */
+
 public class DecryptUtils {
     private static Logger LOG = LoggerFactory.getLogger(DecryptUtils.class);
 

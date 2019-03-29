@@ -2,9 +2,7 @@ package cn.edu.swpu.info.college_website.domain;
 
 import cn.edu.swpu.info.college_website.domain.base.BaseDomain;
 
-/**
- * Created by wangkun on 2019/3/16.
- */
+
 public class UserInfo extends BaseDomain{
     private static final long serialVersionUID = 1L;
 

@@ -18,13 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
-/**
- * <b>描述：</b> <br/>
- *
- * @author<b>作者：</b> cdwangkun1@jd.com<br/>
- * <b>时间：</b>2017/10/31<br/>
- * <b>Copyright (c)</b> 2015-2017京东智能-版权所有<br/>
- */
+
 @Controller
 @Permission(resourceKey = "userInfo")
 @RequestMapping(value = "/userInfo", method = {RequestMethod.GET, RequestMethod.POST})

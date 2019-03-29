@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jd.smart_fridge_ops.dao.OpsRoleDao">
+<mapper namespace="cn.edu.swpu.info.college_website.dao.OpsRoleDao">
 
 	<!-- ops_role 所有查询列 -->
 	<sql id="QUERY_COLUMN_LIST">
-		<![CDATA[id,name,description,gmt_create AS gmtCreate,gmt_modify AS gmtModify]]>
+		<![CDATA[id,name,description,create_date AS createDate,modify_date AS modifyDate]]>
 	</sql>
 
 	<!-- ops_role 查询列来源表-->
@@ -17,8 +17,8 @@
 			<if test="id != null and id != ''"><![CDATA[AND id = #{id}]]></if>
 			<if test="name != null and name != ''"><![CDATA[AND name = #{name}]]></if>
 			<if test="description != null and description != ''"><![CDATA[AND description = #{description}]]></if>
-			<if test="gmtCreate != null and gmtCreate != ''"><![CDATA[AND gmt_create = #{gmtCreate}]]></if>
-			<if test="gmtModify != null and gmtModify != ''"><![CDATA[AND gmt_modify = #{gmtModify}]]></if>
+			<if test="createDate != null and createDate != ''"><![CDATA[AND create_date = #{createDate}]]></if>
+			<if test="modifyDate != null and modifyDate != ''"><![CDATA[AND modify_date = #{modifyDate}]]></if>
 		</where>
 	</sql>
 	
@@ -33,16 +33,16 @@
 		<set>
 			<if test="name != null"><![CDATA[name = #{name},]]></if>
 			<if test="description != null"><![CDATA[description = #{description},]]></if>
-			<if test="gmtCreate != null"><![CDATA[gmt_create = #{gmtCreate},]]></if>
-			<if test="gmtModify != null"><![CDATA[gmt_modify = #{gmtModify},]]></if>
+			<if test="createDate != null"><![CDATA[create_date = #{createDate},]]></if>
+			<if test="modifyDate != null"><![CDATA[modifyDate = #{modifyDate},]]></if>
 		</set>
 	</sql>
 
 	<!-- 插入ops_role记录 -->
 	<insert id="insertEntry" parameterType="opsRole" >
 		<![CDATA[
-			INSERT INTO ops_role (id,name,description,gmt_create,gmt_modify)
-			VALUES (#{id},#{name},#{description},#{gmtCreate},#{gmtModify})
+			INSERT INTO ops_role (id,name,description,create_date,modify_date)
+			VALUES (#{id},#{name},#{description},#{createDate},#{modifyDate})
 		]]>
 	</insert>
 	
@@ -100,7 +100,7 @@
 	<!-- 其它SQL语句 -->
 	<select id="selectSelectiveRolesByUser" parameterType="long" resultType="opsRole">
 		SELECT
-			r.id, r.name, r.description, r.gmt_create AS gmtCreate, r.gmt_modify AS gmtModify
+			r.id, r.name, r.description, r.create_date AS createDate, r.modify_date AS modifyDate
 		FROM
 			ops_role r, ops_user_role ur
 		WHERE

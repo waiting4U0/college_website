@@ -3,13 +3,7 @@ package cn.edu.swpu.info.college_website.dao.base;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * dao基类<实体,主键>
- * @author J-ONE
- * @since 2015-11-16
- * @param <T> 实体
- * @param <KEY> 主键
- */
+
 public interface BaseDao<T,KEY extends Serializable> {
 
 	/**

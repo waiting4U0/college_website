@@ -35,7 +35,7 @@
         <artifactId>log4j</artifactId>
     </dependency>
 
-    <!-- com.jd.common.ws dependency -->
+
     <dependency>
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
@@ -57,17 +57,7 @@
         <groupId>com.alibaba</groupId>
         <artifactId>fastjson</artifactId>
     </dependency>
-    <!-- sms依赖,里面包含cxf...-->
-    <!--<dependency>-->
-    <!--<groupId>com.jd.common</groupId>-->
-    <!--<artifactId>jd-common-hrm</artifactId>-->
-    <!--<exclusions>-->
-    <!--<exclusion>-->
-    <!--<groupId>org.springframework</groupId>-->
-    <!--<artifactId>spring-context</artifactId>-->
-    <!--</exclusion>-->
-    <!--</exclusions>-->
-    <!--</dependency>-->
+
     <dependency>
         <groupId>commons-httpclient</groupId>
         <artifactId>commons-httpclient</artifactId>
@@ -91,11 +81,7 @@
         <artifactId>guava</artifactId>
         <version>20.0</version>
     </dependency>
-    <!--<dependency>-->
-    <!--<groupId>com.jd.image</groupId>-->
-    <!--<artifactId>image-common</artifactId>-->
-    <!--<version>1.0.5-20170602.033615-3</version>-->
-    <!--</dependency>-->
+
     <dependency>
         <groupId>org.apache.httpcomponents</groupId>
         <artifactId>httpclient</artifactId>

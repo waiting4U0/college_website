@@ -1,7 +1,4 @@
-/*
- * Copyright (c) 2015 www.jd.com All rights reserved.
- * 本软件源代码版权归京东成都云平台所有,未经许可不得任意复制与传播.
- */
+
 package cn.edu.swpu.info.college_website.web;
 
 import org.springframework.util.StringUtils;
@@ -13,11 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * 日期绑定
- * @author J-ONE
- * @since 2015-11-16
- */
+
 public class CustomDateEditor extends PropertyEditorSupport {
 	private final boolean allowEmpty;
 	private DateFormat dateFormat;

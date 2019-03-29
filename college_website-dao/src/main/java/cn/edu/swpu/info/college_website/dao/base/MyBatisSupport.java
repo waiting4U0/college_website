@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2015 www.jd.com All rights reserved.
- * 本软件源代码版权归京东成都云平台所有,未经许可不得任意复制与传播.
- */
 package cn.edu.swpu.info.college_website.dao.base;
 
 import cn.edu.swpu.info.college_website.domain.exception.AppException;
@@ -16,8 +12,6 @@ import java.util.Map;
 /**
  * 对mybatis的支持<br/>
  * spring配置文件需定义sqlTemplate与batchSqlTemplate
- * @author J-ONE
- * @since 2015-11-16
  */
 abstract class MyBatisSupport {
 	protected static final Logger LOGGER = LoggerFactory.getLogger(MyBatisSupport.class);

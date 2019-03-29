@@ -2,12 +2,7 @@ package cn.edu.swpu.info.college_website.domain.common;
 
 import java.util.List;
 
-/**
- * 分页对象
- * @author J-ONE
- * @since 2014-03-18
- * @param <T> 实体
- */
+
 public class Page<T> {
 	//初始化size
 	private final static int INIT_SIZE = 20;

@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2015 www.jd.com All rights reserved.
- * 本软件源代码版权归京东成都云平台所有,未经许可不得任意复制与传播.
- */
 package cn.edu.swpu.info.college_website.common.tools;
 
 import org.slf4j.Logger;
@@ -12,11 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-/**
- * 日期工具类
- * @author J-ONE
- * @since 2015-11-16
- */
+
 public class DateUtils {
 
 	private final static Logger LOG = LoggerFactory.getLogger(DateUtils.class);
@@ -68,15 +60,7 @@ public class DateUtils {
 		return format(new Date(time), "yyyy-MM-dd HH:mm:ss");
 	}
 
-	/**
-	 * 
-	 * <b>描述：</b> 获取N天前的日期时间<br/>
-	 * @author<b>创建人：</b> weijunlong@jd.com <br/>
-	 * <b>创建时间：</b> 2016年1月20日 下午3:34:41 <br/>
-	 * <b>修改人：</b> weijunlong@jd.com <br/>
-	 * <b>时间：</b> 2016年1月20日 下午3:34:41 <br/>
-	 * <b>修改内容：</b>  <br/>
-	 */
+
 	public static String getDateTimeOfDay(int day) {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd 00:00:00");
 		Date beginDate = new Date();
@@ -108,15 +92,6 @@ public class DateUtils {
 	}
 	
 
-	/**
-	 * 
-	 * <b>描述：</b> 获取7天前的日期时间<br/>
-	 * @author<b>创建人：</b> weijunlong@jd.com <br/>
-	 * <b>创建时间：</b> 2016年1月22日 上午11:21:12 <br/>
-	 * <b>修改人：</b> weijunlong@jd.com <br/>
-	 * <b>时间：</b> 2016年1月22日 上午11:21:12 <br/>
-	 * <b>修改内容：</b>  <br/>
-	 */
 	public static Long get7DaysAgoDate() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd 00:00:00");
 		Date endDate = null;
@@ -128,15 +103,7 @@ public class DateUtils {
 		return endDate.getTime();
 	}
 
-	/**
-	 * 
-	 * <b>描述：</b> 获取当天的日期时间<br/>
-	 * @author<b>创建人：</b> weijunlong@jd.com <br/>
-	 * <b>创建时间：</b> 2016年1月22日 上午11:21:32 <br/>
-	 * <b>修改人：</b> weijunlong@jd.com <br/>
-	 * <b>时间：</b> 2016年1月22日 上午11:21:32 <br/>
-	 * <b>修改内容：</b>  <br/>
-	 */
+
 	public static Long getCurrentDate() {
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd 23:59:59");
 		Date currentDate = null;
@@ -147,14 +114,7 @@ public class DateUtils {
 		}
 		return currentDate.getTime();
 	}
-	
-	/**
-	 * 
-	 * 字符串格式化为日期
-	 * @param datetime
-	 * @param partten
-	 * @return
-	 */
+
 	public static Date parseDate(String datetime,String partten) {
 		SimpleDateFormat sdf = new SimpleDateFormat(partten);
 		try {

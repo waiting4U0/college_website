@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.jd.smart_fridge_ops.dao.OpsFunctionDao">
+<mapper namespace="cn.edu.swpu.info.college_website.dao.OpsFunctionDao">
 
 	<!-- ops_function 所有查询列 -->
 	<sql id="QUERY_COLUMN_LIST">
-		<![CDATA[id,name,url,resource_key AS resourceKey,parent_id AS parentId,icon, gmt_create AS gmtCreate,gmt_modify AS gmtModify]]>
+		<![CDATA[id,name,url,resource_key AS resourceKey,parent_id AS parentId,icon, create_date AS createDate,modify_date AS modifyDate]]>
 	</sql>
 
 	<!-- ops_function 查询列来源表-->
@@ -20,8 +20,8 @@
 			<if test="resourceKey != null and resourceKey != ''"><![CDATA[AND resource_key = #{resourceKey}]]></if>
 			<if test="icon != null and icon != ''"><![CDATA[AND icon = #{icon}]]></if>
 			<if test="parentId != null and parentId != ''"><![CDATA[AND parent_id = #{parentId}]]></if>
-			<if test="gmtCreate != null and gmtCreate != ''"><![CDATA[AND gmt_create = #{gmtCreate}]]></if>
-			<if test="gmtModify != null and gmtModify != ''"><![CDATA[AND gmt_modify = #{gmtModify}]]></if>
+			<if test="createDate != null and createDate != ''"><![CDATA[AND create_date = #{createDate}]]></if>
+			<if test="modifyDate != null and modifyDate != ''"><![CDATA[AND modify_date = #{modifyDate}]]></if>
 		</where>
 	</sql>
 	
@@ -39,16 +39,16 @@
 			<if test="resourceKey != null"><![CDATA[resource_key = #{resourceKey},]]></if>
 			<if test="icon != null"><![CDATA[icon = #{icon},]]></if>
 			<if test="1 == 1"><![CDATA[parent_id = #{parentId},]]></if>
-			<if test="gmtCreate != null"><![CDATA[gmt_create = #{gmtCreate},]]></if>
-			<if test="gmtModify != null"><![CDATA[gmt_modify = #{gmtModify},]]></if>
+			<if test="createDate != null"><![CDATA[create_date = #{createDate},]]></if>
+			<if test="modifyDate != null"><![CDATA[modify_date = #{modifyDate},]]></if>
 		</set>
 	</sql>
 
 	<!-- 插入ops_function记录 -->
 	<insert id="insertEntry" parameterType="opsFunction" >
 		<![CDATA[
-			INSERT INTO ops_function (id,name,url,resource_key,icon,parent_id,gmt_create,gmt_modify)
-			VALUES (#{id},#{name},#{url},#{resourceKey},#{icon},#{parentId},#{gmtCreate},#{gmtModify})
+			INSERT INTO ops_function (id,name,url,resource_key,icon,parent_id,create_date,modify_date)
+			VALUES (#{id},#{name},#{url},#{resourceKey},#{icon},#{parentId},#{createDate},#{modifyDate})
 		]]>
 	</insert>
 	
