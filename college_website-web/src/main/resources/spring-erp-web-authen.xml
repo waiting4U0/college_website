@@ -13,12 +13,10 @@
 
      <!--&lt;!&ndash;单点登录拦截器配置 &ndash;&gt;-->
     <mvc:interceptors>
-
-
-        <mvc:interceptor>
-            <mvc:mapping path="/"/>
-            <bean id="userAuthInterceptor" class="cn.edu.swpu.info.college_website.web.interceptor.UserAuthInterceptor"/>
-        </mvc:interceptor>
+        <!--<mvc:interceptor>-->
+            <!--<mvc:mapping path="/"/>-->
+            <!--<bean id="userAuthInterceptor" class="cn.edu.swpu.info.college_website.web.interceptor.UserAuthInterceptor"/>-->
+        <!--</mvc:interceptor>-->
 
         <!--&lt;!&ndash;权限拦截&ndash;&gt;-->
         <mvc:interceptor>
