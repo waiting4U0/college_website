@@ -112,7 +112,6 @@
 <script src="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="/js/main/index.js" type="text/javascript"></script>
-<script src="/js/main/tasks.js" type="text/javascript"></script>
+
 <!-- END PAGE LEVEL SCRIPTS -->
 

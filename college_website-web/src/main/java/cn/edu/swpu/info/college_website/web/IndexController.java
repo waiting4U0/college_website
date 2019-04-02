@@ -27,4 +27,12 @@ public class IndexController {
 		view.addAttribute("functions", functionData);
 		return "main/main";
 	}
+	@RequestMapping(value = "/index", method = { RequestMethod.GET })
+	public String index1(HttpServletRequest request, HttpServletResponse response, Model view) {
+		List<OpsFunction> functionData = PinContext.getFunctionData();
+//		//加载用户资源
+//		view.addAttribute("erp", pin);
+		view.addAttribute("functions", functionData);
+		return "main/main";
+	}
 }

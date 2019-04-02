@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Smart Fridge OPS | Login Options</title>
+<title>Login Options</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -35,7 +35,7 @@
 <!-- BEGIN LOGO -->
 <div class="logo">
 	<a href="index">
-	<img src="/img/ops_logo.png" style="height: 100px;width:200px;" alt=""/>
+	<img src="/img/logo.png" style="height: 100px;width:200px;" alt=""/>
 	</a>
 </div>
 <!-- END LOGO -->

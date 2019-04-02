@@ -17,14 +17,12 @@
 	<typeAliases>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.UserInfo" alias="userInfo"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsUser" alias="opsUser"/>
-		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsAdmin" alias="opsAdmin"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsFunction" alias="opsFunction"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRole" alias="opsRole"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRoleFunction" alias="opsRoleFunction"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="sqlmap/OpsUser.xml"/>
-		<mapper resource="sqlmap/OpsAdmin.xml"/>
 		<mapper resource="sqlmap/OpsFunction.xml"/>
 		<mapper resource="sqlmap/OpsRole.xml"/>
 		<mapper resource="sqlmap/OpsRoleFunction.xml"/>
