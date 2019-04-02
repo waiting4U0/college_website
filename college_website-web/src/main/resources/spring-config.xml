@@ -22,8 +22,7 @@
         <property name="ignoreUnresolvablePlaceholders" value="true" />
         <property name="locations">
             <list>
-                <!--<value>classpath:conf/smart_fridge_ops-production.properties</value>-->
-                <value>classpath:authen.properties</value>
+
                 <value>classpath:conf/important.properties</value>
 
             </list>
@@ -32,13 +31,12 @@
     </bean>
     <!--<bean id="secApplicationProperties" class="com.jd.security.configsec.spring.config.JDSecurityPropertyFactoryBean">-->
         <!--<property name="ignoreResourceNotFound" value="true" />-->
-        <!--<property name="secLocation" value="classpath:conf/important.properties"/>-->
+
     <!--</bean>-->
 
 	<import resource="classpath:spring-config-servlet.xml"/>
 	<import resource="classpath*:spring-config-service.xml"/>
 	<import resource="classpath*:spring-config-dao.xml"/>
-	<!--<import resource="classpath*:spring-config-rpc.xml"/>-->
     <import resource="classpath*:spring-erp-web-authen.xml" />
 
     
