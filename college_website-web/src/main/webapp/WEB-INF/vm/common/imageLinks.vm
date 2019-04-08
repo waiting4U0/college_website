@@ -1,0 +1,71 @@
+<div class="imageLinks_box">
+    <div class="imageLinks_box_up">
+        <a href="#">
+            <div class="image" id="image1">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>校园门户</span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image2">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大视频</span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image3">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>校园地图</span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image4">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大图片</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="imageLinks_box_down">
+        <a href="#">
+            <div class="image" id="image5">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大指数</span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image6">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大黄页</span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image7">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>山海原经典网</span>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image8">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大新媒体</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

@@ -39,7 +39,7 @@
             <college_website.jdbc.driver>com.mysql.jdbc.Driver</college_website.jdbc.driver>
             <college_website.jdbc.url>jdbc:MySql://localhost:3306/info_website?characterEncoding=UTF-8</college_website.jdbc.url>
             <college_website.jdbc.username>root</college_website.jdbc.username>
-            <college_website.jdbc.password>123456</college_website.jdbc.password>
+            <college_website.jdbc.password>root</college_website.jdbc.password>
             <!-- 日志 -->
             <college_website.log.level>DEBUG</college_website.log.level>
             <college_website.log.path>/export/logs</college_website.log.path>

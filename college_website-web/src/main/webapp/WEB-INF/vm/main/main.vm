@@ -8,5 +8,6 @@
         #parse("common/index.vm")
 </div>
 
+#parse("common/imageLinks.vm")
 #parse("common/footer.vm")
 
