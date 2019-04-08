@@ -15,7 +15,7 @@ body{ background-color:white;}
 /*导航栏*/
 .nav_menu{text-transform:uppercase; height:53px;width:1000px;background-color: white;margin: 0px auto;}
 .nav_menu a{display:block; cursor:pointer;}
-.nav_menu-item{width: 14%;float:left; position:relative; z-index:55;*z-index:55;_z-index:55;}
+.nav_menu-item{width: 10%;float:left; position:relative; z-index:55;*z-index:55;_z-index:55;}
 .nav_menu-item a{padding:0 16px; height:53px; font-size:15px; line-height:53px; color: black;;text-align: center;}
 
 /*.nav_menu-item:hover{background-image:url(../img/nav_bg.png);background-repeat:repeat-x;}*/

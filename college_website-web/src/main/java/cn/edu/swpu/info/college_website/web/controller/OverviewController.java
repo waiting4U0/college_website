@@ -1,21 +1,13 @@
 package cn.edu.swpu.info.college_website.web.controller;
 
-import cn.edu.swpu.info.college_website.domain.UserInfo;
-import cn.edu.swpu.info.college_website.domain.common.Message;
-import cn.edu.swpu.info.college_website.domain.common.Page;
-import cn.edu.swpu.info.college_website.service.UserInfoService;
 import cn.edu.swpu.info.college_website.web.common.Permission;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 
@@ -26,6 +18,16 @@ public class OverviewController {
     private static final Logger LOG = LoggerFactory.getLogger(OverviewController.class);
 //    @Resource
 //    private UserInfoService userInfoService;
+
+    @RequestMapping(value = "", method = {RequestMethod.GET})
+    public String main(HttpServletRequest request, Model view){
+        try {
+            return "overview/overview";
+        }catch (Exception e){
+            LOG.error("失败:" + e.getMessage(), e);
+            return "overview/overview";
+        }
+    }
 
     @RequestMapping(value = "/list", method = {RequestMethod.GET})
     public String list(HttpServletRequest request, Model view){
@@ -53,6 +55,36 @@ public class OverviewController {
         }catch (Exception e){
             LOG.error("失败:" + e.getMessage(), e);
             return "overview/list";
+        }
+    }
+
+    @RequestMapping(value = "/collegeLab", method = {RequestMethod.GET})
+    public String lab(HttpServletRequest request, Model view){
+        try {
+            return "overview/collegeLab";
+        }catch (Exception e){
+            LOG.error("失败:" + e.getMessage(), e);
+            return "overview/collegeLab";
+        }
+    }
+
+    @RequestMapping(value = "/collegeLeader", method = {RequestMethod.GET})
+    public String leader(HttpServletRequest request, Model view){
+        try {
+            return "overview/collegeLeader";
+        }catch (Exception e){
+            LOG.error("失败:" + e.getMessage(), e);
+            return "overview/collegeLeader";
+        }
+    }
+
+    @RequestMapping(value = "/institutionalSetup", method = {RequestMethod.GET})
+    public String setup(HttpServletRequest request, Model view){
+        try {
+            return "overview/institutionalSetup";
+        }catch (Exception e){
+            LOG.error("失败:" + e.getMessage(), e);
+            return "overview/institutionalSetup";
         }
     }
 

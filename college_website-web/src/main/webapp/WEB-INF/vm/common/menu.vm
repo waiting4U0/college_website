@@ -1,13 +1,9 @@
 <div>
-    <ul class="nav_menu m1200 cleafix">
-        #*#foreach($functionParent in $functions)
+    <ul class="nav_menu">
+        #foreach($functionParent in $functions)
             #if($functionParent.id == 1)
                 <li class="nav_menu-item current">
-                    <a href="javascript:;" onclick="main.menuGoTo('${functionParent.url}','')">
-                        ${functionParent.name}</a>
-                </li>
-                <li class="nav_menu-item current">
-                    <a href="javascript:;" onclick="main.menuGoTo('${functionParent.url}','')">
+                    <a href="javascript:;" onclick="main.menuGoTo('/index','')">
                         ${functionParent.name}</a>
                 </li>
             #elseif (!$functionParent.parentId)
@@ -27,8 +23,8 @@
                     </ul>
                 </li>
             #end
-        #end*#
-        <li class="nav_menu-item">
+        #end
+      #*  <li class="nav_menu-item">
             <a href="javascript:;"><span>主页</span></a>
         </li>
 
@@ -155,6 +151,6 @@
                 </ul>
             </li>
 
-    </ul>
+    </ul>*#
 </div>
 

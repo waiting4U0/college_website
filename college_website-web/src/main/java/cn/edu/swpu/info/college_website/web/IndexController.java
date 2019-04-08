@@ -2,13 +2,13 @@ package cn.edu.swpu.info.college_website.web;
 
 import cn.edu.swpu.info.college_website.common.PinContext;
 import cn.edu.swpu.info.college_website.domain.OpsFunction;
-import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
@@ -33,6 +33,6 @@ public class IndexController {
 //		//加载用户资源
 //		view.addAttribute("erp", pin);
 		view.addAttribute("functions", functionData);
-		return "main/main";
+		return "common/index";
 	}
 }
