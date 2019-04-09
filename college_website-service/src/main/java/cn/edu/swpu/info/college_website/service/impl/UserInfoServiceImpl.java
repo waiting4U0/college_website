@@ -40,8 +40,7 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 
     @Transactional(rollbackFor = Exception.class)
-    public long createUserInfo(UserInfo UserInfo) {
-        return userInfoDao.insertEntry(UserInfo);
+    public long createUserInfo(UserInfo UserInfo) { return userInfoDao.insertEntry(UserInfo);
     }
 
 

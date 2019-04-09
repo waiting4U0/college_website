@@ -20,6 +20,7 @@
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsFunction" alias="opsFunction"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRole" alias="opsRole"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRoleFunction" alias="opsRoleFunction"/>
+		<typeAlias type="cn.edu.swpu.info.college_website.domain.BannerImgInfo" alias="bannerImgInfo"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="sqlmap/OpsUser.xml"/>
@@ -27,6 +28,7 @@
 		<mapper resource="sqlmap/OpsRole.xml"/>
 		<mapper resource="sqlmap/OpsRoleFunction.xml"/>
 		<mapper resource="sqlmap/UserInfo.xml" />
+		<mapper resource="sqlmap/BannerImgInfo.xml" />
 
 	</mappers>
 </configuration>

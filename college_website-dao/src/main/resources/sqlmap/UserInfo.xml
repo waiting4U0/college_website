@@ -9,7 +9,9 @@
 	</sql>
 
 	<!-- user_info 查询列来源表-->
-	<sql id="QUERY_FROM_TABLE"><![CDATA[FROM user_info]]></sql>
+	<sql id="QUERY_FROM_TABLE">
+		<![CDATA[FROM user_info]]>
+	</sql>
 	
 	<!-- 全部条件(更多功能可以通过queryData扩展实现)  -->
 	<sql id="QUERY_WHERE_CLAUSE">
@@ -63,7 +65,7 @@
 
 	<!-- 修改记录通过主键 -->
 	<update id="updateByKey" parameterType="userInfo" >
-		<![CDATA[UPDATE user_info]]>
+		<![CDATA[UPDATE user_Info]]>
 		<include refid="UPDATE_COLUMN_SET"/>
 		<![CDATA[WHERE id = #{id}]]>
 	</update>
