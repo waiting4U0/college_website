@@ -1,13 +1,13 @@
 #parse("common/head.vm")
 #parse("common/top.vm")
 #parse("common/menu.vm")
-#parse("common/banner.vm")
 
 <!-- BEGIN CONTENT -->
 <div class="container" id="main-page-content">
+        #parse("common/banner.vm")
         #parse("common/index.vm")
+        #parse("common/imageLinks.vm")
 </div>
 
-#parse("common/imageLinks.vm")
 #parse("common/footer.vm")
 
