@@ -29,28 +29,16 @@ public class IndexController {
 	}
 	@RequestMapping(value = "/index", method = { RequestMethod.GET })
 	public String index1(HttpServletRequest request, HttpServletResponse response, Model view) {
-		List<OpsFunction> functionData = PinContext.getFunctionData();
-//		//加载用户资源
-//		view.addAttribute("erp", pin);
-		view.addAttribute("functions", functionData);
 		return "common/index";
 	}
 
 	@RequestMapping(value = "/banner", method = { RequestMethod.GET })
 	public String banner(HttpServletRequest request, HttpServletResponse response, Model view) {
-		List<OpsFunction> functionData = PinContext.getFunctionData();
-//		//加载用户资源
-//		view.addAttribute("erp", pin);
-		view.addAttribute("functions", functionData);
 		return "common/banner";
 	}
 
 	@RequestMapping(value = "/imageLinks", method = { RequestMethod.GET })
 	public String imageLinks(HttpServletRequest request, HttpServletResponse response, Model view) {
-		List<OpsFunction> functionData = PinContext.getFunctionData();
-//		//加载用户资源
-//		view.addAttribute("erp", pin);
-		view.addAttribute("functions", functionData);
 		return "common/imageLinks";
 	}
 }

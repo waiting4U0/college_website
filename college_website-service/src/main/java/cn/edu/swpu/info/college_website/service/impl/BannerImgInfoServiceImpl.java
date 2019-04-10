@@ -14,8 +14,8 @@ public class BannerImgInfoServiceImpl implements BannerImgInfoService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserInfoServiceImpl.class);
     private  BannerImgInfoDao  bannerImgInfoDao;
 
-    public long createBannerImgInfo(BannerImgInfo bannerImgInfo){ return null; }
-    public long updateBannerImgInfo(BannerImgInfo bannerImgInfo){ return null;}
+    public long createBannerImgInfo(BannerImgInfo bannerImgInfo){ return 0; }
+    public long updateBannerImgInfo(BannerImgInfo bannerImgInfo){ return 0;}
     public BannerImgInfo getBannerImgInfoById(Long id){ return null;}
-    public int remove(BannerImgInfo condition){ return null; }
+    public int remove(BannerImgInfo condition){ return 0; }
 }
