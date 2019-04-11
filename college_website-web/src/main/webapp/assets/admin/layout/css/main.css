@@ -276,12 +276,12 @@ img{border:none}
 .dp{ width:950px; min-height:680px; background-color:#fff; padding:20px 40px 40px 44px;float: left}
 .dp_t{ width:856px; height:62px; border-bottom:1px #ccc solid; margin-bottom:20px;}
 .dp_t h2{ display:block;width:200px; height:59px; font-size:18px; color:#3170d0; line-height:59px; text-align:center; border-bottom:3px #3170d0 solid;}
-.dp_t .dqwz{ background-repeat:no-repeat; background-position:2px center; text-indent:32px;margin-bottom: 50px}
+.dp_t .dqwz{ background-repeat:no-repeat; background-position:2px center; text-indent:32px;margin-bottom: 20px}
 .dp_t .dqwz span{ font-size:14px; color:#636363; line-height:40px;}
 .dp_t .dqwz span a{ font-size:14px; color:#636363; margin:auto 10px;}
 .dp_t .dqwz a:hover{ color:#3170d0;}
 .dp_t .dqwz .ss{ margin-left:12px;color:#3170d0; margin-right:20px;}
-.dp_c{ font-size:15px; color:#323232; line-height:30px;}
+.dp_c{ font-size:15px; color:#323232; line-height:30px;margin-top: 20px}
 
 /*列表页*/
 .list_c li{ width:870px; height:34px; background-image:url(../img/dian.png); background-repeat:no-repeat; background-position:0px center; text-indent:20px;}
