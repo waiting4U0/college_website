@@ -96,9 +96,19 @@ table{
 
 /* custom */
 a{
-	color: #7e8c8d;
+	text-decoration: none;color:#333;
 	text-decoration: none;
-	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s ease-in;
+	-webkit-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+}
+a:hover{
+	text-decoration: none;
+	-moz-transition: all 0.1s ease-in;
+	-webkit-transition: all 0.1s ease-in;
+	-o-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
 }
 ::-webkit-scrollbar{
 	width: 5px;

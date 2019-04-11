@@ -15,12 +15,13 @@
 
             <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/collegeIntroduce/list','')" title="学院简介">学院简介</a></li>
             <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/collegeLeader/list','')" title="学院领导">学院领导</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/institutionalSetup/list','')" title="机构设置">机构设置</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/collegeLab/list','')" title="学院实验室">学院实验室</a></li>
         </ul>
     </div>
 
     <div class="dp fr">
         <div class="dp_t cleafix">
-            <h2 class="fl">学院简介</h2>
             <div class="dqwz fr">
                 <i class="icon-home"></i>
                 <span>当前位置：</span>
@@ -30,6 +31,7 @@
                 &gt;
                 <span><a href="javascript:;" onclick="main.menuGoTo('/collegeLeader/list','')">学院简介</a></span>
             </div>
+            <h2 class="fl">学院简介</h2>
         </div>
 
 

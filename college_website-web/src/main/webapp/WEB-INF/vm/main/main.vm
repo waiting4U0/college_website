@@ -4,10 +4,15 @@
 
 <!-- BEGIN CONTENT -->
 <div class="container" id="main-page-content">
-        #parse("common/banner.vm")
+    <div class="container" id="main-page-content1">
+    #parse("common/banner.vm")
+    </div>
+    <div class="container" id="main-page-content2">
         #parse("common/index.vm")
+    </div>
+    <div class="container" id="main-page-content3">
         #parse("common/imageLinks.vm")
+    </div>
 </div>
-
 #parse("common/footer.vm")
 
