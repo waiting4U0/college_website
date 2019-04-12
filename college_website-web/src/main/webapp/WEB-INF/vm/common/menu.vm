@@ -1,4 +1,4 @@
-<div>
+<div class="menv_box">
     <ul class="nav_menu">
         #foreach($functionParent in $functions)
             #if($functionParent.id == 1)
