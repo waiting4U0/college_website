@@ -3,19 +3,36 @@ package cn.edu.swpu.info.college_website.service.impl;
 import cn.edu.swpu.info.college_website.dao.BannerImgInfoDao;
 import cn.edu.swpu.info.college_website.domain.BannerImgInfo;
 import cn.edu.swpu.info.college_website.service.BannerImgInfoService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
-
-@Service("bannerImgInfoService")
+//import java.util.List;
+@Service
 public class BannerImgInfoServiceImpl implements BannerImgInfoService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(UserInfoServiceImpl.class);
-    private  BannerImgInfoDao  bannerImgInfoDao;
 
-    public long createBannerImgInfo(BannerImgInfo bannerImgInfo){ return 0; }
-    public long updateBannerImgInfo(BannerImgInfo bannerImgInfo){ return 0;}
-    public BannerImgInfo getBannerImgInfoById(Long id){ return null;}
-    public int remove(BannerImgInfo condition){ return 0; }
+    @Resource
+    private BannerImgInfoDao bannerImgInfoDao;
+
+
+
+    @Override
+    public List<BannerImgInfo> getBannerImgInfoList(BannerImgInfo bannerImgInfo) {
+        List<BannerImgInfo> bannerImgInfos = bannerImgInfoDao.selectEntryList(new BannerImgInfo());
+        List<BannerImgInfo> bannerImgInfoList = new ArrayList<BannerImgInfo>();
+        for (BannerImgInfo bannerImgInfo1:bannerImgInfos)
+            if(bannerImgInfo1.getId() !=null){
+                bannerImgInfoList.add(bannerImgInfo1);
+            }
+        return bannerImgInfoList;
+    }
+
+    @Override
+    public List<BannerImgInfo> selectEntryList(BannerImgInfo bannerImgInfo) {
+        return bannerImgInfoDao.selectEntryList(bannerImgInfo);
+    }
+
+
 }
