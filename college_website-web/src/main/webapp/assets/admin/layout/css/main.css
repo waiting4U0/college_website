@@ -3,14 +3,15 @@
 body{ background-color:white;}
 
 /*头部*/
-.top_box{ height:140px;background-color: #1f78b5;background-repeat:repeat; background-position:center;}
-.top_box .logo{ display:block; width:533px; height:120px; margin-left:200px; margin-top:10px; float:left;}
-.top_box .logo img{ display:block; width:533px; height:120px;float: left;}
+.top_box{ height:140px;background-color: #eaf3ff;/*background-repeat:repeat; background-position:center;*/}
+.top_box .logo{ display:block; width:768px; height:100px; margin-left:200px; margin-top:20px; float:left;position: absolute;z-index: 999;}
+.top_box .logo img{ display:block; width:768px; height:100px;float: left;}
 .top_box .toplink{ display:block; float:left; font-size:20px; color:#fff; line-height:24px; margin-top:92px; margin-left:220px;}
 .top_box .toplink:hover{ color:#ffb671;}
 .top_box .search{ width:252px; height:36px; background-color:#fff; border:1px #ccc solid; border-radius:18px !important; float:right; overflow:hidden; margin-top:86px; margin-right:130px;}
 .top_box .search .text{ width:204px; height:36px; background-color:#fff; text-indent:20px; color:#333;}
 .top_box .search .submit{ height:30px;margin-top:3px;margin-left:5px; background-color:#fff;}
+.top_right{float: right;height: 100%;width: 735px;background-image:url(../img/top_right.png);background-repeat:no-repeat;}
 
 /*导航栏*/
 .nav_menu{text-transform:uppercase; height:53px;width:1000px;background-color: white;margin: 0px auto;}
