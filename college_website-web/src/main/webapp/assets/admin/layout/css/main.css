@@ -72,7 +72,7 @@ img{border:none}
 }
 
 
-.news_box{ margin-top:50px; margin-bottom:32px;margin-right: 200px;margin-left: 200px}
+.news_box{ margin-top:50px; margin-bottom:32px;margin-right: 150px;margin-left: 150px}
 /*新闻焦点图*/
 .focus_news{ position:relative; width:380px; height:231px;}  
 .focus_news img{width:380px; height:231px;} 
@@ -331,7 +331,7 @@ h3{ clear:both; font-size:18px; line-height:50px; display: block;}
 @media (min-width: 1200px) {
 	/* 1200px */
 	.container {
-		width: 1600px !important;
+		width: 100% !important;
 	}
 }
 @media print {
