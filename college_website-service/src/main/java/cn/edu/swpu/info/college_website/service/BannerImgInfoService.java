@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface BannerImgInfoService {
 
-    List<BannerImgInfo> getBannerImgInfoList(BannerImgInfo bannerImgInfo);
+//    List<BannerImgInfo> getBannerImgInfoList(BannerImgInfo bannerImgInfo);
 
 
     List<BannerImgInfo> selectEntryList(BannerImgInfo bannerImgInfo);

@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 
 @Service("userInfoService")
@@ -56,5 +57,10 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     public int remove(UserInfo condition) {
         return userInfoDao.deleteByKey(condition);
+    }
+
+    @Override
+    public List<UserInfo> selectUserInfoList(UserInfo userInfo) {
+        return userInfoDao.selectEntryList(userInfo);
     }
 }
