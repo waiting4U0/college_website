@@ -1,6 +1,6 @@
 <!-- 适应于velocity view导航-->
 <DIV id="navBar" title="出错啦">
-	<li><a href="$!{contextPath}/">首页</a> <span class="divider">/</span></li>
+	<li><a href="$!{contextPath}/">首页111</a> <span class="divider">/</span></li>
 	<li class="active">错误页面</li>
 </DIV>
 
