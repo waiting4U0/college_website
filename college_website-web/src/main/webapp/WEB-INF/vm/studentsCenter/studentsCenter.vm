@@ -9,6 +9,6 @@
 </head>
 <body>
 <h1>学生中心</h1>
-
+<button onclick="window.location.href='studentsCenter/login'">登录</button>
 </body>
 </html>

@@ -22,7 +22,7 @@
                     <div class="liner"></div>
                 </div>
             </li>
-            <li>
+            #*<li>
                 <span>OCR 3款新品火热邀测</span>
                 <div class="dot">
                     <div class="liner"></div>
@@ -39,7 +39,7 @@
                 <div class="dot">
                     <div class="liner"></div>
                 </div>
-            </li>
+            </li>*#
         </ul>
     </div>
     <div class="bd">
@@ -66,8 +66,8 @@
     </div>
 
     <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-    <a class="prev" href="javascript:void(0)"></a>
-    <a class="next" href="javascript:void(0)"></a>
+    #*<a class="prev" href="javascript:void(0)"></a>
+    <a class="next" href="javascript:void(0)"></a>*#
 
 </div>
 <script type="text/javascript" src="../../assets/global/plugins/jquery.min.js"></script>
