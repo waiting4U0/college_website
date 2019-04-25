@@ -33,5 +33,8 @@ public class StudentsCenterController {
     public String platform(){
         return "studentsCenter/trainingPlatform";
     }
-
+    @RequestMapping(value="login",method={RequestMethod.GET})
+    public String login(){
+        return "main/Login";
+    }
 }
