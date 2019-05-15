@@ -13,4 +13,9 @@ public class ContactUsController {
     public String main(){
         return "contactUs/contactUs";
     }
+
+    @RequestMapping(value = "/phone",method = {RequestMethod.GET})
+    public String phone(){
+        return "contactUs/phone";
+    }
 }

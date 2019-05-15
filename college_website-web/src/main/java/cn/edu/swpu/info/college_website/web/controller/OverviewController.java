@@ -58,13 +58,13 @@ public class OverviewController {
         }
     }
 
-    @RequestMapping(value = "/collegeLab", method = {RequestMethod.GET})
+    @RequestMapping(value = "/collegeLogo", method = {RequestMethod.GET})
     public String lab(HttpServletRequest request, Model view){
         try {
-            return "overview/collegeLab";
+            return "overview/collegeLogo";
         }catch (Exception e){
             LOG.error("失败:" + e.getMessage(), e);
-            return "overview/collegeLab";
+            return "overview/collegeLogo";
         }
     }
 
@@ -75,16 +75,6 @@ public class OverviewController {
         }catch (Exception e){
             LOG.error("失败:" + e.getMessage(), e);
             return "overview/collegeLeader";
-        }
-    }
-
-    @RequestMapping(value = "/institutionalSetup", method = {RequestMethod.GET})
-    public String setup(HttpServletRequest request, Model view){
-        try {
-            return "overview/institutionalSetup";
-        }catch (Exception e){
-            LOG.error("失败:" + e.getMessage(), e);
-            return "overview/institutionalSetup";
         }
     }
 

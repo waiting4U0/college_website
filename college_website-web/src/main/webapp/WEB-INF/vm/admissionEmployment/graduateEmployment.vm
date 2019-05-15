@@ -1,3 +1,4 @@
+<!-- BEGIN PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css"
       href="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/select2/select2.css"/>
@@ -11,10 +12,12 @@
 </div>
 <div class="list m1200 cleafix">
     <div class="list_link fl">
-        <h2>考研</h2>
+        <h2>党建</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/postgraduate/guidancePostgraduate','')" title="考研指导">考研指导</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/postgraduate/undergraduateTraining','')" title="本科生培养">本科生培养</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/partyNews','')" title="党团快讯">党团快讯</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/organizationalStructure','')" title="组织结构">组织结构</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/membership','')" title="成员概况">成员概况</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/ideologicalPolitics','')" title="思想政治">思想政治</a></li>
         </ul>
     </div>
 
@@ -25,10 +28,11 @@
                 <span>当前位置：</span>
             #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
             &gt;*#
-                <span><a href="javascript:;" onclick="main.menuGoTo('/postgraduate','')">考研</a></span>
+                <span><a href="javascript:;" onclick="main.menuGoTo('/employment','')">党建</a></span>
                 &gt;
+            </div>
             <div class="fl">
-                <h2>考研</h2>
+                <h2>党建</h2>
             </div>
         </div>
 
@@ -61,7 +65,7 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            考研
+            党建
         </div>
 
     </div>
@@ -75,3 +79,4 @@
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="/js/common/ajaxfileupload.js" type="text/javascript"></script>
+

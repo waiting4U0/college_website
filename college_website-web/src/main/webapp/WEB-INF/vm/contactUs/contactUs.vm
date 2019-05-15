@@ -8,7 +8,8 @@
     <title>testpage</title>
 </head>
 <body>
-<h1>学生管理</h1>
+<h1>联系我们</h1>
+<button onclick="window.location.href='main/login'">登录</button>
 
 </body>
 </html>

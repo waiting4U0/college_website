@@ -14,24 +14,24 @@ public class PartyController {
         return "party/party";
     }
 
-    @RequestMapping(value = "/ideologicalPolitics",method = {RequestMethod.GET})
-    public String politics(){
-        return "party/ideologicalPolitics";
+    @RequestMapping(value = "/activity",method = {RequestMethod.GET})
+    public String activity(){
+        return "party/activity";
     }
 
-    @RequestMapping(value = "/membership",method = {RequestMethod.GET})
-    public String membership(){
-        return "party/membership";
-    }
-
-    @RequestMapping(value = "/organizationalStructure",method = {RequestMethod.GET})
-    public String structure(){
-        return "party/organizationalStructure";
-    }
-
-    @RequestMapping(value = "/partyNews",method = {RequestMethod.GET})
+    @RequestMapping(value = "/news",method = {RequestMethod.GET})
     public String news(){
-        return "party/partyNews";
+        return "party/news";
+    }
+
+    @RequestMapping(value = "/structure",method = {RequestMethod.GET})
+    public String structure(){
+        return "party/structure";
+    }
+
+    @RequestMapping(value = "/study",method = {RequestMethod.GET})
+    public String study(){
+        return "party/study";
     }
 
 }

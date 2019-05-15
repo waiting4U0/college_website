@@ -1,7 +1,7 @@
 <div class="menv_box">
     <ul class="nav_menu">
         #foreach($functionParent in $functions)
-            #if($functionParent.id == 1)
+            #if($functionParent.id == 0)
                 <li class="nav_menu-item current">
                     <a href="javascript:;" onclick="main.homepageGoTo('/banner','/index','/imageLinks','')">
                         ${functionParent.name}</a>

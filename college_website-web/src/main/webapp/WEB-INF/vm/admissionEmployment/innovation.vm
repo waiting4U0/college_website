@@ -12,11 +12,12 @@
 </div>
 <div class="list m1200 cleafix">
     <div class="list_link fl">
-        <h2>学生工作</h2>
+        <h2>党建</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/studentJob/studyWorkerNotice','')" title="学工通知">学工通知</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/studentJob/studentUnion','')" title="学生会概括">学生会概括</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/studentJob/rulesRegulations','')" title="规章制度">规章制度</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/partyNews','')" title="党团快讯">党团快讯</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/organizationalStructure','')" title="组织结构">组织结构</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/membership','')" title="成员概况">成员概况</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/ideologicalPolitics','')" title="思想政治">思想政治</a></li>
         </ul>
     </div>
 
@@ -27,12 +28,11 @@
                 <span>当前位置：</span>
             #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
             &gt;*#
-                <span><a href="javascript:;" onclick="main.menuGoTo('/studentJob','')">学生工作</a></span>
-                <span><a href="javascript:;" onclick="main.menuGoTo('/studentJob/rulesRegulations','')">规章制度</a></span>
+                <span><a href="javascript:;" onclick="main.menuGoTo('/employment','')">党建</a></span>
                 &gt;
             </div>
             <div class="fl">
-                <h2>规章制度</h2>
+                <h2>党建</h2>
             </div>
         </div>
 
@@ -65,7 +65,7 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            规章制度
+            党建
         </div>
 
     </div>
@@ -79,3 +79,4 @@
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="/js/common/ajaxfileupload.js" type="text/javascript"></script>
+
