@@ -16,8 +16,7 @@
         <ul>
             <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/list','')" title="学院简介">学院简介</a></li>
             <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLeader','')" title="学院领导">学院领导</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/institutionalSetup','')" title="机构设置">机构设置</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLab','')" title="学院实验室">学院实验室</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLogo','')" title="学院标识">学院标识</a></li>
         </ul>
     </div>
 
@@ -28,8 +27,7 @@
                 <span>当前位置：</span>
             #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
             &gt;*#
-                <span><a href="javascript:;" onclick="main.menuGoTo('/overview/list','')">学院概况</a></span>
-                &gt;
+                <span><a href="javascript:;" onclick="main.menuGoTo('/overview','')">学院概况</a></span>
             </div>
             <div class="fl">
                 <h2>学院概况</h2>
