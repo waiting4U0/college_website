@@ -16,7 +16,7 @@ public class StudentsController {
 
     @RequestMapping(value = "/evaluation",method = {RequestMethod.GET})
     public String evaluation(){
-        return "students/evaluation";
+        return "students/news";
     }
 
     @RequestMapping(value = "/generalize",method = {RequestMethod.GET})
@@ -26,6 +26,6 @@ public class StudentsController {
 
     @RequestMapping(value="/training",method={RequestMethod.GET})
     public String training(){
-        return "students/training";
+        return "students/rules";
     }
 }
