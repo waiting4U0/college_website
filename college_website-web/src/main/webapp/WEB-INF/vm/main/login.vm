@@ -7,7 +7,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title>Login Options</title>
+<title>登录</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
@@ -27,62 +27,26 @@
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
-<body class="login">
-<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
-<div class="menu-toggler sidebar-toggler">
+<body >
+<div class="login">
+        <img src="../../assets/admin/layout/img/top_logo.png">
+    <h1>Welcome To School Of Information!</h1>
 </div>
-<!-- END SIDEBAR TOGGLER BUTTON -->
-<!-- BEGIN LOGO -->
-<div class="logo">
-	<a href="index">
-	<img src="/img/logo.png" style="height: 100px;width:200px;" alt=""/>
-	</a>
-</div>
-<!-- END LOGO -->
-<!-- BEGIN LOGIN -->
-<div class="content">
-	<!-- BEGIN LOGIN FORM -->
-	<form class="login-form" id="login_form" method="post" name="login_form">
-		<div class="form-title">
-			<span class="form-title">Welcome.</span>
-			<span class="form-subtitle">请输入用户名和密码.</span>
-		</div>
-		<div class="alert alert-danger display-hide">
-			<button class="close" data-close="alert"></button>
-			<span>请输入用户名和密码. </span>
-		</div>
-		<div class="alert alert-warning display-hide">
-			<button class="close" data-close="alert"></button>
-			<span>账号或密码错误，请重新输入！ </span>
-		</div>
-		
-		<div class="form-group">
-			<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-			<label class="control-label visible-ie8 visible-ie9">Username</label>
-			<input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username"  id="username" value="" name="username" />
-		</div>
-		<div class="form-group">
-			<label class="control-label visible-ie8 visible-ie9">Password</label>
-			<input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password"  id="password" value="" name="password" />
-		</div>
-		<div class="form-actions">
-			<button  id="submit_btn" type="submit" class="btn btn-primary btn-block uppercase">Login</button>
-		</div>
-		<div class="form-actions">
-			<div class="pull-left">
-				<label class="rememberme check">
-				<input type="checkbox" name="remember" value="1"/>Remember me </label>
-			</div>
-			<div class="pull-right forget-password-block">
-				<a href="javascript:;" id="forget-password" class="forget-password"></a>
-			</div>
-		</div>
-	</form>
-		
-</div>
+
 <div class="copyright">
-	 Copyright &copy; 2019 西南石油大学信息学院  版权所有
+Copyright &copy; 2019 西南石油大学信息学院  版权所有
 </div>
+<div class="loginBox">
+    <h2><b>Login In Here</b></h2>
+<form  action="/main/login">
+    <p>请输入账号</p>
+    <input type="text"  name="loginName" action="login.vm" placeholder="请输入账号" >
+    <p>请输入密码</p>
+    <input type="password" name="password" action="login.vm" placeholder="请输入密码">
+    <input type="submit" name="" value="登录">
+    <a href="http://localhost:8080/">返回首页</a>
+</form>
+
 
 <!-- END LOGIN -->
 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
