@@ -1,125 +1,113 @@
 <!-- BEGIN PAGE LEVEL PLUGIN STYLES -->
-<link href="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css"/>
+<link href="../../assets/global/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet"
+      type="text/css"/>
 <!-- END PAGE LEVEL PLUGIN STYLES -->
 <!-- BEGIN PAGE STYLES -->
 <link href="../../assets/admin/pages/css/tasks.css" rel="stylesheet" type="text/css"/>
 <!-- END PAGE STYLES -->
 
 
-
-
-    <div class="news_box m1200 cleafix">
-        <div class="news_left">
-            <div class="newsTitle" id="newsTitle1">
-                <h2>新闻聚焦</h2>
+<div class="news_box m1200 cleafix">
+    <div class="news_left">
+        <div class="newsTitle" id="newsTitle1">
+            <h2>新闻聚焦</h2>
+            <a href="list?type=10">更多&gt;</a>
+        </div>
+        <div class="photoList">
+            #foreach($message in $messages)
+                #if($message.messageType == 2)
+                    <div class="left_list">
+                        <a class="news_photo" href="" title="${message.messageTitle}">
+                            <img src="${message.messageImg}" alt="">
+                        </a>
+                        <a class="news_f" href="" title="${message.messageTitle}"
+                        <span>${message.messageTitle}</span>
+                        <p>${message.messageContent}</p>
+                        </a>
+                    </div>
+                #end
+            #end
+        </div>
+    </div>
+    <div class="news_right">
+        <div class="news_rt">
+            <div class="newsTitle" id="newsTitle2">
+                <h2>学工通知</h2>
                 <a href="list?type=10">更多&gt;</a>
             </div>
-            <div class="photoList">
-                <div class="left_list" >
-                    <a class="news_photo" href="" title="信息院组织开展春游踏青活动">
-                        <img src="../../assets/admin/layout/img/new1.jpg" alt="">
-                    </a>
-                    <a class="news_f" href="" title="信息院组织开展春游踏青活动"
-                        <span>信息院组织开展春游踏青活动...</span>
-                    </a>
-                </div>
-                <div class="left_list">
-                    <a class="news_photo" href="" title="信息院组织开展春游踏青活动">
-                        <img src="../../assets/admin/layout/img/new2.jpg" alt="">
-                    </a>
-                    <a class="news_f" href="" title="信息院组织开展春游踏青活动">
-                        <span>信息院组织开展春游踏青活动...</span>
-                    </a>
-                </div>
-                <div class="left_list">
-                    <a class="news_photo" href="" title="信息院组织开展春游踏青活动">
-                        <img src="../../assets/admin/layout/img/new3.jpg" alt="">
-                    </a>
-                    <a class="news_f" href="" title="信息院组织开展春游踏青活动">
-                        <span>信息院组织开展春游踏青活动...</span>
-                    </a>
-                </div>
+            <div class="focusList">
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
             </div>
         </div>
-        <div class="news_right">
-            <div class="news_rt">
-                <div class="newsTitle" id="newsTitle2">
-                    <h2>新闻聚焦</h2>
-                    <a href="list?type=10">更多&gt;</a>
-                </div>
-                <div class="focusList">
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                </div>
+        <div class="news_rd">
+            <div class="newsTitle" id="newsTitle3">
+                <h2>党团快讯</h2>
+                <a href="list?type=10">更多&gt;</a>
             </div>
-            <div class="news_rd">
-                <div class="newsTitle" id="newsTitle3">
-                    <h2>新闻聚焦</h2>
-                    <a href="list?type=10">更多&gt;</a>
-                </div>
-                <div class="focusList">
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+            <div class="focusList">
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
                                 信息院组织开展春游踏青活动...
                              </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
                                 信息院组织开展春游踏青活动...
                              </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
                                 信息院组织开展春游踏青活动...
                              </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
                                 信息院组织开展春游踏青活动...
                              </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
                                 信息院组织开展春游踏青活动...
                              </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
     </div>
+</div>
 
 #*复制
     <div class="news_box m1200 cleafix">

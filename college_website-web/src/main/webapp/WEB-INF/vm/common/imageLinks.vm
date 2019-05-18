@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="#">
+                <a href="/students/login" target="_blank">
                     <div class="image" id="image3">
                         <div class="image_font">
                             <img src="" alt="">
