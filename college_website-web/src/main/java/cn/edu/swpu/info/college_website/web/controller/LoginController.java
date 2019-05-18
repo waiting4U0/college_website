@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
-@RequestMapping("/Login")
+@RequestMapping("main/login")
 public class LoginController {
     @Resource
     private UserInfoService userInfoService;
@@ -20,7 +20,9 @@ public class LoginController {
         List<UserInfo> userInfoList = userInfoService.selectUserInfoList(new UserInfo());
         System.out.println(LoginName);
         System.out.println(password);
-       // UserInfo userInfo = new UserInfo(LoginName,password);
+        String name = "201731771247";
+        String pass = "123456";
+//        UserInfo userInfo = new UserInfo(LoginName,password);
 //        for (UserInfo userInfo2 : userInfoList){
 //            System.out.println(userInfo.getName());
 //        }
@@ -32,22 +34,25 @@ public class LoginController {
 //        }else {
 //            flag1 = false;
 //        }
-//        for (UserInfo userInfo1 : userInfoList){
+//        for (LoginName ==){
 //
-//            if( userInfo.getName()==userInfo1.getName()){
-//
-//                flag2 = true;
-//
-//            }else {
-//                flag2 = false;
-//            }
-//            if(userInfo.getPassword()==userInfo1.getPassword()) {
-//                flag3 = true;
-//            }else {
-//                flag3 = false;
-//            }
-//        }
+            if(LoginName == name ){
 
-        return "loginsucceed";
+                flag2 = true;
+
+            }else {
+                flag2 = false;
+            }
+            if(password == pass) {
+                flag3 = true;
+            }else {
+                flag3 = false;
+            }
+//        }
+if(flag2 && flag3){
+    return "main/loginsucceed";
+}
+
+        return null;
     }
 }
