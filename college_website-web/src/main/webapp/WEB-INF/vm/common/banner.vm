@@ -53,15 +53,6 @@
             <li #*style="background-color: rgb(56, 42, 186);"*#>
                 <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner3.jpg" /></a>
             </li>
-            <li #*style="background-color: rgb(179, 166, 251);"*#>
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner1.jpg" /></a>
-            </li>
-            <li #*style="background-color: rgb(91, 66, 207);*#">
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner2.jpg" /></a>
-            </li>
-            <li #*style="background-color: rgb(37, 70, 187);"*#>
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner3.jpg" /></a>
-            </li>
         </ul>
     </div>
 

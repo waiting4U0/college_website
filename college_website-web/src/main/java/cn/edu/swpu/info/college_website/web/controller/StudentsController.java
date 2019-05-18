@@ -19,9 +19,9 @@ public class StudentsController {
         return "students/students";
     }
 
-    @RequestMapping(value = "/evaluation",method = {RequestMethod.GET})
+    @RequestMapping(value = "/news",method = {RequestMethod.GET})
     public String evaluation(){
-        return "students/evaluation";
+        return "students/news";
     }
 
     @RequestMapping(value = "/generalize",method = {RequestMethod.GET})
@@ -29,9 +29,9 @@ public class StudentsController {
         return "students/generalize";
     }
 
-    @RequestMapping(value="/training",method={RequestMethod.GET})
+    @RequestMapping(value="/rules",method={RequestMethod.GET})
     public String training(){
-        return "students/training";
+        return "students/rules";
     }
     @RequestMapping(value = "/login", method = { RequestMethod.POST })
     public String login(HttpServletRequest request, HttpServletResponse response, Model view) {

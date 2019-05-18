@@ -12,12 +12,12 @@
 </div>
 <div class="list m1200 cleafix">
     <div class="list_link fl">
-        <h2>党建</h2>
+        <h2>党团建设</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/partyNews','')" title="党团快讯">党团快讯</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/organizationalStructure','')" title="组织结构">组织结构</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/membership','')" title="成员概况">成员概况</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/ideologicalPolitics','')" title="思想政治">思想政治</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/structure','')" title="组织结构">组织结构</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/news','')" title="党团快讯">党团快讯</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/study','')" title="理论学习">理论学习</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/activity','')" title="工会活动">工会活动</a></li>
         </ul>
     </div>
 
@@ -28,12 +28,12 @@
                 <span>当前位置：</span>
             #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
             &gt;*#
-                <span><a href="javascript:;" onclick="main.menuGoTo('/employment','')">党建</a></span>
+                <span><a href="javascript:;" onclick="main.menuGoTo('/party','')">党团建设</a></span>
                 &gt;
-                <span><a href="javascript:;" onclick="main.menuGoTo('/party/membership','')">成员概况</a></span>
+                <span><a href="javascript:;" onclick="main.menuGoTo('/party/study','')">理论学习</a></span>
             </div>
             <div class="fl">
-                <h2>成员概况</h2>
+                <h2>理论学习</h2>
             </div>
         </div>
 
@@ -66,7 +66,7 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            成员概况
+            理论学习
         </div>
 
     </div>

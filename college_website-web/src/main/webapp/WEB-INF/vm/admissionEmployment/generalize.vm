@@ -12,10 +12,14 @@
 </div>
 <div class="list m1200 cleafix">
     <div class="list_link fl">
-        <h2>就业</h2>
+        <h2>招生就业</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/employment/careerGuidance','')" title="就业指导">就业指导</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/employment/innovationEntrepreneurship','')" title="创新创业">创新创业</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/major','')" title="专业介绍">专业介绍</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/generalize','')" title="招生就业概括">招生就业概括</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/undergraduateAdmission','')" title="本科生招生网">本科生招生网</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/postgraduateAdmission','')" title="研究生招生信息">研究生招生信息</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/graduateEmployment','')" title="毕业生就业指导">毕业生就业指导</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/innovation','')" title="创新创业">创新创业</a></li>
         </ul>
     </div>
 
@@ -26,12 +30,10 @@
                 <span>当前位置：</span>
             #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
             &gt;*#
-                <span><a href="javascript:;" onclick="main.menuGoTo('/employment','')">就业</a></span>
-                &gt;
-                <span><a href="javascript:;" onclick="main.menuGoTo('/employment/innovationEntrepreneurship','')">创新创业</a></span>
+                <span><a href="javascript:;" onclick="main.menuGoTo('/admissionEmployment','')">招生就业</a></span>
             </div>
             <div class="fl">
-                <h2>创新创业</h2>
+                <h2>招生就业</h2>
             </div>
         </div>
 
@@ -64,7 +66,7 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            创新创业
+            招生就业
         </div>
 
     </div>

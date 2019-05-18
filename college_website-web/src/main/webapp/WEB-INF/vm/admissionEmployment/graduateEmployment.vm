@@ -12,12 +12,14 @@
 </div>
 <div class="list m1200 cleafix">
     <div class="list_link fl">
-        <h2>党建</h2>
+        <h2>招生就业</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/partyNews','')" title="党团快讯">党团快讯</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/organizationalStructure','')" title="组织结构">组织结构</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/membership','')" title="成员概况">成员概况</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/ideologicalPolitics','')" title="思想政治">思想政治</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/major','')" title="专业介绍">专业介绍</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/generalize','')" title="招生就业概括">招生就业概括</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/undergraduateAdmission','')" title="本科生招生网">本科生招生网</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/postgraduateAdmission','')" title="研究生招生信息">研究生招生信息</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/graduateEmployment','')" title="毕业生就业指导">毕业生就业指导</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/innovation','')" title="创新创业">创新创业</a></li>
         </ul>
     </div>
 
@@ -28,11 +30,12 @@
                 <span>当前位置：</span>
             #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
             &gt;*#
-                <span><a href="javascript:;" onclick="main.menuGoTo('/employment','')">党建</a></span>
+                <span><a href="javascript:;" onclick="main.menuGoTo('/admissionEmployment','')">招生就业</a></span>
                 &gt;
+                <span><a href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/graduateEmployment','')">毕业生就业指导</a></span>
             </div>
             <div class="fl">
-                <h2>党建</h2>
+                <h2>毕业生就业指导</h2>
             </div>
         </div>
 
@@ -65,7 +68,7 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            党建
+            毕业生就业指导
         </div>
 
     </div>
