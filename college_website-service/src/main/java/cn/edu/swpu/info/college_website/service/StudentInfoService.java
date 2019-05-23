@@ -7,4 +7,7 @@ import java.util.List;
 public interface StudentInfoService {
     List<StudentInfo> selectStudentInfolist(StudentInfo studentInfo);
     Integer countStudentInfo(StudentInfo studentInfo);
+    boolean studentLogin(String loginName,String password);
+
+
 }
