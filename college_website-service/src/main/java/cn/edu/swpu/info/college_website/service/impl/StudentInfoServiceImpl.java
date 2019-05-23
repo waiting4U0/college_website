@@ -11,8 +11,8 @@ import java.util.List;
 public class StudentInfoServiceImpl implements StudentInfoService {
     @Resource
     private StudentInfoDao studentInfoDao;
-    @Resource
-    private StudentInfoService studentInfoService;
+//    @Resource
+//    private StudentInfoService studentInfoService;
     @Override
     public List<StudentInfo> selectStudentInfolist(StudentInfo studentInfo) {
         return studentInfoDao.selectEntryList(studentInfo);
@@ -23,39 +23,39 @@ public class StudentInfoServiceImpl implements StudentInfoService {
         return studentInfoDao.selectEntryListCount(studentInfo);
     }
 
-    @Override
-    public boolean studentLogin(String loginName, String password) {
-
-
-            List<StudentInfo> studentInfoList = studentInfoService.selectStudentInfolist(new StudentInfo());
-            boolean flag1 = false;
-            boolean flag2 = false;
-            boolean flag3 = false;
-            String name = "201731771247";
-            String pass = "123456";
-            if (loginName != null  ){
-                flag1 = true;
-            }else {
-                flag1 = false;
-            }
-
-            if (loginName == name) {
-
-                flag2 = true;
-
-            } else {
-                flag2 = false;
-            }
-            if (password == pass) {
-                flag3 = true;
-            } else {
-                flag3 = false;
-            }
-            if(flag1==true ){
-                return  true;
-            }
-
-            return false;
-    }
+//    @Override
+//    public boolean studentLogin(String loginName, String password) {
+//
+//
+//            List<StudentInfo> studentInfoList = studentInfoService.selectStudentInfolist(new StudentInfo());
+//            boolean flag1 = false;
+//            boolean flag2 = false;
+//            boolean flag3 = false;
+//            String name = "201731771247";
+//            String pass = "123456";
+//            if (loginName != null  ){
+//                flag1 = true;
+//            }else {
+//                flag1 = false;
+//            }
+//
+//            if (loginName == name) {
+//
+//                flag2 = true;
+//
+//            } else {
+//                flag2 = false;
+//            }
+//            if (password == pass) {
+//                flag3 = true;
+//            } else {
+//                flag3 = false;
+//            }
+//            if(flag1==true ){
+//                return  true;
+//            }
+//
+//            return false;
+//    }
 
 }

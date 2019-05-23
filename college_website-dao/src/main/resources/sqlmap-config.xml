@@ -21,7 +21,7 @@
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRole" alias="opsRole"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRoleFunction" alias="opsRoleFunction"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.BannerImgInfo" alias="bannerImgInfo"/>
-		<typeAlias type="cn.edu.swpu.info.college_website.domain.UserInfo" alias="userInfo"/>
+
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.Message" alias="message"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.MessageType" alias="messageType"/>
 		<typeAlias type="cn.edu.swpu.info.college_website.domain.StudentInfo" alias="studentInfo"/>
