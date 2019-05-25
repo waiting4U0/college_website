@@ -35,6 +35,7 @@
                 <h2>学工通知</h2>
                 <a href="list?type=10">更多&gt;</a>
             </div>
+
             <div class="focusList">
                 <p>
                     <span><img src="/img/news_tip.png"></span>

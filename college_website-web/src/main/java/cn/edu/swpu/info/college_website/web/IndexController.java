@@ -24,9 +24,12 @@ public class IndexController {
 
 	@RequestMapping(value = "", method = { RequestMethod.GET })
 	public String index(HttpServletRequest request, HttpServletResponse response, Model view) {
+		//信息加载
 		List<Message> messagesData = messageService.selectMessagelist(new Message());
 		view.addAttribute("messages", messagesData);
+
 		List<OpsFunction> functionData = PinContext.getFunctionData();
+
 //		//加载用户资源
 //		view.addAttribute("erp", pin);
 		view.addAttribute("functions", functionData);
@@ -51,8 +54,5 @@ public class IndexController {
 	public String imageLinks(HttpServletRequest request, HttpServletResponse response, Model view) {
 		return "common/imageLinks";
 	}
-	@RequestMapping(value = "main/login", method = { RequestMethod.GET })
-	public String login(HttpServletRequest request, HttpServletResponse response, Model view) {
-		return "main/login";
-	}
+
 }
