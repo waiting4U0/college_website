@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.text.ParseException;
+import java.util.LinkedList;
 import java.util.List;
 
 @Controller
@@ -23,13 +25,9 @@ public class IndexController {
 	public static Logger LOG = LoggerFactory.getLogger(IndexController.class);
 
 	@RequestMapping(value = "", method = { RequestMethod.GET })
-	public String index(HttpServletRequest request, HttpServletResponse response, Model view) {
-		//信息加载
-		List<Message> messagesData = messageService.selectMessagelist(new Message());
-		view.addAttribute("messages", messagesData);
-
+	public String index(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+		view.addAttribute("messages", messageService.selectIndexMessagelist());
 		List<OpsFunction> functionData = PinContext.getFunctionData();
-
 //		//加载用户资源
 //		view.addAttribute("erp", pin);
 		view.addAttribute("functions", functionData);
@@ -39,9 +37,8 @@ public class IndexController {
 	@Resource
 	private MessageService messageService;
 	@RequestMapping(value = "/index", method = { RequestMethod.GET })
-	public String index1(HttpServletRequest request, HttpServletResponse response, Model view) {
-		List<Message> messagesData = messageService.selectMessagelist(new Message());
-		view.addAttribute("messages", messagesData);
+	public String index1(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+		view.addAttribute("messages", messageService.selectIndexMessagelist());
 		return "common/index";
 	}
 
@@ -54,5 +51,8 @@ public class IndexController {
 	public String imageLinks(HttpServletRequest request, HttpServletResponse response, Model view) {
 		return "common/imageLinks";
 	}
-
+	@RequestMapping(value = "main/login", method = { RequestMethod.GET })
+	public String login(HttpServletRequest request, HttpServletResponse response, Model view) {
+		return "main/login";
+	}
 }
