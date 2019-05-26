@@ -10,7 +10,7 @@
 
         </div>
         <div class="imageLinks_box_right">
-            <div class="imageLinks_box_right_f" >
+            <div class="imageLinks_box_right_f">
                 <h2>快 速 链 接</h2>
             </div>
             <div class="imageLinks_box_right_p">
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="/teachers/teacherlogin">
+                <a href="/teachers/login">
                     <div class="image" id="image2">
                         <div class="image_font">
                             <img src="" alt="">
@@ -30,7 +30,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="/students/studentlogin" target="_blank">
+                <a href="/students/login" target="_blank">
                     <div class="image" id="image3">
                         <div class="image_font">
                             <img src="" alt="">
@@ -50,40 +50,40 @@
 
         </div>
 
-        #*<div class="imageLinks_box_down">
-            <a href="#">
-                <div class="image" id="image5">
-                    <div class="image_font">
-                        <img src="" alt="">
-                        <span>石大指数</span>
-                    </div>
+    #*<div class="imageLinks_box_down">
+        <a href="#">
+            <div class="image" id="image5">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大指数</span>
                 </div>
-            </a>
-            <a href="#">
-                <div class="image" id="image6">
-                    <div class="image_font">
-                        <img src="" alt="">
-                        <span>石大黄页</span>
-                    </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image6">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大黄页</span>
                 </div>
-            </a>
-            <a href="#">
-                <div class="image" id="image7">
-                    <div class="image_font">
-                        <img src="" alt="">
-                        <span>山海原经典网</span>
-                    </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image7">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>山海原经典网</span>
                 </div>
-            </a>
-            <a href="#">
-                <div class="image" id="image8">
-                    <div class="image_font">
-                        <img src="" alt="">
-                        <span>石大新媒体</span>
-                    </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="image" id="image8">
+                <div class="image_font">
+                    <img src="" alt="">
+                    <span>石大新媒体</span>
                 </div>
-            </a>
-        </div>*#
+            </div>
+        </a>
+    </div>*#
     </div>
 
 </div>

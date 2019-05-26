@@ -57,17 +57,17 @@ fmCategoryJS.addSave = function (formId) {
     });
 };
 
-fmCategoryJS.del  = function(id) {
-    bootbox.confirm("确定删除?", function(result) {
-        if(result){
+fmCategoryJS.del = function (id) {
+    bootbox.confirm("确定删除?", function (result) {
+        if (result) {
             $.ajax({
                 url: '/fmCategory/' + id,
                 type: 'DELETE',
                 dataType: 'json',
                 success: function (data) {
                     if (data.code == 200) {
-                        var requestData={"startIndex":$("#curPageNum").val()};
-                        main.menuGoTo("/fmCategory/list",requestData);
+                        var requestData = {"startIndex": $("#curPageNum").val()};
+                        main.menuGoTo("/fmCategory/list", requestData);
                     } else {
                         bootbox.alert("删除出现异常，请重新删除!");
                     }
@@ -86,7 +86,7 @@ fmCategoryJS.saveCheck = function (formId) {
             bootbox.alert("排序号只能为整数");
             return false;
         }
-        if ($("#categoryType", "#" + formId).val() === 1){
+        if ($("#categoryType", "#" + formId).val() === 1) {
             if ($("#categoryId", "#" + formId).val() === "") {
                 bootbox.alert("请输入分类ID");
                 return false;

@@ -13,9 +13,12 @@
     <div class="list_link fl">
         <h2>学生工作</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/students/generalize','')" title="学生会概括">学生会概括</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/students/news','')" title="学工通知">学工通知</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/students/rules','')" title="规章制度">规章制度</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/students/generalize','')" title="学生会概括">学生会概括</a>
+            </li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/students/news','')"
+                   title="学工通知">学工通知</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/students/rules','')"
+                   title="规章制度">规章制度</a></li>
         </ul>
     </div>
 

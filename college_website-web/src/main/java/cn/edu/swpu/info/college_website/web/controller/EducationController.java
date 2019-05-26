@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/education", method = {RequestMethod.GET, RequestMethod.POST})
 public class EducationController {
 
-    @RequestMapping(value = "",method = {RequestMethod.GET})
-    public String main(){
+    @RequestMapping(value = "", method = {RequestMethod.GET})
+    public String main() {
         return "education/education";
     }
 
-    @RequestMapping(value = "/postgraduate",method = {RequestMethod.GET})
-    public String postgraduate(){
+    @RequestMapping(value = "/postgraduate", method = {RequestMethod.GET})
+    public String postgraduate() {
         return "education/postgraduate";
     }
 
-    @RequestMapping(value = "/resource",method = {RequestMethod.GET})
-    public String resource(){
+    @RequestMapping(value = "/resource", method = {RequestMethod.GET})
+    public String resource() {
         return "education/resource";
     }
 
-    @RequestMapping(value = "/training",method = {RequestMethod.GET})
-    public String training(){
+    @RequestMapping(value = "/training", method = {RequestMethod.GET})
+    public String training() {
         return "education/training";
     }
 }

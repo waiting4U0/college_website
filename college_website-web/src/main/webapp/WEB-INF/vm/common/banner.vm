@@ -22,43 +22,43 @@
                     <div class="liner"></div>
                 </div>
             </li>
-            #*<li>
-                <span>OCR 3款新品火热邀测</span>
-                <div class="dot">
-                    <div class="liner"></div>
-                </div>
-            </li>
-            <li>
-                <span>人脸离线识别SDK 2.0</span>
-                <div class="dot">
-                    <div class="liner"></div>
-                </div>
-            </li>
-            <li>
-                <span>地标识别技术上线</span>
-                <div class="dot">
-                    <div class="liner"></div>
-                </div>
-            </li>*#
+        #*<li>
+            <span>OCR 3款新品火热邀测</span>
+            <div class="dot">
+                <div class="liner"></div>
+            </div>
+        </li>
+        <li>
+            <span>人脸离线识别SDK 2.0</span>
+            <div class="dot">
+                <div class="liner"></div>
+            </div>
+        </li>
+        <li>
+            <span>地标识别技术上线</span>
+            <div class="dot">
+                <div class="liner"></div>
+            </div>
+        </li>*#
         </ul>
     </div>
     <div class="bd">
         <ul>
             <li #*style="background-color: rgb(183, 159, 255);*#">
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner1.jpg" /></a>
+            <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner1.jpg"/></a>
             </li>
             <li #*style="background-color: rgb(56, 29, 140);"*#>
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner2.jpg" /></a>
+                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner2.jpg"/></a>
             </li>
             <li #*style="background-color: rgb(56, 42, 186);"*#>
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner3.jpg" /></a>
+                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner3.jpg"/></a>
             </li>
         </ul>
     </div>
 
     <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-    #*<a class="prev" href="javascript:void(0)"></a>
-    <a class="next" href="javascript:void(0)"></a>*#
+#*<a class="prev" href="javascript:void(0)"></a>
+<a class="next" href="javascript:void(0)"></a>*#
 
 </div>
 <script type="text/javascript" src="../../assets/global/plugins/jquery.min.js"></script>
@@ -71,7 +71,7 @@
         trigger: "click",
         autoPlay: true,
         mouseOverStop: false,
-        startFun:function(i,c){
+        startFun: function (i, c) {
             $('.bd ul li').removeClass('active').eq(i).addClass('active');
         }
     });

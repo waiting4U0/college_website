@@ -2,35 +2,37 @@
 Login page
 ***/
 /* bg color */
-body{
-  background-image:url("/assets/admin/pages/img/bg5.jpg");
-  margin: 0;
-  padding: 0;
-  font-family:sans-serif;
-  background-size: cover;
+body {
+    background-image: url("/assets/admin/pages/img/bg5.jpg");
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-size: cover;
 }
-.loginBox{
- position: absolute;
-  top: 50%;
-  left: 80%;
-  transform: translate(-50%,-50%);
-  width: 350px;
+
+.loginBox {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    width: 350px;
     height: 420px;
-  padding:80px 40px;
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    padding: 80px 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
 }
-.user{
-    width:100px;
+
+.user {
+    width: 100px;
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
-position: absolute;
-    top:calc(-100px/2);
-    left:calc(50% - 50px)
+    position: absolute;
+    top: calc(-100px / 2);
+    left: calc(50% - 50px)
 }
-h2
-{
+
+h2 {
     margin: 0;
     padding: 0 0 20px;
     color: white;
@@ -38,20 +40,20 @@ h2
     font-size: 100px;
 
 }
-.loginBox p
-{
+
+.loginBox p {
     margin: 0;
     padding: 0;
     font-weight: bold;
-    color:white;
+    color: white;
 }
-.loginBox input
-{
+
+.loginBox input {
     width: 100%;
     margin-bottom: 20px;
 }
-.loginBox input[type="text"]
-{
+
+.loginBox input[type="text"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -60,8 +62,8 @@ h2
     color: #fff;
     font-size: 16px;
 }
-.loginBox input[type="password"]
-{
+
+.loginBox input[type="password"] {
     border: none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -70,64 +72,68 @@ h2
     color: #fff;
     font-size: 16px;
 }
-::placeholder
-{
-    color: rgba(255,255,255,.5);
+
+::placeholder {
+    color: rgba(255, 255, 255, .5);
 
 }
-.loginBox input[type="submit"]
-{
+
+.loginBox input[type="submit"] {
     border: none;
     outline: none;
     height: 40px;
     color: #ffffff;
     font-size: 16px;
     background: #ff6347;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 20px;
 }
-.loginBox input [type="submit"]:hover
-{
+
+.loginBox input [type="submit"]:hover {
     background: #32cd32;
-    color:#ffffff;
+    color: #ffffff;
 }
-.loginBox a{
+
+.loginBox a {
     color: #fff;
     font-size: 14px;
     font-weight: bold;
     text-decoration: none;
 }
+
 /* footer copyright */
 .copyright {
-  text-align: center;
-  margin: 10px auto 30px 0;
-  padding: 10px;
-  color:black;
-  font-size: 13px;
-  position: absolute;
-  bottom: 0;
-  left: 70%;
+    text-align: center;
+    margin: 10px auto 30px 0;
+    padding: 10px;
+    color: black;
+    font-size: 13px;
+    position: absolute;
+    bottom: 0;
+    left: 70%;
 }
 
 @media (max-width: 1400px) {
-   .logo {
-    margin-top: 100px;
-  }
+    .logo {
+        margin-top: 100px;
+    }
 }
+
 @media (max-width: 480px) {
-  /***
-  Login page
-  ***/
-  /* .login .logo {
-     margin-top: 30px;
-     padding: 0px;
-   }
-   */
-   .box {
-    width: 245px;
-  }
+    /***
+    Login page
+    ***/
+    /* .login .logo {
+       margin-top: 30px;
+       padding: 0px;
+     }
+     */
+    .box {
+        width: 245px;
+    }
 }
-  /*.login .h1 {
-    font-size: 22px;
-  }
+
+/*.login .h1 {
+  font-size: 22px;
+}
 }

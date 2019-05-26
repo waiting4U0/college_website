@@ -14,10 +14,14 @@
     <div class="list_link fl">
         <h2>党团建设</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/structure','')" title="组织结构">组织结构</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/news','')" title="党团快讯">党团快讯</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/study','')" title="理论学习">理论学习</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/activity','')" title="工会活动">工会活动</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/structure','')"
+                   title="组织结构">组织结构</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/news','')" title="党团快讯">党团快讯</a>
+            </li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/study','')" title="理论学习">理论学习</a>
+            </li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/party/activity','')"
+                   title="工会活动">工会活动</a></li>
         </ul>
     </div>
 

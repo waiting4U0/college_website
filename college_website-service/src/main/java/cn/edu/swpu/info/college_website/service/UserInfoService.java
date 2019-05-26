@@ -14,8 +14,13 @@ public interface UserInfoService {
     long updateUserInfo(UserInfo userInfo);
 
     UserInfo getUserInfoById(Long id);
+
     int remove(UserInfo condition);
+
     List<UserInfo> selectUserInfoList(UserInfo userInfo);
-//    public UserInfo selectUserByUsernameAndPassword(UserInfo userInfo);
-    boolean userLogin(String loginName,String password);
+
+    //    public UserInfo selectUserByUsernameAndPassword(UserInfo userInfo);
+    //boolean userLogin(UserInfo userInfo);
+    boolean check(UserInfo userInfo);
+
 }

@@ -14,7 +14,8 @@
     <div class="list_link fl">
         <h2>联系我们</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/contactUs/phone','')" title="联系电话">联系电话</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/contactUs/phone','')"
+                   title="联系电话">联系电话</a></li>
         </ul>
     </div>
 

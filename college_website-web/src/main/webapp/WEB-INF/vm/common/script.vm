@@ -8,25 +8,28 @@
 <!-- JMA埋点 =============================-->
 <script type="text/javascript">
     var jaq = jaq || [];
-    jaq.push(['account','UA-J2011-5']);
-    jaq.push(['domain','jcloud.com']);
-    (function() {
-        var ja = document.createElement('script'); ja.type = 'text/javascript'; ja.async = true;
+    jaq.push(['account', 'UA-J2011-5']);
+    jaq.push(['domain', 'jcloud.com']);
+    (function () {
+        var ja = document.createElement('script');
+        ja.type = 'text/javascript';
+        ja.async = true;
         ja.src = ('https:' == document.location.protocol ? 'https://cscssl' : 'http://csc') + '.jd.com/joya.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ja, s);
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ja, s);
     })();
 </script>
 <!-- ScollUp Component -->
 <script type="text/javascript">
-	jQuery.scrollUp({
-		scrollName: 'scrollUp', 
-		topDistance: '100', 
-		topSpeed: 300, 
-		animation: 'fade', 
-		animationInSpeed: 200, 
-		animationOutSpeed: 200, 
-		scrollText: '', 
-		activeOverlay: false
-	}); 
-	jQuery.ajax({cache:false});
+    jQuery.scrollUp({
+        scrollName: 'scrollUp',
+        topDistance: '100',
+        topSpeed: 300,
+        animation: 'fade',
+        animationInSpeed: 200,
+        animationOutSpeed: 200,
+        scrollText: '',
+        activeOverlay: false
+    });
+    jQuery.ajax({cache: false});
 </script>

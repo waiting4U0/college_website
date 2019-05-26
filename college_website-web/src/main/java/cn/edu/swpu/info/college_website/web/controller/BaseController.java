@@ -1,4 +1,3 @@
-
 package cn.edu.swpu.info.college_website.web.controller;
 
 
@@ -21,15 +20,25 @@ import java.util.Map;
 
 public class BaseController extends VelocitySupport {
 
-    public final static String SUCCESS="success";
-    public final static String ERROR="error";
+    public final static String SUCCESS = "success";
+    public final static String ERROR = "error";
     public final static Integer USER_MAX_NUM = 100;
 
     protected HttpServletRequest request;
 
     protected HttpServletResponse response;
 
-
+    public static String encodeStr(String tmpStr) {
+        if (StringUtils.isNotBlank(tmpStr)) {
+            try {
+                return new String(tmpStr.getBytes("ISO-8859-1"), "utf-8");
+            } catch (UnsupportedEncodingException e) {
+                return "";
+            }
+        } else {
+            return "";
+        }
+    }
 
     @InitBinder
     public void initBinder(WebDataBinder binder, WebRequest request) {
@@ -38,7 +47,7 @@ public class BaseController extends VelocitySupport {
 
     /**
      * 获取请求对象
-     * 
+     *
      * @return
      */
     protected HttpServletRequest getRequest() {
@@ -48,7 +57,7 @@ public class BaseController extends VelocitySupport {
 
     /**
      * 获取响应对象
-     * 
+     *
      * @return
      */
     protected HttpServletResponse getResponse() {
@@ -56,10 +65,9 @@ public class BaseController extends VelocitySupport {
         return this.response;
     }
 
-
     /**
      * 跳转
-     * 
+     *
      * @param location
      */
     protected void sendRedirect(String location) {
@@ -71,18 +79,15 @@ public class BaseController extends VelocitySupport {
         }
     }
 
-
-
     /**
      * 输出XML对象
-     * 
+     *
      * @param model
      */
     protected ModelAndView toXML(Object model) {
         //return write(ObjectUtils.object2xml(model), "text/xml");
         return null;
     }
-
 
     /**
      * 返回结果可指定模板
@@ -98,7 +103,6 @@ public class BaseController extends VelocitySupport {
         return mv;
     }
 
-
     /**
      * 返回结果,默认模板
      *
@@ -107,8 +111,7 @@ public class BaseController extends VelocitySupport {
      * @return
      */
     protected ModelAndView toResult(String view, Object model) {
-        if(model == null)
-        {
+        if (model == null) {
             model = new Result();     // 当传入参数model为null时，创建一个新的Result对象;
         }
         return toResult(VELOCITY_DETAULT_LAYOUT, view, model);
@@ -133,8 +136,7 @@ public class BaseController extends VelocitySupport {
      * @return
      */
     protected ModelAndView toVM(String view, Object model) {
-        if(model == null)
-        {
+        if (model == null) {
             model = new Result();     // 当传入参数model为null时，创建一个新的Result对象;
         }
         // 向页面注入基础工具对象;
@@ -151,8 +153,7 @@ public class BaseController extends VelocitySupport {
         Result result = new Result();
         result.addDefaultModel("errorMsg", errorMsg);
         // 向页面注入基础工具对象;
-        if(skipLayout)
-        {
+        if (skipLayout) {
             return toVM(null, "vm2.0/common/error", result);
         }
         return toVM(VELOCITY_DETAULT_LAYOUT, "vm2.0/common/error", result);
@@ -166,26 +167,11 @@ public class BaseController extends VelocitySupport {
      * @return
      */
     protected ModelAndView toResultSkipLayout(String view, Object model) {
-        if(model == null)
-        {
+        if (model == null) {
             model = new Result();     // 当传入参数model为null时，创建一个新的Result对象;
         }
         // 向页面注入基础工具对象;
         return toResult(null, view, model);
-    }
-
-
-
-    public static String encodeStr(String tmpStr) {
-        if (StringUtils.isNotBlank(tmpStr)) {
-            try {
-                return new String(tmpStr.getBytes("ISO-8859-1"), "utf-8");
-            } catch (UnsupportedEncodingException e) {
-                return "";
-            }
-        } else {
-            return "";
-        }
     }
 
     /**
@@ -208,12 +194,12 @@ public class BaseController extends VelocitySupport {
 
     }
 
-	/* (non-Javadoc)
-	 * @see com.jd.smart_fridge_ops.web.controller.VelocitySupport#getDefaultContext()
-	 */
-	@Override
-	protected Map<String, Object> getDefaultContext() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    /* (non-Javadoc)
+     * @see com.jd.smart_fridge_ops.web.controller.VelocitySupport#getDefaultContext()
+     */
+    @Override
+    protected Map<String, Object> getDefaultContext() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }

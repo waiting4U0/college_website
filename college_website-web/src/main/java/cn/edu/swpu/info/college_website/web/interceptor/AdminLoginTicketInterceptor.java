@@ -19,14 +19,11 @@ import java.util.List;
 
 
 public class AdminLoginTicketInterceptor implements org.springframework.web.servlet.HandlerInterceptor {
+    private final static Log LOG = LogFactory.getLog(AdminLoginTicketInterceptor.class);
     @Resource
     private OpsFunctionService opsFunctionService;
-
     @Resource
     private OpsRoleFunctionDao opsRoleFunctionDao;
-
-
-    private final static Log LOG = LogFactory.getLog(AdminLoginTicketInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request,
@@ -88,21 +85,21 @@ public class AdminLoginTicketInterceptor implements org.springframework.web.serv
 //    }
 
 
-	private List<OpsRoleFunction> getOpsRoleFunctionsByRoleIds(List<Long> roleIds) {
-		List<OpsRoleFunction> opsRoleFunctionList = new ArrayList<OpsRoleFunction>();
-		for (Long roleId : roleIds) {
-			OpsRoleFunction opsRoleFunction = new OpsRoleFunction();
-			opsRoleFunction.setRoleId(roleId);
-			List<OpsRoleFunction> list = opsRoleFunctionDao.selectEntryList(opsRoleFunction);
-			if (CollectionUtils.isNotEmpty(list)) {
-				opsRoleFunctionList.addAll(list);
-			}
-		}
-		return opsRoleFunctionList;
+    private List<OpsRoleFunction> getOpsRoleFunctionsByRoleIds(List<Long> roleIds) {
+        List<OpsRoleFunction> opsRoleFunctionList = new ArrayList<OpsRoleFunction>();
+        for (Long roleId : roleIds) {
+            OpsRoleFunction opsRoleFunction = new OpsRoleFunction();
+            opsRoleFunction.setRoleId(roleId);
+            List<OpsRoleFunction> list = opsRoleFunctionDao.selectEntryList(opsRoleFunction);
+            if (CollectionUtils.isNotEmpty(list)) {
+                opsRoleFunctionList.addAll(list);
+            }
+        }
+        return opsRoleFunctionList;
 
-	}
+    }
 
-	@Override
+    @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         //super.postHandle(request, response, handler, modelAndView);
     }

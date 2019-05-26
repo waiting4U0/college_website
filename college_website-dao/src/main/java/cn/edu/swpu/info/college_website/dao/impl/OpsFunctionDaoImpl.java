@@ -1,4 +1,3 @@
-
 package cn.edu.swpu.info.college_website.dao.impl;
 
 import cn.edu.swpu.info.college_website.dao.OpsFunctionDao;
@@ -10,12 +9,12 @@ import org.springframework.stereotype.Repository;
  * OpsFunctionDao 实现类
  */
 @Repository("opsFunctionDao")
-public class OpsFunctionDaoImpl extends BaseDaoImpl<OpsFunction,Long> implements OpsFunctionDao {
-	private final static String NAMESPACE = "cn.edu.swpu.info.college_website.dao.OpsFunctionDao.";
-	
-	//返回本DAO命名空间,并添加statement
-	public String getNameSpace(String statement) {
-		return NAMESPACE + statement;
-	}
+public class OpsFunctionDaoImpl extends BaseDaoImpl<OpsFunction, Long> implements OpsFunctionDao {
+    private final static String NAMESPACE = "cn.edu.swpu.info.college_website.dao.OpsFunctionDao.";
+
+    //返回本DAO命名空间,并添加statement
+    public String getNameSpace(String statement) {
+        return NAMESPACE + statement;
+    }
 
 }

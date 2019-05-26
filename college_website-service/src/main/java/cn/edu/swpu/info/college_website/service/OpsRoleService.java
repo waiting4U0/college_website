@@ -8,15 +8,15 @@ import java.util.List;
 
 
 public interface OpsRoleService {
-	List<OpsRole> getRoleList(OpsRole opsRole);
+    List<OpsRole> getRoleList(OpsRole opsRole);
 
-	Integer countOpsFunction(OpsRole opsRole);
+    Integer countOpsFunction(OpsRole opsRole);
 
-	void saveOpsRole(OpsRole opsRole, List<Long> opsResource);
+    void saveOpsRole(OpsRole opsRole, List<Long> opsResource);
 
-	void modifyEntryByKey(OpsRole opsRole, List<Long> opsResource);
+    void modifyEntryByKey(OpsRole opsRole, List<Long> opsResource);
 
-	int removeEntryByKey(Long id);
+    int removeEntryByKey(Long id);
 
-	List<Long> getRoleFunctionList(OpsRoleFunction opsRoleFunction);
+    List<Long> getRoleFunctionList(OpsRoleFunction opsRoleFunction);
 }

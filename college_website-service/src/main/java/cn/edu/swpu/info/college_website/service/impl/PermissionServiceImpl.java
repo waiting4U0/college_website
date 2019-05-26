@@ -1,4 +1,3 @@
-
 package cn.edu.swpu.info.college_website.service.impl;
 
 import cn.edu.swpu.info.college_website.dao.OpsFunctionDao;
@@ -21,30 +20,30 @@ import java.util.List;
 @Service("permissionService")
 public class PermissionServiceImpl implements PermissionService {
 
-	@Resource
-	OpsUserDao opsUserDao;
+    @Resource
+    OpsUserDao opsUserDao;
 
-	@Resource
-	OpsRoleFunctionDao opsRoleFunctionDao;
+    @Resource
+    OpsRoleFunctionDao opsRoleFunctionDao;
 
-	@Resource
-	OpsFunctionDao opsFunctionDao;
+    @Resource
+    OpsFunctionDao opsFunctionDao;
 
-	@Resource
-	OpsRoleDao opsRoleDao;
+    @Resource
+    OpsRoleDao opsRoleDao;
 
 
-	@Override
-	public List<OpsFunction> getOpsFunctionsByPin(String pin) {
-		OpsUser opsUser = new OpsUser();
-		opsUser.setErp(pin);
-		List<OpsUser> opsUsers = opsUserDao.selectEntryList(opsUser);
-		if (CollectionUtils.isEmpty(opsUsers)) {
-			return null;
-		}
-		
-		List<OpsRoleFunction> opsRoleFunctionList = new ArrayList<OpsRoleFunction>();
-		
+    @Override
+    public List<OpsFunction> getOpsFunctionsByPin(String pin) {
+        OpsUser opsUser = new OpsUser();
+        opsUser.setErp(pin);
+        List<OpsUser> opsUsers = opsUserDao.selectEntryList(opsUser);
+        if (CollectionUtils.isEmpty(opsUsers)) {
+            return null;
+        }
+
+        List<OpsRoleFunction> opsRoleFunctionList = new ArrayList<OpsRoleFunction>();
+
         for (OpsUser ou : opsUsers) {
             OpsRoleFunction opsRoleFunction = new OpsRoleFunction();
             opsRoleFunction.setRoleId(ou.getRoleId());
@@ -53,49 +52,49 @@ public class PermissionServiceImpl implements PermissionService {
             opsRoleFunctionList.addAll(list);
         }
 
-		if (CollectionUtils.isEmpty(opsRoleFunctionList)) {
-			return null;
-		}
-		List<Long> functionIdList = new ArrayList<Long>();
-		for (OpsRoleFunction roleFunction : opsRoleFunctionList) {
-			functionIdList.add(roleFunction.getFunctionId());
-		}
-		Long[] functionIds = functionIdList.toArray(new Long[functionIdList.size()]);
-		List<OpsFunction> opsFunctionList = opsFunctionDao.selectEntryList(functionIds);
+        if (CollectionUtils.isEmpty(opsRoleFunctionList)) {
+            return null;
+        }
+        List<Long> functionIdList = new ArrayList<Long>();
+        for (OpsRoleFunction roleFunction : opsRoleFunctionList) {
+            functionIdList.add(roleFunction.getFunctionId());
+        }
+        Long[] functionIds = functionIdList.toArray(new Long[functionIdList.size()]);
+        List<OpsFunction> opsFunctionList = opsFunctionDao.selectEntryList(functionIds);
 
-		return opsFunctionList;
-	}
+        return opsFunctionList;
+    }
 
-	@Override
-	public Integer countOpsUser(OpsUser opsUser) {
+    @Override
+    public Integer countOpsUser(OpsUser opsUser) {
 
-		return opsUserDao.selectEntryListCount(opsUser);
-	}
+        return opsUserDao.selectEntryListCount(opsUser);
+    }
 
-	@Override
-	public List<OpsUser> getOpsUserList(OpsUser opsUser) {
-		List<OpsUser> opsUsers = opsUserDao.selectEntryList(opsUser);
-		
-		List<OpsUser> opsUserList = new ArrayList<OpsUser>();
-		String temporaryErp = "";
-		OpsUser temporaryUser = null;
-		for (OpsUser user : opsUsers) {
-			String erp = user.getErp();
-			if (erp.equals(temporaryErp)) {
-				String roleName = temporaryUser.getRoleName();
-				Long roleId = user.getRoleId();
-				OpsRole opsRole = opsRoleDao.selectEntry(roleId);
-				temporaryUser.setRoleName(roleName + "," + opsRole.getName());
-			} else {
-				Long roleId = user.getRoleId();
-				OpsRole opsRole = opsRoleDao.selectEntry(roleId);
-				user.setRoleName(opsRole.getName());
-				opsUserList.add(user);
-				temporaryErp = erp;
-				temporaryUser = user;
-			}
-		}
-		
-		return opsUserList;
-	}
+    @Override
+    public List<OpsUser> getOpsUserList(OpsUser opsUser) {
+        List<OpsUser> opsUsers = opsUserDao.selectEntryList(opsUser);
+
+        List<OpsUser> opsUserList = new ArrayList<OpsUser>();
+        String temporaryErp = "";
+        OpsUser temporaryUser = null;
+        for (OpsUser user : opsUsers) {
+            String erp = user.getErp();
+            if (erp.equals(temporaryErp)) {
+                String roleName = temporaryUser.getRoleName();
+                Long roleId = user.getRoleId();
+                OpsRole opsRole = opsRoleDao.selectEntry(roleId);
+                temporaryUser.setRoleName(roleName + "," + opsRole.getName());
+            } else {
+                Long roleId = user.getRoleId();
+                OpsRole opsRole = opsRoleDao.selectEntry(roleId);
+                user.setRoleName(opsRole.getName());
+                opsUserList.add(user);
+                temporaryErp = erp;
+                temporaryUser = user;
+            }
+        }
+
+        return opsUserList;
+    }
 }

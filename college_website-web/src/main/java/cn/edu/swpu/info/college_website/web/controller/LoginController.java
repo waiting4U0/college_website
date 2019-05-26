@@ -1,35 +1,30 @@
 package cn.edu.swpu.info.college_website.web.controller;
 
+import cn.edu.swpu.info.college_website.domain.UserInfo;
 import cn.edu.swpu.info.college_website.service.UserInfoService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("main/login")
+@RequestMapping("students/login")
 public class LoginController {
 
-//    @Resource
+    //    @Resource
 //    private StudentInfoService studentInfoService;
     @Resource
     private UserInfoService userInfoService;
-    @RequestMapping("")
-    public String login(@RequestParam(value = "loginName",required = true) String LoginName, String password, Model model){
-        System.out.println(LoginName);
-        System.out.println(password);
-        boolean flag =false;
-        if(userInfoService.userLogin(LoginName,password) == true){
-            flag = true;
-        }
-        if(flag = true){
-            return "main/loginsucceed";
-        }else {
-            return  null;
-        }
 
-
+    @RequestMapping("/userlogin")
+    public String login(UserInfo userInfo) {
+//        System.out.println(LoginName);
+//        System.out.println(password);
+        System.out.println(userInfo.toString());
+        //List<UserInfo> userInfoList = userInfoService.selectUserInfoList(new UserInfo());
+        if (userInfoService.check(userInfo)) {
+            return "students/loginsucceed";
+        } else
+            return "students/loginfailed";
     }
 }

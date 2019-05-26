@@ -14,12 +14,21 @@
     <div class="list_link fl">
         <h2>招生就业</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/major','')" title="专业介绍">专业介绍</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/generalize','')" title="招生就业概括">招生就业概括</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/undergraduateAdmission','')" title="本科生招生网">本科生招生网</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/postgraduateAdmission','')" title="研究生招生信息">研究生招生信息</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/graduateEmployment','')" title="毕业生就业指导">毕业生就业指导</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/innovation','')" title="创新创业">创新创业</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/major','')"
+                   title="专业介绍">专业介绍</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/generalize','')"
+                   title="招生就业概括">招生就业概括</a></li>
+            <li><a class="current" href="javascript:;"
+                   onclick="main.menuGoTo('/admissionEmployment/undergraduateAdmission','')" title="本科生招生网">本科生招生网</a>
+            </li>
+            <li><a class="current" href="javascript:;"
+                   onclick="main.menuGoTo('/admissionEmployment/postgraduateAdmission','')" title="研究生招生信息">研究生招生信息</a>
+            </li>
+            <li><a class="current" href="javascript:;"
+                   onclick="main.menuGoTo('/admissionEmployment/graduateEmployment','')" title="毕业生就业指导">毕业生就业指导</a>
+            </li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/admissionEmployment/innovation','')"
+                   title="创新创业">创新创业</a></li>
         </ul>
     </div>
 

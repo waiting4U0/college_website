@@ -5,11 +5,15 @@
 
     <!-- message 所有查询列 -->
     <sql id="QUERY_COLUMN_LIST">
-		<![CDATA[id,message_title AS messageTitle,message_type AS messageType,message_content AS messageContent,message_img As messageImg,message_addition AS messageAddition,create_date AS createDate,modify_date AS modifyDate]]>
+		<![CDATA[
+        id, message_title AS messageTitle, message_type AS messageType, message_content AS messageContent, message_img As messageImg, message_addition AS messageAddition, create_date AS createDate, modify_date AS modifyDate
+        ]]>
 	</sql>
 
     <!-- message 查询列来源表-->
-    <sql id="QUERY_FROM_TABLE"><![CDATA[FROM message]]></sql>
+    <sql id="QUERY_FROM_TABLE"><![CDATA[
+        FROM message
+        ]]></sql>
 
     <!-- 全部条件(更多功能可以通过queryData扩展实现)  -->
     <sql id="QUERY_WHERE_CLAUSE">
@@ -17,9 +21,11 @@
             <if test="id != null and id != ''"><![CDATA[AND id = #{id}]]></if>
             <if test="messageTitle != null and messageTitle != ''"><![CDATA[AND message_title = #{messageTitle}]]></if>
             <if test="messageType != null and messageType != ''"><![CDATA[AND message_type = #{messageType}]]></if>
-            <if test="messageContent != null and messageContent != ''"><![CDATA[AND message_content = #{messageContent}]]></if>
+            <if test="messageContent != null and messageContent != ''">
+                <![CDATA[AND message_content = #{messageContent}]]></if>
             <if test="messageImg != null and messageImg != ''"><![CDATA[AND message_img = #{messageImg}]]></if>
-            <if test="messageAddition != null and messageAddition != ''"><![CDATA[AND message_addition = #{messageAddition}]]></if>
+            <if test="messageAddition != null and messageAddition != ''">
+                <![CDATA[AND message_addition = #{messageAddition}]]></if>
             <if test="createDate != null and createDate != ''"><![CDATA[AND create_date = #{createDate}]]></if>
             <if test="modifyDate != null and modifyDate != ''"><![CDATA[AND modify_date = #{modifyDate}]]></if>
         </where>
@@ -27,8 +33,10 @@
 
     <!-- 智能排序与分页 -->
     <sql id="QUERY_ORDER_LIMIT_CONDTION">
-        <if test="orderField != null and orderField != '' and orderFieldType != null and orderFieldType != ''"><![CDATA[ORDER BY ${orderField} ${orderFieldType}]]></if>
-        <if test="startIndex != null and startIndex &gt;= 0 and pageSize != null and pageSize &gt; 0"><![CDATA[LIMIT #{startIndex},#{pageSize}]]></if>
+        <if test="orderField != null and orderField != '' and orderFieldType != null and orderFieldType != ''">
+            <![CDATA[ORDER BY ${orderField} ${orderFieldType}]]></if>
+        <if test="startIndex != null and startIndex &gt;= 0 and pageSize != null and pageSize &gt; 0">
+            <![CDATA[LIMIT #{startIndex},#{pageSize}]]></if>
     </sql>
 
     <!-- 更新列字段,只要不为NULL则更新,除开主键列 -->
@@ -46,18 +54,34 @@
     </sql>
 
     <!-- 插入ops_function记录 -->
-    <insert id="insertEntry" parameterType="message" >
+    <insert id="insertEntry" parameterType="message">
 		<![CDATA[
-        INSERT INTO message (id,message_title,message_type,message_content,message_img,message_addition,create_date,modify_date)
-        VALUES (#{id},#{messageTitle},#{messageType},#{messageContent},#{messageImg},#{messageAddition},#{createDate},#{modifyDate})
+        INSERT INTO message (id,
+                             message_title,
+                             message_type,
+                             message_content,
+                             message_img,
+                             message_addition,
+                             create_date,
+                             modify_date)
+        VALUES (#{id},
+                #{messageTitle},
+                #{messageType},
+                #{messageContent},
+                #{messageImg},
+                #{messageAddition},
+                #{createDate},
+                #{modifyDate})
         ]]>
 	</insert>
 
     <!-- 返回插入的编号,在事务开启状态下有效 -->
-    <select id="lastSequence" resultType="long"><![CDATA[SELECT LAST_INSERT_ID() AS id]]></select>
+    <select id="lastSequence" resultType="long"><![CDATA[
+        SELECT LAST_INSERT_ID() AS id
+        ]]></select>
 
     <!-- 删除记录,主键IN(array) -->
-    <delete id="deleteByArrayKey" parameterType="java.lang.reflect.Array" >
+    <delete id="deleteByArrayKey" parameterType="java.lang.reflect.Array">
         <![CDATA[DELETE FROM message WHERE id IN]]>
         <foreach collection="array" item="id" open="(" separator="," close=")">
             <![CDATA[#{id}]]>
@@ -65,13 +89,13 @@
     </delete>
 
     <!-- 删除,通过条件 -->
-    <update id="deleteByCondtion" parameterType="message" >
+    <update id="deleteByCondtion" parameterType="message">
         <![CDATA[DELETE FROM message]]>
         <include refid="QUERY_WHERE_CLAUSE"/>
     </update>
 
     <!-- 修改记录通过主键 -->
-    <update id="updateByKey" parameterType="message" >
+    <update id="updateByKey" parameterType="message">
         <![CDATA[UPDATE message]]>
         <include refid="UPDATE_COLUMN_SET"/>
         <![CDATA[WHERE id = #{id}]]>

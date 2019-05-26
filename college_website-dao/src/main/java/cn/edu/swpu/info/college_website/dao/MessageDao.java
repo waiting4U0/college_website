@@ -6,6 +6,6 @@ import cn.edu.swpu.info.college_website.domain.Message;
 /**
  * message接口
  */
-public interface MessageDao extends BaseDao<Message,Long>{
+public interface MessageDao extends BaseDao<Message, Long> {
 
 }

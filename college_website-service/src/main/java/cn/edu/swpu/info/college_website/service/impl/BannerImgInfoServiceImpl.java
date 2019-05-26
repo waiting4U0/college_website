@@ -16,7 +16,6 @@ public class BannerImgInfoServiceImpl implements BannerImgInfoService {
     private BannerImgInfoDao bannerImgInfoDao;
 
 
-
 //    @Override
 //    public List<BannerImgInfo> getBannerImgInfoList(BannerImgInfo bannerImgInfo) {
 //        List<BannerImgInfo> bannerImgInfos = bannerImgInfoDao.selectEntryList(new BannerImgInfo());

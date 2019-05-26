@@ -13,9 +13,12 @@
     <div class="list_link fl">
         <h2>学院概况</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/list','')" title="学院简介">学院简介</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLeader','')" title="学院领导">学院领导</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLogo','')" title="学院标识">学院标识</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/list','')"
+                   title="学院简介">学院简介</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLeader','')"
+                   title="学院领导">学院领导</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/overview/collegeLogo','')" title="学院标识">学院标识</a>
+            </li>
         </ul>
     </div>
 

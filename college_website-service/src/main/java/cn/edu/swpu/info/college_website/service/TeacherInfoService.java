@@ -6,5 +6,8 @@ import java.util.List;
 
 public interface TeacherInfoService {
     List<TeacherInfo> selectTeacherInfolist(TeacherInfo teacherInfo);
+
     Integer countTeacherInfo(TeacherInfo teacherInfo);
+
+    boolean check(TeacherInfo teacherInfo);
 }

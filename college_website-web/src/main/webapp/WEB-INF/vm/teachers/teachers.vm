@@ -14,8 +14,10 @@
     <div class="list_link fl">
         <h2>师资队伍</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/teachers/teacher','')" title="在职教师">在职教师</a></li>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/teachers/academic','')" title="学术交流">学术交流</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/teachers/teacher','')"
+                   title="在职教师">在职教师</a></li>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/teachers/academic','')" title="学术交流">学术交流</a>
+            </li>
         </ul>
     </div>
 

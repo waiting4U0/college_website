@@ -7,20 +7,20 @@ import java.util.List;
 
 public interface OpsUserService {
 
-	Long insertEntryCreateId(OpsUser opsUser);
+    Long insertEntryCreateId(OpsUser opsUser);
 
 
-	void modifyEntryByKey(OpsUser opsUser, List<Long> opsResource);
+    void modifyEntryByKey(OpsUser opsUser, List<Long> opsResource);
 
-	int removeEntryByKey(Long id);
+    int removeEntryByKey(Long id);
 
-	OpsUser getOpsUserByKey(Long id);
+    OpsUser getOpsUserByKey(Long id);
 
-	List<OpsUser> getOpsUserList(OpsUser condition);
-	
+    List<OpsUser> getOpsUserList(OpsUser condition);
 
-	void saveOpsUser(OpsUser opsUser, List<Long> opsResource);
-	
 
-	List<Long> getRoleIdsByCondition(OpsUser opsUser);
+    void saveOpsUser(OpsUser opsUser, List<Long> opsResource);
+
+
+    List<Long> getRoleIdsByCondition(OpsUser opsUser);
 }

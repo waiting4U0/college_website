@@ -1,22 +1,29 @@
 <div class="top_box m1200">
     <div class="top_c">
-        <a class="logo" href="index.htm" >
+        <a class="logo" href="index.htm">
             <img src="../../assets/admin/layout/img/top_logo.png" alt="信息学院" title="信息学院">
         </a>
         <div class="top_r">
             <script type="text/javascript">
 
-                function _nl_ys_check(){
+                function _nl_ys_check() {
                 }
             </script>
-            <form action="search.jsp?wbtreeid=1001" method="post" id="au2a" name="au2a" onsubmit="return _nl_ys_check()" style="display: inline">
-                <input type="hidden" id="lucenenewssearchkey197010" name="lucenenewssearchkey" value=""><input type="hidden" id="_lucenesearchtype197010" name="_lucenesearchtype" value="1"><input type="hidden" id="searchScope197010" name="searchScope" value="0">
+            <form action="search.jsp?wbtreeid=1001" method="post" id="au2a" name="au2a" onsubmit="return _nl_ys_check()"
+                  style="display: inline">
+                <input type="hidden" id="lucenenewssearchkey197010" name="lucenenewssearchkey" value=""><input
+                    type="hidden" id="_lucenesearchtype197010" name="_lucenesearchtype" value="1"><input type="hidden"
+                                                                                                         id="searchScope197010"
+                                                                                                         name="searchScope"
+                                                                                                         value="0">
                 <div class="search cleafix">
                     <input name="showkeycode" id="showkeycode197010" class="text fl" placeholder="请输入关键词">
-                    #*<input type="text" class="search" value="搜索">*#
+                #*<input type="text" class="search" value="搜索">*#
                     <input type="image" src="img/search.png" align="absmiddle" class="submit fl" style="cursor: hand">
                 </div>
-            </form><script language="javascript" src="/system/resource/js/base64.js"></script><script language="javascript" src="/system/resource/js/formfunc.js"></script>
+            </form>
+            <script language="javascript" src="/system/resource/js/base64.js"></script>
+            <script language="javascript" src="/system/resource/js/formfunc.js"></script>
 
         </div>
     </div>

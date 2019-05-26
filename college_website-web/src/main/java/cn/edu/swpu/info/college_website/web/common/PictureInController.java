@@ -40,7 +40,7 @@ public class PictureInController {
             prop = PropertiesLoaderUtils.loadAllProperties("conf/pictureIn.properties");
             // 根据关键字查询相应的值
             value = prop.getProperty("pictureRootPath");
-            fis = new FileInputStream(value +"/"+ subpath);
+            fis = new FileInputStream(value + "/" + subpath);
             os = response.getOutputStream();
             int count = 0;
             byte[] buffer = new byte[1024 * 8];

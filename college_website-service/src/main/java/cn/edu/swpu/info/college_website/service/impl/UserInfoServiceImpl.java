@@ -18,10 +18,11 @@ import java.util.List;
 @Service("userInfoService")
 public class UserInfoServiceImpl implements UserInfoService {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserInfoServiceImpl.class);
-//    @Resource
+    //    @Resource
 //    private UserInfoDao userInfoDao;
     @Autowired
     private UserInfoDao userInfoDao;
+
     public Page<UserInfo> selectPage(UserInfo condition, Page<UserInfo> page) {
         try {
             Class<?> clz = condition.getClass();
@@ -31,7 +32,7 @@ public class UserInfoServiceImpl implements UserInfoService {
             throw new AppException("设置分页参数失败", e);
         }
         Integer size = userInfoDao.selectEntryListCount(condition);
-        if (size == null || size <= 0){
+        if (size == null || size <= 0) {
             return page;
         }
         page.setTotalCount(size);
@@ -42,7 +43,8 @@ public class UserInfoServiceImpl implements UserInfoService {
 
 
     @Transactional(rollbackFor = Exception.class)
-    public long createUserInfo(UserInfo UserInfo) { return userInfoDao.insertEntry(UserInfo);
+    public long createUserInfo(UserInfo UserInfo) {
+        return userInfoDao.insertEntry(UserInfo);
     }
 
 
@@ -65,10 +67,27 @@ public class UserInfoServiceImpl implements UserInfoService {
         return userInfoDao.selectEntryList(userInfo);
     }
 
-    @Override
-    public boolean userLogin(String loginName, String password) {
-        return true;
-    }
+    //    @Override
+//    public boolean userLogin(UserInfo userInfo) {
+//        selectUserInfoList(userInfo)
+//        return true;
+//    }
+    public boolean check(UserInfo userInfo) {
+        List<UserInfo> userInfoList = selectUserInfoList(new UserInfo());
+        for (UserInfo u : userInfoList
+        ) {
+            if (u.getName() == userInfo.getName()) {
+                if (u.getPassword() == userInfo.getPassword()) {
+                    return true;
+                } else {
+                    System.out.println("账号对，密码不对");
+                }
+            } else {
+                System.out.println("账号不对");
+            }
 
+        }
+        return false;
+    }
 
 }

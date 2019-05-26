@@ -8,10 +8,13 @@ import java.util.List;
 /**
  * DeviceDao 接口
  */
-public interface UserInfoDao extends BaseDao<UserInfo,Long> {
-	//自定义扩展
-	public List<String> selectProjectUuidList();
-//	public UserInfo login(UserInfo userInfo);
-	//UserInfo selectUserByUsernameAndPassword(UserInfo userInfo);
+public interface UserInfoDao extends BaseDao<UserInfo, Long> {
+    //自定义扩展
+    public List<String> selectProjectUuidList();
+
+    //	public UserInfo login(UserInfo userInfo);
+    //UserInfo selectUserByUsernameAndPassword(UserInfo userInfo);
+    //UserInfo selectUserBynameAndPassword(UserInfo userInfo);
+
 
 }

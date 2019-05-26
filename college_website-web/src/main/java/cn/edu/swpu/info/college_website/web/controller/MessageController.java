@@ -21,7 +21,8 @@ public class MessageController {
     public static Logger LOG = LoggerFactory.getLogger(IndexController.class);
     @Resource
     private MessageService messageService;
-    @RequestMapping(value = "", method = { RequestMethod.GET })
+
+    @RequestMapping(value = "", method = {RequestMethod.GET})
     public void index(HttpServletRequest request, HttpServletResponse response, Model view) {
         List<Message> messagesData = messageService.selectMessagelist(new Message());
 //		//加载用户资源

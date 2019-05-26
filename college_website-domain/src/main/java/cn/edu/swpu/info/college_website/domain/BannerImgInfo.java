@@ -9,7 +9,7 @@ public class BannerImgInfo extends BaseDomain {
     private String describeInfo;
 
 
-    public BannerImgInfo(){
+    public BannerImgInfo() {
 
     }
 

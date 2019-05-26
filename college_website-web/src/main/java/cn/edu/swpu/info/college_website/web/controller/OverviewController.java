@@ -20,17 +20,17 @@ public class OverviewController {
 //    private UserInfoService userInfoService;
 
     @RequestMapping(value = "", method = {RequestMethod.GET})
-    public String main(HttpServletRequest request, Model view){
+    public String main(HttpServletRequest request, Model view) {
         try {
             return "overview/overview";
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error("失败:" + e.getMessage(), e);
             return "overview/overview";
         }
     }
 
     @RequestMapping(value = "/list", method = {RequestMethod.GET})
-    public String list(HttpServletRequest request, Model view){
+    public String list(HttpServletRequest request, Model view) {
         try {
 //            Page<UserInfo> page = new Page<UserInfo>();
 //            int startIndex = 1;
@@ -52,27 +52,27 @@ public class OverviewController {
             //view.addAttribute("erp", PinContext.getPin());
 //            view.addAttribute("listPage", page);
             return "overview/list";
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error("失败:" + e.getMessage(), e);
             return "overview/list";
         }
     }
 
     @RequestMapping(value = "/collegeLogo", method = {RequestMethod.GET})
-    public String lab(HttpServletRequest request, Model view){
+    public String lab(HttpServletRequest request, Model view) {
         try {
             return "overview/collegeLogo";
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error("失败:" + e.getMessage(), e);
             return "overview/collegeLogo";
         }
     }
 
     @RequestMapping(value = "/collegeLeader", method = {RequestMethod.GET})
-    public String leader(HttpServletRequest request, Model view){
+    public String leader(HttpServletRequest request, Model view) {
         try {
             return "overview/collegeLeader";
-        }catch (Exception e){
+        } catch (Exception e) {
             LOG.error("失败:" + e.getMessage(), e);
             return "overview/collegeLeader";
         }

@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+
 @Service("StudentInfoService")
 public class StudentInfoServiceImpl implements StudentInfoService {
     @Resource
     private StudentInfoDao studentInfoDao;
-//    @Resource
+
+    //    @Resource
 //    private StudentInfoService studentInfoService;
     @Override
     public List<StudentInfo> selectStudentInfolist(StudentInfo studentInfo) {
@@ -21,6 +23,29 @@ public class StudentInfoServiceImpl implements StudentInfoService {
     @Override
     public Integer countStudentInfo(StudentInfo studentInfo) {
         return studentInfoDao.selectEntryListCount(studentInfo);
+    }
+
+    @Override
+    public Integer addStudent(StudentInfo studentInfo) {
+        return studentInfoDao.insertEntry(studentInfo);
+    }
+
+    //登陆验证
+    @Override
+    public boolean check(StudentInfo studentInfo) {
+
+
+        //获取学生列表并验证
+        List<StudentInfo> studentInfoList = studentInfoDao.selectEntryList(new StudentInfo());
+        for (StudentInfo studentInfo3 : studentInfoList
+        ) {
+            if (studentInfo3.getStudentId() == studentInfo.getStudentId()) {
+                return true;
+            }
+
+        }
+
+        return false;
     }
 
 //    @Override

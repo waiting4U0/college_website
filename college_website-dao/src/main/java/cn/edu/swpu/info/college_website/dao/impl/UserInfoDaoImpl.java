@@ -11,14 +11,16 @@ import java.util.List;
  * Created by wangkun on 2019/3/16.
  */
 @Repository("userInfoDao")
-public class UserInfoDaoImpl extends BaseDaoImpl<UserInfo,Long> implements UserInfoDao {
+public class UserInfoDaoImpl extends BaseDaoImpl<UserInfo, Long> implements UserInfoDao {
+    static final String DEFAULT_SELECT__KEY = "selectByKey";
     private final static String NAMESPACE = "cn.edu.swpu.info.college_website.dao.UserInfoDao.";
+
     public String getNameSpace(String statement) {
         return NAMESPACE + statement;
     }
 
     public List<String> selectProjectUuidList() {
-        return this.selectList(getNameSpace("selectProjectUuidList"),null);
+        return this.selectList(getNameSpace("selectProjectUuidList"), null);
     }
 
 //    @Override

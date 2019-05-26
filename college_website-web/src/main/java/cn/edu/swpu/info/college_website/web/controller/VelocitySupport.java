@@ -17,26 +17,17 @@ import java.util.Map;
 
 
 public abstract class VelocitySupport {
-    protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
-
     // Velocity参数
     public final static String VELOCITY_DETAULT_LAYOUT = "vm2.0/layout/default";
-
     public final static String VELOCITY_ERROR_VIEW = "vm2.0/common/error";
-
     public final static String VELOCITY_VM_SUFFIX = ".vm";
-
     public final static String VELOCITY_SCREEN_CONTENT = "screen_content";
-
     // 请求后缀
     public final static String HTML_SUFFIX = ".html";
-
     public final static String JSON_SUFFIX = ".json";
-
     public final static String XML_SUFFIX = ".xml";
-
     public final static String TXT_SUFFIX = ".txt";
-
+    protected final Logger LOGGER = LoggerFactory.getLogger(getClass());
     @Resource
     private VelocityConfigurer velocityConfigurer;
 
@@ -44,8 +35,8 @@ public abstract class VelocitySupport {
      * 输出VM模板,自定义布局
      *
      * @param layout 布局
-     * @param view 视图
-     * @param model 数据
+     * @param view   视图
+     * @param model  数据
      * @return
      */
     @SuppressWarnings("unchecked")
@@ -94,14 +85,14 @@ public abstract class VelocitySupport {
 
     /**
      * velocity默认数据
-     * 
+     *
      * @return
      */
     protected abstract Map<String, Object> getDefaultContext();
 
     /**
      * 页面响应结果
-     * 
+     *
      * @author cfish
      * @since 2013-11-13
      */
@@ -112,7 +103,7 @@ public abstract class VelocitySupport {
 
         /**
          * 添加数据
-         * 
+         *
          * @param key
          * @param value
          */
@@ -122,7 +113,7 @@ public abstract class VelocitySupport {
 
         /**
          * 获取数据
-         * 
+         *
          * @param key
          * @return
          */
@@ -133,7 +124,7 @@ public abstract class VelocitySupport {
 
         /**
          * 获取Map数据
-         * 
+         *
          * @return
          */
         public Map<String, Object> getMap() {

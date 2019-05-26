@@ -8,17 +8,17 @@ import java.util.List;
 
 public interface OpsFunctionService {
 
-	Integer countOpsFunction(OpsFunction opsFunction);
+    Integer countOpsFunction(OpsFunction opsFunction);
 
-	List<OpsFunction> getOpsFunctionSortList(OpsFunction opsFunction);
+    List<OpsFunction> getOpsFunctionSortList(OpsFunction opsFunction);
 
-	List<OpsFunction> getParentList();
+    List<OpsFunction> getParentList();
 
-	Long insertEntryCreateId(OpsFunction opsFunction);
+    Long insertEntryCreateId(OpsFunction opsFunction);
 
-	void modifyEntryByKey(OpsFunction opsFunction);
+    void modifyEntryByKey(OpsFunction opsFunction);
 
-	int removeEntryByKey(Long id);
+    int removeEntryByKey(Long id);
 
-	List<OpsFunction> selectEntryList(OpsFunction opsFunction);
+    List<OpsFunction> selectEntryList(OpsFunction opsFunction);
 }

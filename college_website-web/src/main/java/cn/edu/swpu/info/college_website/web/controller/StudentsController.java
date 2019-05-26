@@ -1,39 +1,48 @@
 package cn.edu.swpu.info.college_website.web.controller;
 
+import cn.edu.swpu.info.college_website.domain.StudentInfo;
+import cn.edu.swpu.info.college_website.service.StudentInfoService;
 import cn.edu.swpu.info.college_website.web.common.Permission;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import javax.annotation.Resource;
 
 @Controller
 @Permission(resourceKey = "students")
 @RequestMapping(value = "/students", method = {RequestMethod.GET, RequestMethod.POST})
 public class StudentsController {
 
-    @RequestMapping(value = "",method = {RequestMethod.GET})
-    public String main(){
+    @Resource
+    private StudentInfoService studentInfoService;
+
+    @RequestMapping(value = "", method = {RequestMethod.GET})
+    public String main() {
         return "students/students";
     }
 
-    @RequestMapping(value = "/news",method = {RequestMethod.GET})
-    public String evaluation(){
+    @RequestMapping(value = "/news", method = {RequestMethod.GET})
+    public String evaluation() {
         return "students/news";
     }
 
-    @RequestMapping(value = "/generalize",method = {RequestMethod.GET})
-    public String generalize(){
+    @RequestMapping(value = "/generalize", method = {RequestMethod.GET})
+    public String generalize() {
         return "students/generalize";
     }
 
-    @RequestMapping(value="/rules",method={RequestMethod.GET})
-    public String training(){
+    @RequestMapping(value = "/rules", method = {RequestMethod.GET})
+    public String training() {
         return "students/rules";
     }
-    @RequestMapping(value = "/login", method = { RequestMethod.POST })
+
+    @RequestMapping(value = "/login", method = {RequestMethod.POST})
     public String login() {
         return "students/studentsLogin";
     }
-//    @Resource
+
+    //    @Resource
 //    private StudentInfoService studentInfoService;
 //    @RequestMapping(value = "/studentsmanager",method = {RequestMethod.POST})
 //    public String studentsmanager(){
@@ -48,25 +57,23 @@ public class StudentsController {
 ////        studentInfoService.addStudent(studentInfo);
 //        return "students/addStudent";
 //    }
-//    @RequestMapping(value = "/addStudent",method = {RequestMethod.POST})
-//    public String addStudent(StudentInfo studentInfo){
-//        System.out.println(studentInfo.toString());
-//        studentInfoService.addStudent(studentInfo);
-//
-//        return "students/succ";
-//    }
-//    @Resource
-////    private StudentInfoService studentInfoService;
-////    @RequestMapping("/studentslogincheck")
-////    public String login(UserInfo userInfo){
-//////        System.out.println(LoginName);
-//////        System.out.println(password);
-////        System.out.println(userInfo.toString());
-////        //List<UserInfo> userInfoList = userInfoService.selectUserInfoList(new UserInfo());
-////        if(studentInfoService.check(userInfo)){
-////            return "main/loginsucceed";
-////        }
-////        else
-////            return "main/loginfailed";
-////    }
+    @RequestMapping(value = "/addStudent", method = {RequestMethod.POST})
+    public String addStudent(StudentInfo studentInfo) {
+        //System.out.println(studentInfo.toString());
+        studentInfoService.addStudent(studentInfo);
+
+        return "students/succ";
+    }
+
+    @RequestMapping(value = "/studentslogincheck", method = {RequestMethod.POST})
+    public String login(StudentInfo studentInfo) {
+        //System.out.println(LoginName);
+        //System.out.println(password);
+        //System.out.println(studentInfo.toString());
+        //List<UserInfo> userInfoList = userInfoService.selectUserInfoList(new UserInfo());
+        if (studentInfoService.check(studentInfo)) {
+            return "students/loginsucceed";
+        } else
+            return "students/loginfailed";
+    }
 }

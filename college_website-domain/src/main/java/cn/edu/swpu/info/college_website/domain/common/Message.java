@@ -5,21 +5,13 @@ import com.alibaba.fastjson.JSON;
 import java.io.Serializable;
 
 public class Message implements Serializable {
+    public static final int SYSTEM_ERROR = -1;
+    public static final int ILLEGAL_ARGUMENT = -2;
     private int code = 200;
     private Object data;
     private String errorMsg = "success";
-    public static final int SYSTEM_ERROR = -1;
-    public static final int ILLEGAL_ARGUMENT = -2;
 
     public Message() {
-    }
-
-    public String getErrorMsg() {
-        return this.errorMsg;
-    }
-
-    public void setErrorMsg(String errorMsg) {
-        this.errorMsg = errorMsg;
     }
 
     public Message(int code, String errorMsg) {
@@ -27,24 +19,8 @@ public class Message implements Serializable {
         this.errorMsg = errorMsg;
     }
 
-    public void setData(Object data) {
-        this.data = JSON.toJSON(data);
-    }
-
     public static Message create(int code, String result) {
         return new Message(code, result);
-    }
-
-    public int getCode() {
-        return this.code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public Object getData() {
-        return this.data;
     }
 
     public static Message success() {
@@ -65,6 +41,30 @@ public class Message implements Serializable {
 
     public static Message illegalArgument(String message) {
         return create(-2, "参数错误：" + message);
+    }
+
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+    }
+
+    public int getCode() {
+        return this.code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public Object getData() {
+        return this.data;
+    }
+
+    public void setData(Object data) {
+        this.data = JSON.toJSON(data);
     }
 
     public String toString() {

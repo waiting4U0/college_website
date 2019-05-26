@@ -15,7 +15,7 @@
         <scope>application</scope>
         <class>cn.edu.swpu.info.college_website.web.common.VelocityMapTool</class>
     </tool>
-     <tool>
+    <tool>
         <key>velocityListTool</key>
         <scope>application</scope>
         <class>cn.edu.swpu.info.college_website.web.common.VelocityListTool</class>

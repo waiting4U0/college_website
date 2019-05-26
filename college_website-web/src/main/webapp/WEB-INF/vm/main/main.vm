@@ -5,7 +5,7 @@
 <!-- BEGIN CONTENT -->
 <div class="container" id="main-page-content">
     <div class="container" id="main-page-content1">
-    #parse("common/banner.vm")
+        #parse("common/banner.vm")
     </div>
     <div class="container" id="main-page-content2">
         #parse("common/index.vm")

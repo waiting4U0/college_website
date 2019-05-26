@@ -9,11 +9,12 @@ import org.springframework.stereotype.Repository;
 
 @Repository("TeacherInfoDao")
 
-public class TeacherInfoDaoImpl extends BaseDaoImpl<TeacherInfo,Long> implements TeacherInfoDao {
+public class TeacherInfoDaoImpl extends BaseDaoImpl<TeacherInfo, Long> implements TeacherInfoDao {
 
     private final static String NAMESPACE = "cn.edu.swpu.info.college_website.dao.TeacherInfoDao.";
+
     @Override
     public String getNameSpace(String statement) {
-        return NAMESPACE+statement;
+        return NAMESPACE + statement;
     }
 }
