@@ -29,6 +29,7 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public List<Message> selectIndexMessagelist() throws ParseException {
+
         List<Message> messagesData = messageDao.selectEntryList(new Message());
 		//选取新闻前三条，学工通知前四条，党团快讯前四条信息组成加载首页时的信息
 		List<Message> messages = new LinkedList<>();

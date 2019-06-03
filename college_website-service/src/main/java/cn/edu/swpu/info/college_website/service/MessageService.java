@@ -9,4 +9,5 @@ public interface MessageService {
     List<Message> selectMessagelist(Message message);
     Integer countMssage(Message message);
     List<Message> selectIndexMessagelist() throws ParseException;
+
 }
