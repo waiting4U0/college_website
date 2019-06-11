@@ -23,11 +23,16 @@ public class MessageController {
     private MessageService messageService;
     private  String msg = "信息发布失败";
     @RequestMapping("/addOneMessge")
-    public String messageManager(Message message){
+    public String messageManager(Message message,HttpServletResponse response,Model view){
+        String msg = "发布成功";
         if(messageService.addOne(message)==1){
-            return "manager/useraddsucc";
+
+            view.addAttribute(msg);
+        }else {
+            msg = "发布不成功";
+            view.addAttribute(msg);
         }
-        return "manager/useraddfailed";
+        return "manage/messagemanage";
     }
     @RequestMapping(value = "", method = {RequestMethod.GET})
     public void index(HttpServletRequest request, HttpServletResponse response, Model view) {

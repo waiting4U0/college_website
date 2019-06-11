@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>管理界面</title>
+<link rel="stylesheet" href="../../assets/admin/pages/css/reset.css">
+<link rel="stylesheet" href="../../assets/admin/pages/css/style.css">
+</head>
+
+<body>
+<div class="title">
+	<h1>HERE IS TITLE</h1>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+      <td class="ComboBox">
+		  <div>
+			<table class="con" width="200" border="0" cellspacing="0" cellpadding="0">
+			  <tbody>
+				<tr>
+				  <td class="nobo">
+					  <script src="/demos/googlegg.js"></script>
+<ul class="cd-accordion-menu animated">
+	<li class="has-children">
+		<input type="checkbox" name ="group-1" id="group-1">
+		<label for="group-1" data_temp_dwid="1">学生管理</label>
+		<ul>
+			<li><a href="#0">子标题1</a></li>
+			<li><a href="#0">子标题2</a></li>
+		</ul>
+	</li>
+
+	<li class="has-children">
+		<input type="checkbox" name ="group-2" id="group-2">
+		<label for="group-2">教师管理</label>
+
+		<ul>
+			<li><a href="#0">子标题1</a></li>
+			<li><a href="#0">子标题2</a></li>
+		</ul>
+	</li>
+
+	<li class="has-children">
+		<input type="checkbox" name ="group-3" id="group-3">
+		<label for="group-3">信息管理</label>
+
+		<ul>
+			<li class="has-children">
+				<input type="checkbox" name ="sub-group-3" id="sub-group-3">
+				<label for="sub-group-3">子标题1</label>
+			</li>
+			<li><a href="#0">子标题2</a></li>
+			<li><a href="#0">子标题3</a></li>
+		</ul>
+	</li>
+</ul>
+
+<script type="text/javascript" src="../../js/common/jquery.min.jsjquery.min.js"></script>
+<script type="text/javascript" src="../../js/common/main.js"></script>
+					</td>
+				</tr>
+			  </tbody>
+			</table>
+		</div>
+		</td>
+      <td>
+          <form action="/message/addOneMessge.action" method="post">
+              <table>
+                  <tr>
+                      <td class="details1" width="130">文章标题</td>
+                      <td class="details2" width="900" >
+                          <input name="messageTitle" class="point" type="text" placeholder="请输入文章标题" size="18" /></td>
+                  </tr>
+
+                  <tr>
+                      <td class="details1">发布频道</td>
+                      <td class="details2">
+                          <select name="messageType">
+                              <option value ="1">新闻聚焦</option>
+                              <option value="2">学工通知</option>
+                              <option value="3">党团快讯</option>
+                          </select>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td class="details1">文章封面图片</td>
+                      <td class="details2"><button name="messageImg">点击上传封面图</button></td>
+                  </tr>
+                  <tr>
+                      <td class="details1">文章内容</td>
+                      <td class="details2"><textarea name="messageContent">请输入文章内容</textarea></td>
+                  </tr>
+
+              </table>
+              <input type="submit" value="保存"></td>
+        </form>
+
+		</td>
+    </tr>
+</table>
+</body>
+</html>
