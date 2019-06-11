@@ -66,8 +66,28 @@
     </div>
 
 </div>*#
-        <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            学院领导
+        <div style="font-family: 黑体;/*line-height: 25px;letter-spacing: 5px;text-indent :40px;*/font-size: 15px;" id="leader">
+            #*<table border="1">
+                <tr>
+                    <td>领导图片</td>
+                    <td>姓名</td>
+                    <td>职称</td>
+                    <td>职责</td>
+                </tr>
+                <tr>
+                    <td><img src="../../assets/admin/layout/img/leader1.jpg" alt="胥林"></td>
+                    <td>胥林</td>
+                    <td>院长</td>
+                    <td>主要负责：。。。</td>
+                </tr>
+                <tr>
+                    <td><img src="../../assets/admin/layout/img/leader1.jpg" alt="胥林"></td>
+                    <td>胥林</td>
+                    <td>副院长</td>
+                    <td>主要负责：。。。</td>
+                </tr>
+            </table>*#
+                学院领导
         </div>
 
     </div>
