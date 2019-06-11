@@ -1,6 +1,5 @@
 package cn.edu.swpu.info.college_website.service.impl;
 
-import cn.edu.swpu.info.college_website.common.tools.dataVerifyTool;
 import cn.edu.swpu.info.college_website.dao.UserDao;
 import cn.edu.swpu.info.college_website.domain.User;
 import cn.edu.swpu.info.college_website.domain.common.Page;
@@ -73,10 +72,15 @@ public class UserServiceImpl implements UserService {
 //        return true;
 //    }
     public User checkUser(User userInfo) {
-        userInfo = userDao.selectUserByKey(userInfo);
-        dataVerifyTool.isNull(userInfo,"该用户不存在");
-        if(userInfo != null){
-            return userInfo;
+        User userInfo1 = userDao.selectUserByKey(userInfo);
+        //dataVerifyTool.isNull(userInfo1,"该用户不存在");
+        if(userInfo1 != null){
+            if(userInfo1.getPassword().equals(userInfo.getPassword())){
+                return userInfo1;
+            }else {
+                return null;
+            }
+
         }
         return null;
     }
