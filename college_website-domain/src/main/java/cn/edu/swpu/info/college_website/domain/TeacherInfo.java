@@ -5,13 +5,32 @@ import cn.edu.swpu.info.college_website.domain.base.BaseDomain;
 
 public class TeacherInfo extends BaseDomain {
 
+    @Override
+    public String toString() {
+        return "TeacherInfo{" +
+                "teacherId='" + teacherId + '\'' +
+                ", teacherName='" + teacherName + '\'' +
+                ", telephoneNumber='" + telephoneNumber + '\'' +
+                ", sex='" + sex + '\'' +
+                ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
+                '}';
+    }
 
     private String teacherId;
     private String teacherName;
     private String telephoneNumber;
     private String sex;
     private String email;
+    private String role;
 
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
 
     public String getTeacherId() {
         return teacherId;

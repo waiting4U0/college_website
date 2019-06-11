@@ -16,28 +16,26 @@
     </settings>
 
     <typeAliases>
-        <typeAlias type="cn.edu.swpu.info.college_website.domain.UserInfo" alias="userInfo"/>
+        <typeAlias type="cn.edu.swpu.info.college_website.domain.User" alias="user"/>
         <typeAlias type="cn.edu.swpu.info.college_website.domain.OpsUser" alias="opsUser"/>
         <typeAlias type="cn.edu.swpu.info.college_website.domain.OpsFunction" alias="opsFunction"/>
         <typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRole" alias="opsRole"/>
         <typeAlias type="cn.edu.swpu.info.college_website.domain.OpsRoleFunction" alias="opsRoleFunction"/>
-        <typeAlias type="cn.edu.swpu.info.college_website.domain.BannerImgInfo" alias="bannerImgInfo"/>
+
 
         <typeAlias type="cn.edu.swpu.info.college_website.domain.Message" alias="message"/>
         <typeAlias type="cn.edu.swpu.info.college_website.domain.MessageType" alias="messageType"/>
-        <typeAlias type="cn.edu.swpu.info.college_website.domain.StudentInfo" alias="studentInfo"/>
-        <typeAlias type="cn.edu.swpu.info.college_website.domain.TeacherInfo" alias="teacherInfo"/>
+
     </typeAliases>
     <mappers>
         <mapper resource="sqlmap/OpsUser.xml"/>
         <mapper resource="sqlmap/OpsFunction.xml"/>
         <mapper resource="sqlmap/OpsRole.xml"/>
         <mapper resource="sqlmap/OpsRoleFunction.xml"/>
-        <mapper resource="sqlmap/UserInfo.xml"/>
+        <mapper resource="sqlmap/User.xml"/>
         <mapper resource="sqlmap/Message.xml"/>
         <mapper resource="sqlmap/MessageType.xml"/>
-        <mapper resource="sqlmap/StudentInfo.xml"/>
-        <mapper resource="sqlmap/TeacherInfo.xml"/>
+
 
     </mappers>
 </configuration>

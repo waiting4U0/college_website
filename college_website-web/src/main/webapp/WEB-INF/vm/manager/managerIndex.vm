@@ -1,0 +1,21 @@
+
+#parse("manager/managerhead")
+<body>
+<div>
+    #parse("manager/addmessage")
+</div>
+<div>
+    #parse("manager/adduser")
+</div>
+<div>
+    #parse("manager/updateuser")
+</div>
+<div>
+    #parse("manager/showuser")
+</div>
+
+
+<div id="container" style="width:1000px">版权 © 乐橙软件开发</div>
+
+</body>
+</html>

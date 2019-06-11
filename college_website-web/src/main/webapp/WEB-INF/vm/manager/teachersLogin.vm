@@ -39,13 +39,13 @@
 </div>
 <div class="loginBox">
     <h2><b>老师登录</b></h2>
-    <form action="/students/login" method="post">
+    <form action="/login/teacherslogincheck" method="post">
         <p>请输入账号</p>
-        <input type="text" name="teacherName"  placeholder="请输入账号">
+        <input type="text" name="code"  placeholder="请输入账号">
         <p>请输入密码</p>
-        <input type="password" name="teacherId"  placeholder="请输入密码">
+        <input type="text" name="password"  placeholder="请输入密码">
         <input type="submit" name="" value="登录">
-        <a href="http://localhost:8080/">返回首页</a>
+        <a href="http://localhost:8080">返回首页</a>
     </form>
 
 

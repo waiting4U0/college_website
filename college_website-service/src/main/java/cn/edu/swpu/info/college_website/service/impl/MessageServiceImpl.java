@@ -7,11 +7,8 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.TimeZone;
 
 @Service
 public class MessageServiceImpl implements MessageService {
@@ -51,4 +48,11 @@ public class MessageServiceImpl implements MessageService {
 		}
         return messages;
     }
+
+	@Override
+	public Integer addOne(Message message) {
+		return messageDao.insertEntry(message);
+	}
+
+
 }

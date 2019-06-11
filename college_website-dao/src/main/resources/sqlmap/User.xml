@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="cn.edu.swpu.info.college_website.dao.UserInfoDao">
+<mapper namespace="cn.edu.swpu.info.college_website.dao.UserDao">
 
     <!-- user_info 所有查询列 -->
     <sql id="QUERY_COLUMN_LIST">
 		<![CDATA[
-        id, name, password, create_date AS createDate, modify_date AS modifyDate
+        id, name,code,password,telephoneNumber,email,sex,role,create_date AS createDate, modify_date AS modifyDate
         ]]>
 	</sql>
 
     <!-- user_info 查询列来源表-->
     <sql id="QUERY_FROM_TABLE">
 		<![CDATA[
-        FROM user_info
+        FROM user
         ]]>
 	</sql>
 
@@ -22,7 +22,14 @@
         <where>
             <if test="id != null and id != ''"><![CDATA[AND id = #{id}]]></if>
             <if test="name != null and name != ''"><![CDATA[AND name = #{name}]]></if>
+            <if test="code != null and code != ''"><![CDATA[AND code = #{code}]]></if>
+            <if test="email != null and email != ''"><![CDATA[AND email = #{email}]]></if>
             <if test="password != null and password != ''"><![CDATA[AND password = #{password}]]></if>
+            <if test="telephone_number != null and telephone_number != ''"><![CDATA[AND telephone_number = #{telephoneNumber}]]></if>
+            <if test="sex != null and sex != ''"><![CDATA[AND sex = #{sex}]]></if>
+            <if test="role != null and role != ''"><![CDATA[AND role = #{role}]]></if>
+            <if test="createDate != null and createDate != ''"><![CDATA[AND create_date = #{createDate}]]></if>
+            <if test="modifyDate != null and modifyDate != ''"><![CDATA[AND modify_date = #{modifyDate}]]></if>
         </where>
     </sql>
 
@@ -37,18 +44,24 @@
     <!-- 更新列字段,只要不为NULL则更新,除开主键列 -->
     <sql id="UPDATE_COLUMN_SET">
         <set>
-            <if test="id != null"><![CDATA[id = #{id},]]></if>
-            <if test="name != null"><![CDATA[name = #{name},]]></if>
-            <if test="password != null"><![CDATA[password = #{password}]]></if>
 
+            <if test="name != null "><![CDATA[AND name = #{name}]]></if>
+            <if test="code != null  "><![CDATA[AND code = #{code}]]></if>
+            <if test="email != null  "><![CDATA[AND email = #{email}]]></if>
+            <if test="password != null  "><![CDATA[AND password = #{password}]]></if>
+            <if test="telephone_number != null "><![CDATA[AND telephone_number = #{telephoneNumber}]]></if>
+            <if test="sex != null "><![CDATA[AND sex = #{sex}]]></if>
+            <if test="role != null "><![CDATA[AND role = #{role}]]></if>
+            <if test="createDate != null "><![CDATA[AND create_date = #{createDate}]]></if>
+            <if test="modifyDate != null "><![CDATA[AND modify_date = #{modifyDate}]]></if>
         </set>
     </sql>
 
     <!-- 插入user_info记录 -->
-    <insert id="insertEntry" parameterType="userInfo">
+    <insert id="insertEntry" parameterType="user">
 		<![CDATA[
-        INSERT INTO user_info (id, name, password)
-        VALUES (#{id}, #{name}, #{password})
+        INSERT INTO user (id, name,code, password,telephone_number,email,create_date, modify_date)
+        VALUES (#{id}, #{name},#{code}, #{password},#{telephoneNumber}, #{email},#{createDate}, #{modifyDate} )
         ]]>
 	</insert>
 
@@ -59,38 +72,38 @@
 
     <!-- 删除记录,主键IN(array) -->
     <delete id="deleteByArrayKey" parameterType="java.lang.reflect.Array">
-        <![CDATA[DELETE FROM user_info WHERE id IN]]>
+        <![CDATA[DELETE FROM user WHERE id IN]]>
         <foreach collection="array" item="id" open="(" separator="," close=")">
             <![CDATA[#{id}]]>
         </foreach>
     </delete>
 
     <!-- 删除,通过条件 -->
-    <update id="deleteByCondtion" parameterType="userInfo">
-        <![CDATA[DELETE FROM user_info]]>
+    <update id="deleteByCondtion" parameterType="user">
+        <![CDATA[DELETE FROM user]]>
         <include refid="QUERY_WHERE_CLAUSE"/>
     </update>
 
     <!-- 修改记录通过主键 -->
-    <update id="updateByKey" parameterType="userInfo">
-        <![CDATA[UPDATE user_Info]]>
+    <update id="updateByKey" parameterType="user">
+        <![CDATA[UPDATE user]]>
         <include refid="UPDATE_COLUMN_SET"/>
         <![CDATA[WHERE id = #{id}]]>
     </update>
 
     <!-- 查询,通过主键IN(array) -->
-    <select id="selectEntryArray" parameterType="java.lang.reflect.Array" resultType="userInfo">
+    <select id="selectEntryArray" parameterType="java.lang.reflect.Array" resultType="user">
         <![CDATA[SELECT]]>
         <include refid="QUERY_COLUMN_LIST"/>
         <include refid="QUERY_FROM_TABLE"/>
-        <![CDATA[WHERE id IN]]>
-        <foreach collection="array" item="user_infoId" open="(" separator="," close=")">
-            <![CDATA[#{id}]]>
+        <![CDATA[WHERE code IN]]>
+        <foreach collection="array" item="code" open="(" separator="," close=")">
+            <![CDATA[#{code}]]>
         </foreach>
     </select>
 
     <!-- 查询,通过条件 -->
-    <select id="selectEntryList" parameterType="userInfo" resultType="userInfo">
+    <select id="selectEntryList" parameterType="user" resultType="user">
         <![CDATA[SELECT]]>
         <include refid="QUERY_COLUMN_LIST"/>
         <include refid="QUERY_FROM_TABLE"/>
@@ -99,19 +112,17 @@
     </select>
 
     <!-- 总数查询,通过条件 -->
-    <select id="selectEntryListCount" parameterType="userInfo" resultType="int">
+    <select id="selectEntryListCount" parameterType="user" resultType="int">
         <![CDATA[SELECT COUNT(id) AS dataCount]]>
         <include refid="QUERY_FROM_TABLE"/>
         <include refid="QUERY_WHERE_CLAUSE"/>
     </select>
 
     <!-- 其它SQL语句 -->
-    <select id="selectByKey" resultType="userInfo" parameterType="userInfo">
-        SELECT id, NAME, PASSWORD, create_date, modify_date
-
-        FROM info_website.user_info
-        where name = #{name}
-          and password = #{passWord}
+    <select id="selectOneByKey" resultType="user" parameterType="user">
+        SELECT id, name,code,password, telephone_number,Email,sex,role,create_date, modify_date
+        FROM user
+        where code = #{code} or telephone_number = #{telephoneNumber} or Email = #{email}
     </select>
     <!-- 通过HistoryId修改 -->
     <!--<update id="updateByHistoryKey" parameterType="userInfo" >-->
@@ -119,6 +130,5 @@
     <!--<include refid="UPDATE_COLUMN_SET"/>-->
     <!--<![CDATA[WHERE user_info_id = #{historyId}]]>-->
     <!--</update>-->
-
 
 </mapper>

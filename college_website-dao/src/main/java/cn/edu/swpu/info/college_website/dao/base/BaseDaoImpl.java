@@ -68,8 +68,8 @@ public abstract class BaseDaoImpl<T, KEY extends Serializable> extends MyBatisSu
         return this.update(getNameSpace(DEFAULT_UPDATE_KEY), t);
     }
 
-    public T selectOneByKey(String key) {
-        return (T) this.select(getNameSpace(DEFAULT_SELECT_KEY), key);
+    public T selectOneByKey(T t) {
+        return (T) this.select(getNameSpace(DEFAULT_SELECT_KEY),t);
     }
 
     public T selectEntry(KEY key) {
