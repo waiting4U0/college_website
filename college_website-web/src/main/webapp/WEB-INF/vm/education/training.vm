@@ -68,7 +68,29 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            人才培养概括
+            <div class="education">
+                <div class="ed" id="ed1">
+                    <h2>本科教育</h2>
+                    <div class="tu">
+                        <img src="../../assets/admin/layout/img/QQ.jpg" alt="">
+                        <img src="../../assets/admin/layout/img/weixin.jpg" alt="">
+                    </div>
+                    <div class="wenben">
+                        简介,比如:学院设置“石油工程”、“油气储运工程”、“海洋油气工程”三个本科专业，依托“石油与天然气工程”国家重点学科一级学科和“油气藏地质与开发工程”国家重点实验室，紧密围绕行业技术发展和地方经济建设的需求，科学制定本科专业人才培养方案，致力培养理论基础扎实、工程实践能力强、综合素质高、具有创新意识和国际视野的高级技术人才。
+                    </div>
+                </div>
+                <div class="ed">
+                    <h2>研究生教育</h2>
+                    <div class="tu">
+                        <img src="../../assets/admin/layout/img/QQ.jpg" alt="">
+                        <img src="../../assets/admin/layout/img/weixin.jpg" alt="">
+                    </div>
+                    <div class="wenben">
+                        简介,比如:学院设置“石油工程”、“油气储运工程”、“海洋油气工程”三个本科专业，依托“石油与天然气工程”国家重点学科一级学科和“油气藏地质与开发工程”国家重点实验室，紧密围绕行业技术发展和地方经济建设的需求，科学制定本科专业人才培养方案，致力培养理论基础扎实、工程实践能力强、综合素质高、具有创新意识和国际视野的高级技术人才。
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
