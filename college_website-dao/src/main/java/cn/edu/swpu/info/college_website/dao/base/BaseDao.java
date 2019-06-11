@@ -52,7 +52,7 @@ public interface BaseDao<T, KEY extends Serializable> {
      * @param key
      * @return T
      */
-    T selectOneByKey(String key);
+    T selectOneByKey(T t);
 
     /**
      * 查询对象,条件主键

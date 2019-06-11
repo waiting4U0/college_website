@@ -16,12 +16,19 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
-
+@RequestMapping("message")
 public class MessageController {
     public static Logger LOG = LoggerFactory.getLogger(IndexController.class);
     @Resource
     private MessageService messageService;
-
+    private  String msg = "信息发布失败";
+    @RequestMapping("/addOneMessge")
+    public String messageManager(Message message){
+        if(messageService.addOne(message)==1){
+            return "manager/useraddsucc";
+        }
+        return "manager/useraddfailed";
+    }
     @RequestMapping(value = "", method = {RequestMethod.GET})
     public void index(HttpServletRequest request, HttpServletResponse response, Model view) {
         List<Message> messagesData = messageService.selectMessagelist(new Message());
@@ -29,7 +36,7 @@ public class MessageController {
 //		view.addAttribute("erp", pin);
         view.addAttribute("messages", messagesData);
         //return "main/main";
-
     }
+
 }
 
