@@ -34,6 +34,7 @@ public class IndexController {
 		return "main/main";
 	}
 
+
 	@Resource
 	private MessageService messageService;
 	@RequestMapping(value = "/index", method = { RequestMethod.GET })
