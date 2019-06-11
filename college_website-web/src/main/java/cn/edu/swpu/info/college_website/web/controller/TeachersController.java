@@ -36,7 +36,8 @@ public class TeachersController {
 
     @RequestMapping(value = "/login", method = {RequestMethod.POST})
     public String login(HttpServletRequest request, HttpServletResponse response, Model view) {
-        return "teachers/teachersLogin";
+        //return "teachers/teachersLogin";
+        return "manage/managemain";
     }
 
     @RequestMapping("/teacherslogincheck")
@@ -49,5 +50,11 @@ public class TeachersController {
             return "students/loginsucceed";
         } else
             return "students/loginfailed";
+    }
+
+    @RequestMapping(value = "main/test", method = { RequestMethod.GET })
+    public String test(HttpServletRequest request, HttpServletResponse response, Model view) {
+        System.out.println("接受请求");
+        return "manage/teacherlist";
     }
 }

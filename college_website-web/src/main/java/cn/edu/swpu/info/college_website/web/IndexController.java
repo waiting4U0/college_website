@@ -56,4 +56,5 @@ public class IndexController {
 	public String login(HttpServletRequest request, HttpServletResponse response, Model view) {
 		return "main/login";
 	}
+
 }
