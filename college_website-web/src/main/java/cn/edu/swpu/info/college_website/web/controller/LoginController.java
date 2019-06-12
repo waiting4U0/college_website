@@ -40,7 +40,7 @@ public class LoginController {
                 return "manage/managemain";//管理员页面
             }
         } else{
-            return  "普通教师页面";
+            return  "manager/loginfailed";
         }
         return "manager/loginfailed";
     }
@@ -52,5 +52,9 @@ public class LoginController {
     @RequestMapping(value = "/main/message", method = { RequestMethod.GET })
     public String message(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
         return "manage/messagemanage";
+    }
+    @RequestMapping(value = "/main/student", method = { RequestMethod.GET })
+    public String student(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+        return "manage/studentlist";
     }
 }

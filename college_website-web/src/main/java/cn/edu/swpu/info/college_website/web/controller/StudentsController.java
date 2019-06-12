@@ -38,8 +38,6 @@ public class StudentsController {
 
     @RequestMapping(value = "/login", method = {RequestMethod.POST})
     public String login() {
-        return "manager/studentsLogin";
+        return "manager/studentslogin";
     }
-
-
 }

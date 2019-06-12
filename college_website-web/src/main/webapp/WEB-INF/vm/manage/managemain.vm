@@ -39,12 +39,12 @@
             <!-- 左侧菜单 -->
             <ul class="layui-nav layui-nav-tree">
                 <li class="layui-nav-item">
-                    <a href="javascript:itemclick()">
+                    <a href="javascript:teacherclick();">
                         <span>教师管理</span>
                     </a>
                 </li>
                 <li class="layui-nav-item">
-                    <a  href="javascript;" >
+                    <a  href="javascript:studentMessaGeclick();" >
                         <span>学生管理</span>
                     </a>
                 </li>

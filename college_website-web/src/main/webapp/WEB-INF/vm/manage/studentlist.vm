@@ -151,7 +151,7 @@
                                 <input role="checkbox" type="checkbox" id="jqg_jqGrid_2" class="cbox checkbox"
                                        name="jqg_jqGrid_2"></td>
                             <td role="gridcell" style="" title="2" aria-describedby="jqGrid_userId">2</td>
-                            <td role="gridcell" style="" title="root" aria-describedby="jqGrid_username">root</td>
+                            <td role="gridcell" style="" title="root" aria-describedby="jqGrid_username"></td>
                             <td role="gridcell" style="" title="123@163..com" aria-describedby="jqGrid_email">
                                 123@163..com
                             </td>
