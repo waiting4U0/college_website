@@ -24,6 +24,7 @@ public class MessageController {
     private  String msg = "信息发布失败";
     @RequestMapping("/addOneMessge")
     public String messageManager(Message message){
+        System.out.println(message);
         if(messageService.addOne(message)==1){
             return "manager/useraddsucc";
         }

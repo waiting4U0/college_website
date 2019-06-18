@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+##    #parse("manager/managerIndex.vm")
+    <title>发布消息</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../assets/admin/pages/css/managerReset.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/admin/pages/css/managerStyle.css">
+##    tinymce 编辑框js
+    <script type="text/javascript" src="../../../js/tinymce/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../../js/tinymce/js/jquery.form.js"></script>
+    <script type="text/javascript" src="../../../js/tinymce/js/tinymce/jquery.tinymce.min.js"></script>
+    <script src="../../../js/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: '#mytextarea',
+            upload_image_url: './upload',
+            language:'zh_CN',
+            plugins: [
+                'advlist autolink lists link  charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc help uploadimage'
+            ],
+            toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            toolbar2: 'print preview media | forecolor backcolor emoticons | codesample help uploadimage',
+            image_advtab: true,
+            templates: [//模板
+                { title: 'Test template 1', content: 'Test 1' },
+                { title: 'Test template 2', content: 'Test 2' }
+            ],
+            menubar: false
+        });
+    </script>
+##    以上tinymcejs
+    <script>
+        var sub = function(url){
+            alert("提交成功");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0">
+    <tr><!---边侧选择栏--->
+        <td>
+            <form action="/message/addOneMessge.action" method="post" id="form">
+                <table>
+                    <tr>
+                        <td class="details1" width="130">文章标题</td>
+                        <td class="details2" width="900" >
+                            <input name="messageTitle" class="point" type="text" placeholder="请输入文章标题" size="18" /></td>
+                    </tr>
+
+                    <tr>
+                        <td class="details1">发布频道</td>
+                        <td class="details2">
+                            <select name="messageType">
+                                <option value ="1">新闻聚焦</option>
+                                <option value="2">学工通知</option>
+                                <option value="3">党团快讯</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="details1">文章封面图片</td>
+                        <td class="details2"><button name="messageImg">点击上传封面图</button></td>
+                    </tr>
+                    <tr>
+                        <td class="details1">文章内容</td>
+                        <td class="details2">
+                            <div>
+                                <textarea id="mytextarea" class="content" name="messageContent">Next, start a free trial!</textarea>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+                <input id="save"  type="submit" value="保存">
+            </form>
+
+        </td>
+    </tr>
+</table>
+
+
+</body>
+
+
+</html>

@@ -5,6 +5,16 @@ import cn.edu.swpu.info.college_website.domain.base.BaseDomain;
 
 public class Message extends BaseDomain {
 
+    @Override
+    public String toString() {
+        return "Message{" +
+                "messageTitle='" + messageTitle + '\'' +
+                ", messageType=" + messageType +
+                ", messageContent='" + messageContent + '\'' +
+                ", messageImg='" + messageImg + '\'' +
+                ", messageAddition='" + messageAddition + '\'' +
+                '}';
+    }
 
     private String messageTitle;
     private long messageType;
