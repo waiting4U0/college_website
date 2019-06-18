@@ -5,23 +5,41 @@
     <div class="hd">
         <ul>
             <li>
-                <span>学院美景</span>
+                <span>EdgeBoard火热开售</span>
                 <div class="dot">
                     <div class="liner"></div>
                 </div>
             </li>
             <li>
-                <span>我们毕业啦！</span>
+                <span>人脸考勤解决方案</span>
                 <div class="dot">
                     <div class="liner"></div>
                 </div>
             </li>
             <li>
-                <span>学校全景</span>
+                <span>车辆分析 全新上线</span>
                 <div class="dot">
                     <div class="liner"></div>
                 </div>
             </li>
+        #*<li>
+            <span>OCR 3款新品火热邀测</span>
+            <div class="dot">
+                <div class="liner"></div>
+            </div>
+        </li>
+        <li>
+            <span>人脸离线识别SDK 2.0</span>
+            <div class="dot">
+                <div class="liner"></div>
+            </div>
+        </li>
+        <li>
+            <span>地标识别技术上线</span>
+            <div class="dot">
+                <div class="liner"></div>
+            </div>
+        </li>*#
         </ul>
     </div>
     <div class="bd">

@@ -38,6 +38,6 @@
     <import resource="classpath*:spring-config-service.xml"/>
     <import resource="classpath*:spring-config-dao.xml"/>
     <import resource="classpath*:spring-erp-web-authen.xml"/>
-
+    <import resource="classpath*:migo-shiro.xml"/>
 
 </beans>

@@ -153,6 +153,20 @@
         <property name="cacheSeconds" value="5"/>
     </bean>
 
+    <!-- Kaptcha验证码生成器 -->
+    <!--<bean name="producer" class="com.google.code.kaptcha.impl.DefaultKaptcha">-->
+        <!--<property name="config">-->
+            <!--<bean class="com.google.code.kaptcha.util.Config">-->
+                <!--<constructor-arg>-->
+                    <!--<props>-->
+                        <!--<prop key="kaptcha.border">no</prop>-->
+                        <!--<prop key="kaptcha.textproducer.font.color">black</prop>-->
+                        <!--<prop key="kaptcha.textproducer.char.space">5</prop>-->
+                    <!--</props>-->
+                <!--</constructor-arg>-->
+            <!--</bean>-->
+        <!--</property>-->
+    <!--</bean>-->
     <!-- exception related -->
     <!-- all exception handler will be registered by DispatcherServlet default (detectAllHandlerExceptionResolvers=true) -->
     <!--<bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->

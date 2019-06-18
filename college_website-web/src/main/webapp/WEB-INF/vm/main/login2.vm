@@ -44,7 +44,7 @@
         <input type="text" name="name" placeholder="请输入账号">
         <p>请输入密码</p>
         <input type="password" name="psssWord" placeholder="请输入性命">
-        <input type="submit" name="" value="登录">
+        <input type="submit" name="" onclick="Login" value="登录">
         <a href="http://localhost:8080/">返回首页</a>
     </form>
 

@@ -52,9 +52,5 @@ public class IndexController {
 	public String imageLinks(HttpServletRequest request, HttpServletResponse response, Model view) {
 		return "common/imageLinks";
 	}
-	@RequestMapping(value = "main/login", method = { RequestMethod.GET })
-	public String login(HttpServletRequest request, HttpServletResponse response, Model view) {
-		return "main/login";
-	}
 
 }
