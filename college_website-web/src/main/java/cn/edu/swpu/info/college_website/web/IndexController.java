@@ -53,4 +53,10 @@ public class IndexController {
 		return "common/imageLinks";
 	}
 
+	@RequestMapping(value = "/newslist", method = { RequestMethod.GET })
+	public String newslist(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+		view.addAttribute("messages", messageService.selectIndexMessagelist());
+		return "main/news/liebiao";
+	}
+
 }

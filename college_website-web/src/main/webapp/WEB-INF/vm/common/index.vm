@@ -11,7 +11,7 @@
     <div class="news_left">
         <div class="newsTitle" id="newsTitle1">
             <h2>新闻聚焦</h2>
-            <a href="list?type=10">更多&gt;</a>
+            <a href="newslist">更多&gt;</a>
         </div>
         <div class="photoList">
             #foreach($message in $messages)

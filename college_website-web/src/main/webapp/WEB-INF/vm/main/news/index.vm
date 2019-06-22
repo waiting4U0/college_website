@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>新闻</title>
+		<link rel="stylesheet" type="text/css" href="../../../../css/news/reset.css" />
+		<!--引入index.css用来引入首页样式-->
+		<link rel="stylesheet" type="text/css" href="../../../../css/news/index.css" />
+	</head>
+	<body>
+		<script type="text/javascript src="js/getUrlParam.js"></script>
+		<script type="text/javascript">
+                var newsId = UrlParam.paramValuse("newsId");
+                var title = document.getElementsByName("title")[0];
+                var new_biaoti = document.getElementById("new_biaoti");
+                var wnei = document.getElementById("wnei");
+                var type = document.getElementsByClassName("type");
+                var shijian = document.getElementById("shijian");
+                var laiyuan = document.getElementById("laiyuan");
+                var bianji = document.getElementById("bianji");
+                $(function(){
+                    #foreach($message in $messages)
+                        if('$message.messageId' == newsId) {
+                            title.innerHTML = "$messageTitle";
+                            new_biaoti.innerHTML = "$messageTitle";
+                            wnei.innerHTML = "$messageContent"
+                            for (var i = 0; i < type.length; i++) {
+                                type[i].innerHTML = "$messageType";
+                            }
+                            shijian.innerHTML = "$messageTime";
+                            laiyuan.innerHTML = "$messageSoure";
+                            bianji.innerHTML = "$messageCompiler";
+
+                            var shangyitiaoId = newsId - 1;
+                            var xiayitiaoId = newsId + 1;
+                            #foreach($messagel in $messages)
+                                if ('$messagel.messageId' == shangyitiaoId) {
+                                    var shangyitiao = document.getElementById("shangyitiao");
+                                    shangyitiao.innerHTML = "${messagel.messageTitle}";
+                                    shangyitiao.title = "${messagel.messageId}"
+                                }
+                                if ('$messager.messageId' == shangyitiaoId) {
+                                    var xiayitiao = document.getElementById("xiagyitiao");
+                                    xiayitiao.innerHTML = "${messager.messageTitle}";
+                                    xiayitiao.title = "${messager.messageId}"
+                                }
+                            #end
+                        }
+                    #end
+                });
+		</script>
+		<div class="top">
+			#parse("common/head.vm")
+			#parse("common/top.vm")
+			#parse("common/menu.vm")
+##			此处为头部导航
+		</div>
+		
+		<div class="biaoti">
+			<!--<div class="dp_t cleafix">
+	            <div class="dqwz fr">
+	                <i class="icon-home"></i>
+	                <span>当前位置：</span>
+	            #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
+	            &gt;*#
+	                <span><a href="javascript:;" onclick="main.menuGoTo('/party','')">党团建设</a></span>
+	                &gt;
+	                <span><a href="javascript:;" onclick="main.menuGoTo('/party/activity','')">工会活动</a></span>
+	            </div>
+	            <div class="fl">
+	                <h2>工会活动</h2>
+	            </div>
+	        </div>-->
+	        <div class="kong"></div>
+	        <div class="didi">
+	        	<p id="wei">首页.新闻.<span class="type">综合新闻</span>.正文</p>
+	        	<p id="biao" class="type">综合新闻</p>
+	        </div>
+	        
+		</div>
+		
+		<div class="neirong">
+			<div id="wbiao">
+				<p id="new_biaoti" style="font-size: 30px;line-height: 2em;text-align: center;color: #000;">张兴栋院士被授予罗马尼亚布加勒斯特理工大学“名誉博士”</p>
+				<!--<div class="zhu">
+					<p class="dada">发布时间 ：2019年06月16日</p>
+					<p class="dada">来源 ：国家生物医学材料工程技术研究中心 </p>
+					<p class="dada">编辑 ：王彦东</p>
+				</div>-->
+				<p style="font-size: 14px;line-height: 30px;text-align: center;color: #C9C9C9;">
+					<span>来源 ：<span id="shijian"></span></span>
+					<span>发布时间 ：<span id="laiyuan"> </span></span>
+					<span>编辑 ：<span id="bianji"></span></span>
+				</p>
+			</div>
+			<div id="wnei">
+				......
+			</div>
+			
+		</div>
+		<div class="shangxia">
+			<p>
+				<span>上一条：</span>
+				<a id="shangyitiao" href="javascript:;" onclick="huanye()">傅其林教授走进习近平新时代中国特色社会主义思想“三进”系列讲座</a>
+			</p>
+			<p>
+				<span>上一条：</span>
+				<a id="xiayitiao" href="javascript:;" onclick="huanye()">傅其林教授走进习近平新时代中国特色社会主义思想“三进”系列讲座</a>
+			</p>
+			<script type="text/javascript">
+				function huanye(){
+					this.href = "index.html?newsId="this.title"";
+				}
+			</script>
+			
+		</div>
+		<div class="tiao">
+			<a href="javascript:;" onclick="fanhui()">返回到列表页</a>
+			<script type="text/javascript">
+				function fanhui(){
+					this.href = "liebiao.vm";
+				}
+			</script>
+		</div>
+		
+		
+		
+		
+		<div class="footer">
+			#parse("common/footer.vm")
+##			此处为footer
+		</div>
+	</body>
+</html>

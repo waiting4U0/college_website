@@ -1,0 +1,336 @@
+
+.top{
+	width: 100%;
+	min-width:1200px;
+	height:300px;
+	background-color: gainsboro;
+}
+#tu{
+	width: 100%;
+	/*width:expression(document.body.clientWidth <= 1519.2? "1519.2px": "auto");*/
+	min-width:1200px;
+	height: 300px;
+	background-color: aquamarine;
+	/*background-image: ;*/
+	background-repeat:no-repeat;
+	margin-bottom: 20px;
+}
+#tu #tuzi{
+	width: 350px;
+	height: 200px;
+	background-color:rgba(255,0,0,0.5);
+	position:relative;
+	left: 70%;
+	top: 33%;
+	text-indent: 32px;
+}
+#tu #tuzi #shang{
+	text-indent: 0px;
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid lightsteelblue;
+	line-height: 70px;
+	text-align: center;
+}
+#tu #tuzi p{
+	position: relative;
+}
+#tu #tuzi #zishang{
+	font-size: 28px;
+	color: #000000;
+}
+#tu #tuzi #zixia{
+	font-size: 16px;
+	color: #000000;
+	line-height: 30px;
+}
+
+#nei{
+	width: 100%;
+	min-width:1200px;
+	margin-bottom: 100px;
+	min-height: 1000px;
+}
+#nei #lei{
+	float: left;
+	margin-left: 8%;
+	width: 15%;
+	margin-top: 40px;
+	border-left: 4px inset #f0f3f7;
+}
+#nei #lei #leibiao{
+	width: 230px;
+	height: 120px;
+	background-color: darksalmon;
+	font-size: 25px;
+	line-height: 120px;
+	text-align: center;
+	/*font: "微软雅黑";*/
+}
+#nei #juti{
+ 	float: left;
+	width: 74%;
+	position: relative;
+	left: 3%;
+}
+#nei #juti #biao{
+	width: 100%;
+	height: 70px;
+	border-bottom: groove 1px cornflowerblue;
+	margin-bottom: 40px;
+}
+#nei #juti #tiao{
+	width: 85%;
+	min-width: 900px;
+	margin-bottom: 10px;
+}
+#nei #juti #tiao .dan{
+	width: 100%;
+	height: 50px;
+	background-color: #d0d0d2;
+	/*font: "微软雅黑";*/
+	color: black;
+	font-size: 16px;
+	line-height: 50px;
+	text-indent: 30px;
+}
+#nei #juti #tiao .shuang{
+	width: 100%;
+	height: 50px;
+	/*font: "微软雅黑";*/
+	color: black;
+	font-size: 16px;
+	line-height: 50px;
+	text-indent: 30px;
+}
+
+#nei #juti #yeshu{
+	width: 73%;
+	background-color: greenyellow;
+	margin-left: 25%;
+}
+#nei #juti #yeshu button{
+	background-color: white;
+	font-size: 12px;
+	width: 60px;
+	height: 24px;
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+#nei #juti #yeshu form{
+	float: left;
+}
+#nei #juti #yeshu input{
+	width: 60px;
+	color: mediumslateblue;
+	margin-left: 80px;
+	margin-right: 10px;
+}
+.footer{
+	width: 100%;
+	height: 200px;
+	background-color: rosybrown;
+}
+
+
+.cd-accordion-menu {
+  width: 90%;
+  max-width: 200px;
+  margin: auto 0;
+}
+.cd-accordion-menu ul {
+  display: none;
+}
+.cd-accordion-menu li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.cd-accordion-menu input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+.cd-accordion-menu label, .cd-accordion-menu a {
+  position: relative;
+  display: block;
+  background: #e7ebff;
+  box-shadow: inset 0 -2px #e6e8ec;
+  color: black;
+  font-size: 1.6rem;
+	text-align: center;
+}
+.no-touch .cd-accordion-menu label:hover, .no-touch .cd-accordion-menu a:hover {
+  background: #52565d;
+}
+.cd-accordion-menu label::before, .cd-accordion-menu label::after, .cd-accordion-menu a::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.cd-accordion-menu label {
+  cursor: pointer;
+}
+.cd-accordion-menu label::before, .cd-accordion-menu label::after {
+  /*background-image: url(../img/cd-icons.svg);*/
+  background-repeat: no-repeat;
+}
+.cd-accordion-menu label::before {
+  left: 18px;
+  background-position: 0 0;
+  -webkit-transform: translateY(-50%) rotate(-90deg);
+  -moz-transform: translateY(-50%) rotate(-90deg);
+  -ms-transform: translateY(-50%) rotate(-90deg);
+  -o-transform: translateY(-50%) rotate(-90deg);
+  transform: translateY(-50%) rotate(-90deg);
+}
+.cd-accordion-menu label::after {
+  left: 41px;
+  background-position: -16px 0;
+}
+.cd-accordion-menu a::after {
+  left: 36px;
+  /*background: url(../img/cd-icons.svg) no-repeat -48px 0;*/
+	background: no-repeat -48px 0;
+}
+.cd-accordion-menu input[type=checkbox]:checked + label::before {
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.cd-accordion-menu input[type=checkbox]:checked + label::after {
+  background-position: -32px 0;
+}
+.cd-accordion-menu input[type=checkbox]:checked + label + ul,
+.cd-accordion-menu input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+  display: block;
+}
+.cd-accordion-menu ul label,
+.cd-accordion-menu ul a {
+  background: white;
+ box-shadow: inset 0 -2px #e6e8ec;
+  padding-left: 82px;
+}
+.no-touch .cd-accordion-menu ul label:hover, .no-touch
+.cd-accordion-menu ul a:hover {
+  background: #3c3f45;
+}
+.cd-accordion-menu > li:last-of-type > label,
+.cd-accordion-menu > li:last-of-type > a,
+.cd-accordion-menu > li > ul > li:last-of-type label,
+.cd-accordion-menu > li > ul > li:last-of-type a {
+  box-shadow: none;
+}
+.cd-accordion-menu ul label::before {
+  left: 36px;
+}
+.cd-accordion-menu ul label::after,
+.cd-accordion-menu ul a::after {
+  left: 59px;
+}
+.cd-accordion-menu ul ul label,
+.cd-accordion-menu ul ul a {
+  padding-left: 100px;
+}
+.cd-accordion-menu ul ul label::before {
+  left: 54px;
+}
+.cd-accordion-menu ul ul label::after,
+.cd-accordion-menu ul ul a::after {
+  left: 77px;
+}
+.cd-accordion-menu ul ul ul label,
+.cd-accordion-menu ul ul ul a {
+  padding-left: 118px;
+}
+.cd-accordion-menu ul ul ul label::before {
+  left: 72px;
+}
+.cd-accordion-menu ul ul ul label::after,
+.cd-accordion-menu ul ul ul a::after {
+  left: 95px;
+}
+@media only screen and (min-width: 600px) {
+  .cd-accordion-menu label, .cd-accordion-menu a {
+    padding: 24px 24px 24px 82px;
+    font-size: 1.2rem;
+  }
+  .cd-accordion-menu label::before {
+    left: 24px;
+  }
+  .cd-accordion-menu label::after {
+    left: 53px;
+  }
+  .cd-accordion-menu ul label,
+  .cd-accordion-menu ul a {
+    padding-left: 106px;
+  }
+  .cd-accordion-menu ul label::before {
+    left: 48px;
+  }
+  .cd-accordion-menu ul label::after,
+  .cd-accordion-menu ul a::after {
+    left: 77px;
+  }
+  .cd-accordion-menu ul ul label,
+  .cd-accordion-menu ul ul a {
+    padding-left: 130px;
+  }
+  .cd-accordion-menu ul ul label::before {
+    left: 72px;
+  }
+  .cd-accordion-menu ul ul label::after,
+  .cd-accordion-menu ul ul a::after {
+    left: 101px;
+  }
+  .cd-accordion-menu ul ul ul label,
+  .cd-accordion-menu ul ul ul a {
+    padding-left: 154px;
+  }
+  .cd-accordion-menu ul ul ul label::before {
+    left: 96px;
+  }
+  .cd-accordion-menu ul ul ul label::after,
+  .cd-accordion-menu ul ul ul a::after {
+    left: 125px;
+  }
+}
+.cd-accordion-menu.animated label::before {
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+.title{
+	width: auto;
+	height: 100px;
+    border-bottom:5px solid red;;
+}
+.first
+{
+	border-right: 6px solid red;
+	height: 500px;
+}
+.second-title{
+	width: 1200px;
+	height: 20px;
+	border-bottom: 6px solid red;
+}
+td{
+	border: 1px solid black;
+	text-align: center;
+	color: black;
+}
+.point{
+	text-align: left;
+}

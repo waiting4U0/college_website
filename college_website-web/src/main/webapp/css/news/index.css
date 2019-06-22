@@ -1,0 +1,108 @@
+.top{
+	width:100%;
+	height:300px;
+	background-color: gainsboro;
+	margin-bottom: 20px;
+}
+.biaoti{
+	width:100%;
+}
+.biaoti .kong{
+	width: 50%;
+	height: 60px;
+	float: left;
+	border-bottom: #bababa 1px solid;
+}
+.biaoti .didi{
+	width: 40%;
+	/*height: 100px;*/
+	float: right;
+	padding-right: 50px;
+}
+.biaoti .didi #wei{
+	font-size: 18px;
+	color: #bababa;
+	margin-bottom: 15px;
+	text-align: right;
+}
+.biaoti .didi #biao{
+	font-size: 32px;
+	color: #333333;
+	position: relative;
+	text-align: right;
+}
+
+.neirong{
+	width: 80%;
+	margin: 0 auto;
+	border: 1px solid #c9c9c9;
+	margin-top: 140px;
+	background-color: #fcfcfc;
+	position: relative;
+	padding: 73px;
+	padding-top: 50px;
+	padding-bottom: 40px;
+}
+.neirong #wbiao{
+	width: 100%;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #c9c9c9;
+	margin-bottom: 40px;
+}
+/*.neirong #wbiao .zhu{
+	width: ;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.neirong #wbiao .zhu .dada{
+	float: left;
+	margin-right: 15px;
+	font-size: 14px;
+	color: #c9c9c9;
+}*/
+.neirong #wnei{
+	width: 100%;
+	min-height: 600px;
+}
+.shangxia{
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 0px;
+	border: 1px solid #c9c9c9;
+	background-color: #fcfcfc;
+	position: relative;
+	padding: 73px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+}
+.shangxia p{
+	font-size: 16px;
+	line-height: 30px;
+}
+.shangxia span{
+	color: #c9c9c9;
+}
+.shangxia a{
+	color: black;
+}
+.shangxia a:hover{
+	color: cornflowerblue;
+}
+.tiao{
+	width: 100%;
+	text-align:center;
+	margin-bottom: 30px;
+}
+.tiao a{
+	font-size: 18px;
+	color: indianred;
+}
+.tiao a:hover{
+	color: red;
+}
+.footer{
+	width: 100px;
+	height: 200px;
+	background-color: aliceblue;
+}
