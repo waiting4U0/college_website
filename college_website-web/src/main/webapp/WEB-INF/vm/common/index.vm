@@ -11,11 +11,11 @@
     <div class="news_left">
         <div class="newsTitle" id="newsTitle1">
             <h2>新闻聚焦</h2>
-            <a href="newslist">更多&gt;</a>
+            <a href="list?type=10">更多&gt;</a>
         </div>
         <div class="photoList">
             #foreach($message in $messages)
-                #if($message.messageType == 2  )
+                #if($message.messageType == 2)
                     <div class="left_list">
                         <a class="news_photo" href="" title="${message.messageTitle}">
                             <img src="${message.messageImg}" alt="">
@@ -37,19 +37,36 @@
             </div>
 
             <div class="focusList">
-                #foreach($message in $messages)
-                    #if($message.getMessageType()==1)
-                        <p>
-                            <span><img src="/img/news_tip.png"></span>
-                            <span><a href="view?type=10&amp;id=19149" title=" ${message.getMessageTitle()}">
-                                ${message.getMessageTitle()}
-                            </a></span>
-                            <span></span> <span id="time">
-                            ${message.getCreateDate().toLocaleString().substring(0,9)}
-                        </span>
-                        </p>
-                    #end
-                #end
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
             </div>
         </div>
         <div class="news_rd">
@@ -58,124 +75,47 @@
                 <a href="list?type=10">更多&gt;</a>
             </div>
             <div class="focusList">
-                #foreach($message in $messages)
-                    #if($message.getMessageType()==3)
-                        <p>
-                            <span><img src="/img/news_tip.png"></span>
-                            <span><a href="view?type=10&amp;id=19149" title=" ${message.getMessageTitle()}">
-                                ${message.getMessageTitle()}
-                            </a></span> <span></span> <span id="time">
-                            ${message.getCreateDate().toLocaleString().substring(0,9)}
-                        </span>
-                        </p>
-                    #end
-                #end
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
+                <p>
+                    <span><img src="/img/news_tip.png"></span>
+                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
+                                信息院组织开展春游踏青活动...
+                             </a></span> <span></span> <span id="time">2019-03-25</span>
+                </p>
             </div>
         </div>
     </div>
 </div>
 
-#*复制
-    <div class="news_box m1200 cleafix">
-        <div id="bodyRight">
 
-            <div id="focus">
-                <div class="newsTitle">
-                    <div class="focusRight">
-                        <h2>新闻聚焦</h2>
-                        <a href="list?type=10">更多&gt;</a>
-                    </div>
-                </div>
-                <div class="focusList">
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-        <div id="bodyLeft">
-        ##        <img id="backLogo" src="./images/backLogo.png">
-            <div id="notice">
-                <div class="newsTitle">
-                    <div class="noticeRight">
-                        <h2>通知公告</h2>
-                        <a href="list?type=10">更多&gt;</a>
-                    </div>
-                </div>
-                <div class="noticeList">
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="关于公布2018年度院级“课堂教学质量奖”获得”">
-                                关于公布2018年度院级“课堂教学质量奖”获得...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="关于公布2018年度院级“课堂教学质量奖”获得”">
-                                关于公布2018年度院级“课堂教学质量奖”获得...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="关于公布2018年度院级“课堂教学质量奖”获得”">
-                                关于公布2018年度院级“课堂教学质量奖”获得...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="关于公布2018年度院级“课堂教学质量奖”获得”">
-                                关于公布2018年度院级“课堂教学质量奖”获得...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-
-                    <p>
-                        <span><img src="/img/news_tip.png"></span>
-                        <span><a href="view?type=10&amp;id=19149" title="关于公布2018年度院级“课堂教学质量奖”获得”">
-                                关于公布2018年度院级“课堂教学质量奖”获得...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                    </p>
-
-                </div>
-            </div>
-
-        </div>
-    </div>*#
 
 <!-- BEGIN PAGE LEVEL PLUGINS -->
 <!-- char控件 -->
 <script src="../../assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
-<script src = "../../assets/global/plugins/flot/jquery.flot.resize.min.js" type = "text/javascript" ></script>
+<script src="../../assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
 <script src="../../assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
 <script src="../../assets/global/plugins/jquery.pulsate.min.js" type="text/javascript"></script>
 <!-- 时间控件 -->

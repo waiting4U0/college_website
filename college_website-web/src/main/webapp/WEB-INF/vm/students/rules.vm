@@ -66,8 +66,13 @@
     </div>
 
 </div>*#
-        <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            规章制度
+        <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;/*text-indent :40px;*/font-size: 18px;">
+            <a href="#">·制度，，，</a><br/>
+            <a href="#">·制度，，，</a><br/>
+            <a href="#">·制度，，，</a><br/>
+            <a href="#">·制度，，，</a><br/>
+            <a href="#">·制度，，，</a><br/>
+            <a href="#">·制度，，，</a><br/>
         </div>
 
     </div>

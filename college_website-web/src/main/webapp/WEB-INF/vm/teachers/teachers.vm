@@ -64,7 +64,45 @@
 
 </div>*#
         <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            师资队伍
+            <div class="teacher">
+                <div class="teacher0">
+                    <div class="tu">
+                        <img src="../../assets/admin/layout/img/teacher.jpg" alt="">
+                    </div>
+                    <div class="biao">
+                        <p>党政领导班子</p>
+                    </div>
+                </div>
+                <div class="teacher0">
+                    <div class="tu">
+                        <img src="../../assets/admin/layout/img/teacher.jpg" alt="">
+                    </div>
+                    <div class="biao">
+                        <p>学院管理团队</p>
+                    </div>
+                </div>
+                <div class="teacher0">
+                    <div class="tu">
+                        <img src="../../assets/admin/layout/img/teacher.jpg" alt="">
+                    </div>
+                    <div class="biao">
+                        <p>。。研究所</p>
+                    </div>
+                </div>
+                <div class="teacher0">
+                    <div class="tu">
+                        <img src="../../assets/admin/layout/img/teacher.jpg" alt="">
+                    </div>
+                    <div class="biao">
+                        <p>实验中心</p>
+                    </div>
+                </div>
+                <div class="wenben">
+                    <p>教职工258人，专任教师191人，博士生导师45人，教授64人，副教授73人，他们中有中国工程院院士1人，国家“万人计划”入选者1人，教育部长江学者特聘教授3人，国家杰出青年基金获得者2人，“新世纪百千万人才工程”国家级人选5人，国务院学位委员会学科评议组成员2人，享受国务院政府特殊津贴专家10人，四川省“塔尖”人才培养工程人选1人，省部级拔尖人才77人。</p>
+                    <br/>
+                    <p style="text-align:right">（信息更新：2019年3月20日）</p>
+                </div>
+            </div>
         </div>
 
     </div>
