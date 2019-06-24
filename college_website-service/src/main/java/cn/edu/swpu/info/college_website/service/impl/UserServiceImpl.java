@@ -1,5 +1,7 @@
 package cn.edu.swpu.info.college_website.service.impl;
 
+import cn.edu.swpu.info.college_website.common.tools.Md5Utils;
+import cn.edu.swpu.info.college_website.common.tools.PasswordVerify;
 import cn.edu.swpu.info.college_website.dao.UserDao;
 import cn.edu.swpu.info.college_website.domain.User;
 import cn.edu.swpu.info.college_website.domain.common.Page;
@@ -71,25 +73,28 @@ public class UserServiceImpl implements UserService {
 //        selectUserInfoList(userInfo)
 //        return true;
 //    }
-    public User checkUser(User userInfo) {
-        User userInfo1 = userDao.selectUserByKey(userInfo);
+    public User checkUser(User webuser) {
+        User dbUser = userDao.selectUserByKey(webuser);//查找用户信息
+        User user = webuser;//接受登录用户信息
         //dataVerifyTool.isNull(userInfo1,"该用户不存在");
-        if(userInfo1 != null){
-            if(userInfo1.getPassword().equals(userInfo.getPassword())){
-                return userInfo1;
+        if(dbUser != null){
+            //验证密码PasswordVerify.isRightPassword(webuser,dbUser)
+            if(PasswordVerify.isRightPassword(webuser,dbUser)){
+                return dbUser;
             }else {
                 return null;
             }
-
         }
         return null;
     }
 
     @Override
-    public boolean addStudent(User user) {
-        User user1 = checkUser(user);
-        if(user1 == null){
-            if(userDao.insertEntryCreateId(user)==1){
+    public boolean addStudent(User webUser) {
+        User dbUser = checkUser(webUser);
+        User webUsercopy = webUser;
+        if(dbUser == null){
+            webUsercopy.setPassword(Md5Utils.Md5(webUser.getPassword()));
+            if(userDao.insertEntryCreateId(webUsercopy)==1){
                 return true;
             }
         }

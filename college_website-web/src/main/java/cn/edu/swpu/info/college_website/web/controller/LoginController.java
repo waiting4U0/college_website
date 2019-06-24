@@ -36,7 +36,8 @@ public class LoginController {
         return "manager/loginfailed";
     }
     @RequestMapping("/teacherslogincheck")
-    public String login2(User user) {
+    public String login2(User user,String password,String username) {
+        System.out.println("username:"+username+"   "+"password:"+ password);
         User user1 = userService.checkUser(user);
         String role1 = "管理员";
         String role2 = "院长";
@@ -44,7 +45,7 @@ public class LoginController {
 
         if (user1 != null) {
             if(user1.getRole().equals(role1)){
-                return "manage/messagemanage";//管理员页面
+                return "manage/managemain";//管理员页面
             }
         } else{
             return  "manager/loginfailed";
