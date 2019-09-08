@@ -59,4 +59,15 @@ public class IndexController {
 		return "main/news/liebiao";
 	}
 
+	@RequestMapping(value = "/news/index", method = { RequestMethod.GET })
+	public String newsindex(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+		return "news/index";
+	}
+
+
+	@RequestMapping(value = "/news/index2", method = { RequestMethod.GET })
+	public String newsindex2(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+		return "news/liebiao";
+	}
+
 }

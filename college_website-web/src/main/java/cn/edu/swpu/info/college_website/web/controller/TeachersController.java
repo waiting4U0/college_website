@@ -35,7 +35,7 @@ public class TeachersController {
     @RequestMapping(value = "/login", method = {RequestMethod.POST})
     public String login(HttpServletRequest request, HttpServletResponse response, Model view) {
         //return "manage/login";
-        return  "manamger/teachersLogin";
+        return  "teachers/teachersLogin";
     }
 
 

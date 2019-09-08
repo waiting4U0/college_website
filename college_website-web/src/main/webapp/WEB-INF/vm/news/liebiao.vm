@@ -3,15 +3,15 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../../../../css/news/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../../../../css/news/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/news/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../css/news/index.css" />
 	</head>
 	<body>
 		<div class="top">
-##			#parse("common/head.vm")
-##			#parse("common/top.vm")
-##			#parse("common/menu.vm")
-			此处为头部
+			#parse("common/head.vm")
+			#parse("common/top.vm")
+			#parse("common/menu.vm")
+##			此处为头部
 		</div>
 		<div id="tu">
 			<div id="tuzi">
@@ -236,8 +236,8 @@
 ##			#parse("common/footer.vm")
 			此处为footer
 		</div>
-		<script type="text/javascript" src="../../../../js/common/jquery.min.js"></script>
-		<script type="text/javascript" src="../../../../js/main/news/main.js"></script>
+		<script type="text/javascript" src="../../../js/common/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/main/news/main.js"></script>
 	</body>
 </html>
 

@@ -3,11 +3,17 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>新闻</title>
-		<link rel="stylesheet" type="text/css" href="../../../../css/news/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/news/reset.css" />
 		<!--引入index.css用来引入首页样式-->
-		<link rel="stylesheet" type="text/css" href="../../../../css/news/index.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/news/index.css" />
 	</head>
 	<body>
+		<div class="top">
+			#parse("common/head.vm")
+			#parse("common/top.vm")
+			#parse("common/menu.vm")
+		</div>
+
 		<script type="text/javascript src="js/getUrlParam.js"></script>
 		<script type="text/javascript">
                 var newsId = UrlParam.paramValuse("newsId");
@@ -21,7 +27,7 @@
                 $(function(){
                     #foreach($message in $messages)
                         if('$message.messageId' == newsId) {
-                            title.innerHTML = "$messageTitle";
+                            title.innerHTML = "$message.messageTitle";
                             new_biaoti.innerHTML = "$messageTitle";
                             wnei.innerHTML = "$messageContent"
                             for (var i = 0; i < type.length; i++) {
@@ -49,12 +55,7 @@
                     #end
                 });
 		</script>
-		<div class="top">
-			#parse("common/head.vm")
-			#parse("common/top.vm")
-			#parse("common/menu.vm")
-##			此处为头部导航
-		</div>
+
 		
 		<div class="biaoti">
 			<!--<div class="dp_t cleafix">
@@ -115,12 +116,12 @@
 			
 		</div>
 		<div class="tiao">
-			<a href="javascript:;" onclick="fanhui()">返回到列表页</a>
-			<script type="text/javascript">
+			<a href="liebiao.vm" ">返回到列表页</a>
+			#*<script type="text/javascript">
 				function fanhui(){
 					this.href = "liebiao.vm";
 				}
-			</script>
+			</script>*#
 		</div>
 		
 		
@@ -128,7 +129,6 @@
 		
 		<div class="footer">
 			#parse("common/footer.vm")
-##			此处为footer
 		</div>
 	</body>
 </html>
