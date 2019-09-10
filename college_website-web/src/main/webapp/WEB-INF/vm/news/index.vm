@@ -1,134 +1,117 @@
-<!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 	<head>
-		<meta charset="utf-8" />
 		<title>新闻</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta charset="UTF-8"/>
 		<link rel="stylesheet" type="text/css" href="../../../css/news/reset.css" />
 		<!--引入index.css用来引入首页样式-->
+        <link rel="stylesheet" type="text/css" href="../../../assets/admin/layout/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="../../../css/news/index.css" />
 	</head>
 	<body>
 		<div class="top">
-			#parse("common/head.vm")
+			#*#parse("common/head.vm")*#
 			#parse("common/top.vm")
 			#parse("common/menu.vm")
 		</div>
 
-		<script type="text/javascript src="js/getUrlParam.js"></script>
-		<script type="text/javascript">
-                var newsId = UrlParam.paramValuse("newsId");
-                var title = document.getElementsByName("title")[0];
-                var new_biaoti = document.getElementById("new_biaoti");
-                var wnei = document.getElementById("wnei");
-                var type = document.getElementsByClassName("type");
-                var shijian = document.getElementById("shijian");
-                var laiyuan = document.getElementById("laiyuan");
-                var bianji = document.getElementById("bianji");
-                $(function(){
-                    #foreach($message in $messages)
-                        if('$message.messageId' == newsId) {
-                            title.innerHTML = "$message.messageTitle";
-                            new_biaoti.innerHTML = "$messageTitle";
-                            wnei.innerHTML = "$messageContent"
-                            for (var i = 0; i < type.length; i++) {
-                                type[i].innerHTML = "$messageType";
-                            }
-                            shijian.innerHTML = "$messageTime";
-                            laiyuan.innerHTML = "$messageSoure";
-                            bianji.innerHTML = "$messageCompiler";
-
-                            var shangyitiaoId = newsId - 1;
-                            var xiayitiaoId = newsId + 1;
-                            #foreach($messagel in $messages)
-                                if ('$messagel.messageId' == shangyitiaoId) {
-                                    var shangyitiao = document.getElementById("shangyitiao");
-                                    shangyitiao.innerHTML = "${messagel.messageTitle}";
-                                    shangyitiao.title = "${messagel.messageId}"
-                                }
-                                if ('$messager.messageId' == shangyitiaoId) {
-                                    var xiayitiao = document.getElementById("xiagyitiao");
-                                    xiayitiao.innerHTML = "${messager.messageTitle}";
-                                    xiayitiao.title = "${messager.messageId}"
-                                }
-                            #end
-                        }
-                    #end
-                });
-		</script>
-
 		
 		<div class="biaoti">
-			<!--<div class="dp_t cleafix">
-	            <div class="dqwz fr">
-	                <i class="icon-home"></i>
-	                <span>当前位置：</span>
-	            #*<span><a href="javascript:;" onclick="main.menuGoTo('/index','')">学院首页</a></span>
-	            &gt;*#
-	                <span><a href="javascript:;" onclick="main.menuGoTo('/party','')">党团建设</a></span>
-	                &gt;
-	                <span><a href="javascript:;" onclick="main.menuGoTo('/party/activity','')">工会活动</a></span>
-	            </div>
-	            <div class="fl">
-	                <h2>工会活动</h2>
-	            </div>
-	        </div>-->
 	        <div class="kong"></div>
 	        <div class="didi">
-	        	<p id="wei">首页.新闻.<span class="type">综合新闻</span>.正文</p>
-	        	<p id="biao" class="type">综合新闻</p>
+	        	<p id="wei">首页.新闻</p>
+	        	<p id="biao" class="type"></p>
 	        </div>
 	        
 		</div>
 		
 		<div class="neirong">
 			<div id="wbiao">
-				<p id="new_biaoti" style="font-size: 30px;line-height: 2em;text-align: center;color: #000;">张兴栋院士被授予罗马尼亚布加勒斯特理工大学“名誉博士”</p>
-				<!--<div class="zhu">
-					<p class="dada">发布时间 ：2019年06月16日</p>
-					<p class="dada">来源 ：国家生物医学材料工程技术研究中心 </p>
-					<p class="dada">编辑 ：王彦东</p>
-				</div>-->
+				<p id="new_biaoti" style="font-size: 30px;line-height: 2em;text-align: center;color: #000;"></p>
 				<p style="font-size: 14px;line-height: 30px;text-align: center;color: #C9C9C9;">
-					<span>来源 ：<span id="shijian"></span></span>
-					<span>发布时间 ：<span id="laiyuan"> </span></span>
+					<span>来源 ：<span id="laiyuan"></span></span>
+					<span>发布时间 ：<span id="shijian"> </span></span>
 					<span>编辑 ：<span id="bianji"></span></span>
 				</p>
 			</div>
+			<div>
+                <img id="wtu" src="" alt="">
+			</div>
 			<div id="wnei">
-				......
+
 			</div>
 			
 		</div>
 		<div class="shangxia">
 			<p>
 				<span>上一条：</span>
-				<a id="shangyitiao" href="javascript:;" onclick="huanye()">傅其林教授走进习近平新时代中国特色社会主义思想“三进”系列讲座</a>
+				<a id="shangyitiao" href=""></a>
 			</p>
 			<p>
-				<span>上一条：</span>
-				<a id="xiayitiao" href="javascript:;" onclick="huanye()">傅其林教授走进习近平新时代中国特色社会主义思想“三进”系列讲座</a>
+				<span>下一条：</span>
+				<a id="xiayitiao" href=""></a>
 			</p>
-			<script type="text/javascript">
-				function huanye(){
-					this.href = "index.html?newsId="this.title"";
-				}
-			</script>
-			
 		</div>
+
 		<div class="tiao">
-			<a href="liebiao.vm" ">返回到列表页</a>
-			#*<script type="text/javascript">
-				function fanhui(){
-					this.href = "liebiao.vm";
-				}
-			</script>*#
+			<a href="liebiao?messageType=0&&page=1">返回到列表页</a>
 		</div>
-		
-		
-		
-		
+
+
 		<div class="footer">
 			#parse("common/footer.vm")
 		</div>
+
+        <script type="text/javascript">
+            window.onload=function(){
+                var new_biaoti = document.getElementById("new_biaoti");
+                var biao =document.getElementById("biao");
+                var wtu = document.getElementById("wtu");
+                var wnei = document.getElementById("wnei");
+                var shijian = document.getElementById("shijian");
+				#foreach($message in $messages)
+                    if($message.id == $id){
+                        var messageTitle = '$message.messageTitle';  //新闻标题
+                        var messageType = '$message.messageType';  //新闻类型
+                        var messageContent = '$message.messageContent';   //新闻内容
+                        var messageImg = '$message.messageImg';   //新闻图片
+                        var messageCreateDate = '$message.createDate'   //新闻时间
+
+                        new_biaoti.innerHTML = messageTitle;
+                        biao.innerHTML = messageType;
+                        wtu.src = messageImg;
+                        wnei.innerHTML = messageContent;
+                        shijian .innerHTML = messageCreateDate;
+                    }
+				#end
+
+                var shangyitiaoId = ($id)-1;
+                var shangyitiao = document.getElementById("shangyitiao");
+				#foreach($message1 in $messages)
+                    if($message1.id == shangyitiaoId){
+                        var messageTitle1 = '$message1.messageTitle';
+                        shangyitiao.href= 'index?id='+shangyitiaoId;
+                        shangyitiao.innerHTML = messageTitle1;
+                    }
+				#end
+
+                var xiayitiaoId = ($id)+1;
+                var xiayitiao = document.getElementById("xiayitiao");
+				#foreach($message2 in $messages)
+                    if($message2.id == xiayitiaoId){
+                        var messageTitle2 = '$message2.messageTitle';
+                        xiayitiao.href= 'index?id='+xiayitiaoId;
+                        xiayitiao.innerHTML = messageTitle2;
+                    }
+				#end
+            }
+
+        </script>
+
 	</body>
+
 </html>

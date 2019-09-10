@@ -16,11 +16,11 @@ public class Message extends BaseDomain {
                 '}';
     }
 
-    private String messageTitle;
-    private long messageType;
-    private String messageContent;
-    private String messageImg;
-    private String messageAddition;
+    private String messageTitle;  //新闻标题
+    private long messageType;   //新闻类型
+    private String messageContent;    //新闻内容
+    private String messageImg;   //新闻图片
+    private String messageAddition;   //新闻
 
 
     /**

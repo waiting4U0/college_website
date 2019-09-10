@@ -50,6 +50,13 @@ public class MessageServiceImpl implements MessageService {
     }
 
 	@Override
+	public List<Message> getMessagelist(){
+
+		List<Message> messagesData = messageDao.selectEntryList(new Message());
+		return messagesData;
+	}
+
+	@Override
 	public Integer addOne(Message message) {
 		return messageDao.insertEntry(message);
 	}
