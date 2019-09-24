@@ -24,34 +24,34 @@ import java.util.Date;
 public class LoginController {
     @Resource
     private UserService userService;
-    @RequestMapping(value = "/studentslogincheck", method = {RequestMethod.POST})
-    public String login1(User user) {
-        User user1 = userService.checkUser(user);
-        String role = "学生";
-        if (user1 != null) {
-            if(user1.getRole().equals(role))
-            return "students/2048";
-        } else
-            return "manager/loginfailed";
-        return "manager/loginfailed";
-    }
-    @RequestMapping("/teacherslogincheck")
-    public String login2(User user,String password,String username) {
-        System.out.println("username:"+username+"   "+"password:"+ password);
-        User user1 = userService.checkUser(user);
-        String role1 = "管理员";
-        String role2 = "院长";
-        String role3 = "辅导员";
-
-        if (user1 != null) {
-            if(user1.getRole().equals(role1)){
-                return "manage/managemain";//管理员页面
-            }
-        } else{
-            return  "manager/loginfailed";
-        }
-        return "manager/loginfailed";
-    }
+//    @RequestMapping(value = "/studentslogincheck", method = {RequestMethod.POST})
+//    public String login1(User user) {
+//        User user1 = userService.checkUser(user);
+//        String role = "学生";
+//        if (user1 != null) {
+//            if(user1.getRole().equals(role))
+//            return "students/2048";
+//        } else
+//            return "manager/loginfailed";
+//        return "manager/loginfailed";
+//    }
+//    @RequestMapping("/teacherslogincheck")
+//    public String login2(User user,String password,String username) {
+//        System.out.println("username:"+username+"   "+"password:"+ password);
+//        User user1 = userService.checkUser(user);
+//        String role1 = "管理员";
+//        String role2 = "院长";
+//        String role3 = "辅导员";
+//
+//        if (user1 != null) {
+//            if(user1.getRole().equals(role1)){
+//                return "manage/managemain";//管理员页面
+//            }
+//        } else{
+//            return  "manager/loginfailed";
+//        }
+//        return "manager/loginfailed";
+//    }
     @RequestMapping(value = "/main/test", method = { RequestMethod.GET })
     public String index(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
         return "manage/teacherlist";

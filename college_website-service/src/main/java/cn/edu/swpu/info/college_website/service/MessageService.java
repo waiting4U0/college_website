@@ -11,4 +11,6 @@ public interface MessageService {
     List<Message> selectIndexMessagelist() throws ParseException;
 
     Integer addOne(Message message);
+
+    String getMessageNameList();
 }

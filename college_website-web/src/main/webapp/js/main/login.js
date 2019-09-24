@@ -4,7 +4,6 @@ var Login = function () {
     //提交表单
 
     var formSubmit = function () {
-        //alert(123);
         //var myReg = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/; //邮件正则
         $('.alert-warning', $('.login-form')).css('display', 'none');
         $('.alert-danger', $('.login-form')).css('display', 'none');
@@ -17,17 +16,22 @@ var Login = function () {
         } else {
             var username = $("#username").val();
             var password = $("#password").val();
+            var verificationCode = $("#verificationCode").val();
             password = $.md5(password);
-            var url = "/main/login";
-            var param = {"username": username, "password": password};
+            var url = "/students/verify";
+            var param = {"username": username, "password": password, "verificationCode":verificationCode};
 
-            $.post(url, param, function (data) {
-                //alert(data);
-                if (data.code == 200) {
-                    //show_msg(data.data);
-                    window.location.href = "/index";
-                } else {
-                    loginFail("账号或密码错误，请重新输入！");
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: param,
+                dataType: 'json',
+                success: function (data) {
+                    if (data.code === 200) {
+                        window.location.href = "/loginsucceed";
+                    } else {
+                        loginFail(data.errorMsg);
+                    }
                 }
             });
         }

@@ -28,3 +28,17 @@ main.menuGoTo = function (url, param) {
         document.body.scrollTop = 0;
     });
 };
+
+
+$(function() {
+
+    $.post("/news/search",function (data) {
+        if (data.code == 200) {
+            var availableTags = data.data.toString().split(",");
+            $( "#tags" ).autocomplete({
+                source: availableTags
+            });
+        }
+    },"json");
+
+});

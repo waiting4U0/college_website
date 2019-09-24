@@ -2,7 +2,9 @@ package cn.edu.swpu.info.college_website.service.impl;
 
 import cn.edu.swpu.info.college_website.dao.MessageDao;
 import cn.edu.swpu.info.college_website.domain.Message;
+import cn.edu.swpu.info.college_website.domain.common.State;
 import cn.edu.swpu.info.college_website.service.MessageService;
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -52,6 +54,24 @@ public class MessageServiceImpl implements MessageService {
 	@Override
 	public Integer addOne(Message message) {
 		return messageDao.insertEntry(message);
+	}
+
+	@Override
+	public String getMessageNameList() {
+    	List<Message> messageList = messageDao.selectEntryList(new Message());
+    	List<String> nameList = new LinkedList<>();
+		for (Message me: messageList
+			 ) {
+			nameList.add(me.getMessageTitle());
+		}
+		State msg= State.success();
+		if(nameList!=null){
+			msg.setData(nameList);
+			return JSONObject.toJSONString(msg);
+		}else {
+			msg.setErrorMsg("获取数据失败");
+			return JSONObject.toJSONString(msg);
+		}
 	}
 
 

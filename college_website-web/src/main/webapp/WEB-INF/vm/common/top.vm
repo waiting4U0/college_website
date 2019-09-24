@@ -16,14 +16,12 @@
                                                                                                          id="searchScope197010"
                                                                                                          name="searchScope"
                                                                                                          value="0">
-                <div class="search cleafix">
-                    <input name="showkeycode" id="showkeycode197010" class="text fl" placeholder="请输入关键词">
-                #*<input type="text" class="search" value="搜索">*#
+                <div class="search cleafix ui-widget" >
+                    <label for="tags"></label>
+                    <input id="tags">
                     <input type="image" src="img/search.png" align="absmiddle" class="submit fl" style="cursor: hand">
                 </div>
             </form>
-            <script language="javascript" src="/system/resource/js/base64.js"></script>
-            <script language="javascript" src="/system/resource/js/formfunc.js"></script>
 
         </div>
     </div>

@@ -1,7 +1,6 @@
 package cn.edu.swpu.info.college_website.dao.impl;
 
 import cn.edu.swpu.info.college_website.dao.MessageDao;
-import cn.edu.swpu.info.college_website.dao.base.BaseDao;
 import cn.edu.swpu.info.college_website.dao.base.BaseDaoImpl;
 import cn.edu.swpu.info.college_website.domain.Message;
 import org.springframework.stereotype.Repository;

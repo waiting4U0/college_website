@@ -21,7 +21,7 @@ public interface UserService {
 
     //    public User selectUserByUsernameAndPassword(User userInfo);
 
-    User checkUser(User userInfo);//检查数据库是否已经存在此用户
+    String checkUser(User userInfo);//检查数据库是否已经存在此用户
 
     boolean addStudent(User studentInfo);
 }

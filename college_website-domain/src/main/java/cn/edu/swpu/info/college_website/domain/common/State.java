@@ -4,42 +4,42 @@ import com.alibaba.fastjson.JSON;
 
 import java.io.Serializable;
 
-public class Message implements Serializable {
+public class State implements Serializable {
     public static final int SYSTEM_ERROR = -1;
     public static final int ILLEGAL_ARGUMENT = -2;
     private int code = 200;
     private Object data;
     private String errorMsg = "success";
 
-    public Message() {
+    public State() {
     }
 
-    public Message(int code, String errorMsg) {
+    public State(int code, String errorMsg) {
         this.code = code;
         this.errorMsg = errorMsg;
     }
 
-    public static Message create(int code, String result) {
-        return new Message(code, result);
+    public static State create(int code, String result) {
+        return new State(code, result);
     }
 
-    public static Message success() {
+    public static State success() {
         return success("success");
     }
 
-    public static Message success(String msg) {
+    public static State success(String msg) {
         return create(200, msg);
     }
 
-    public static Message systemError() {
+    public static State systemError() {
         return create(-1, "系统异常");
     }
 
-    public static Message illegalArgument() {
+    public static State illegalArgument() {
         return create(-2, "参数错误");
     }
 
-    public static Message illegalArgument(String message) {
+    public static State illegalArgument(String message) {
         return create(-2, "参数错误：" + message);
     }
 

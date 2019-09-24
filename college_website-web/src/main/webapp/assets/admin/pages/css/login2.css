@@ -133,7 +133,23 @@ h2 {
     }
 }
 
-/*.login .h1 {
-  font-size: 22px;
+.yanzhengma{
+    width: 270px;
+    height: 50px;
+    margin-bottom: 10px;
 }
+.yanzhengma .left{
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+.yanzhengma .right{
+    width: 160px;
+    height: 40px;
+    float: left;
+}
+.yanzhengma img{
+    width: 160px;
+    height: 40px;
 }

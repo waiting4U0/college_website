@@ -1,9 +1,12 @@
 package cn.edu.swpu.info.college_website.web.interceptor;
 
 import cn.edu.swpu.info.college_website.common.PinContext;
+import cn.edu.swpu.info.college_website.dao.OpsFunctionDao;
 import cn.edu.swpu.info.college_website.dao.OpsRoleFunctionDao;
+import cn.edu.swpu.info.college_website.dao.OpsUserDao;
 import cn.edu.swpu.info.college_website.domain.OpsFunction;
 import cn.edu.swpu.info.college_website.domain.OpsRoleFunction;
+import cn.edu.swpu.info.college_website.domain.OpsUser;
 import cn.edu.swpu.info.college_website.service.OpsFunctionService;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.logging.Log;
@@ -24,6 +27,10 @@ public class AdminLoginTicketInterceptor implements org.springframework.web.serv
     private OpsFunctionService opsFunctionService;
     @Resource
     private OpsRoleFunctionDao opsRoleFunctionDao;
+    @Resource
+    private OpsUserDao opsUserDao;
+    @Resource
+    private OpsFunctionDao opsFunctionDao;
 
     @Override
     public boolean preHandle(HttpServletRequest request,

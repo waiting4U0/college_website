@@ -1,13 +1,14 @@
 package cn.edu.swpu.info.college_website.service.impl;
 
 import cn.edu.swpu.info.college_website.common.tools.Md5Utils;
-import cn.edu.swpu.info.college_website.common.tools.PasswordVerify;
 import cn.edu.swpu.info.college_website.dao.UserDao;
 import cn.edu.swpu.info.college_website.domain.User;
+import cn.edu.swpu.info.college_website.domain.common.State;
 import cn.edu.swpu.info.college_website.domain.common.Page;
 import cn.edu.swpu.info.college_website.domain.exception.AppException;
 import cn.edu.swpu.info.college_website.service.UserService;
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -73,24 +74,32 @@ public class UserServiceImpl implements UserService {
 //        selectUserInfoList(userInfo)
 //        return true;
 //    }
-    public User checkUser(User webuser) {
+    @Override
+    public String checkUser(User webuser) {
         User dbUser = userDao.selectUserByKey(webuser);//查找用户信息
-        User user = webuser;//接受登录用户信息
-        //dataVerifyTool.isNull(userInfo1,"该用户不存在");
-        if(dbUser != null){
-            //验证密码PasswordVerify.isRightPassword(webuser,dbUser)
-            if(PasswordVerify.isRightPassword(webuser,dbUser)){
-                return dbUser;
+        try {
+            State msg = State.illegalArgument();
+            if(dbUser != null){
+                if(webuser.getPassword().equals(dbUser.getPassword())){
+                    msg= State.success();
+                }else {
+                    msg= State.systemError();
+                    msg.setErrorMsg("密码错误");
+                }
             }else {
-                return null;
+                msg= State.systemError();
+                msg.setErrorMsg("用户不存在");
             }
+            return JSONObject.toJSONString(msg);
+        } catch (Exception e) {
+            State msg = State.systemError();
+            return JSONObject.toJSONString(msg);
         }
-        return null;
     }
 
     @Override
     public boolean addStudent(User webUser) {
-        User dbUser = checkUser(webUser);
+        User dbUser = userDao.selectUserByKey(webUser);
         User webUsercopy = webUser;
         if(dbUser == null){
             webUsercopy.setPassword(Md5Utils.Md5(webUser.getPassword()));
