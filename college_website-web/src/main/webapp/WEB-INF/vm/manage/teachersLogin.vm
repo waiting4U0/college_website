@@ -41,11 +41,11 @@
     <h2><b>老师登录</b></h2>
     <form action="/login/teacherslogincheck" method="post">
         <p>请输入账号</p>
-        <input type="text" name="code"  placeholder="请输入工号">
+        <input type="text" name="code"  placeholder="请输入账号">
         <p>请输入密码</p>
-        <input type="password" name="password"  placeholder="请输入密码">
+        <input type="text" name="password"  placeholder="请输入密码">
         <input type="submit" name="" value="登录">
-        <a href="http://localhost:8080/">返回首页</a>
+        <a href="http://localhost:8080">返回首页</a>
     </form>
 
 

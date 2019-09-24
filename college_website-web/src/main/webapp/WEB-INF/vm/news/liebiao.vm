@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="utf-8" />
+        <title>新闻</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../../css/news/reset.css"/>
-		<link rel="stylesheet" type="text/css" href="../../../css/news/index.css" />
+        <link rel="stylesheet" type="text/css" href="../../../assets/admin/layout/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="../../../css/news/liebiao.css" />
 	</head>
 	<body>
 		<div class="top">
 			#parse("common/head.vm")
 			#parse("common/top.vm")
-			#parse("common/menu.vm")
+			#*#parse("common/menu.vm")*#
 ##			此处为头部
 		</div>
 		<div id="tu">
@@ -28,216 +34,195 @@
 				</div>
 				<div class="menv_box">
 					<ul class="cd-accordion-menu animated">
-						#foreach($messageParent in $messages)
-							#if($messageParent.messageParentType == 0)
-								<li class="has-children">
-									<input type="checkbox" name ="group-2" id="group-2">
-									<label for="group-2">${messageParent.messageTypeName}</label>
-									<ul>
-										#foreach($messageChild in $messages)
-											#if($messageChild.messageParentType == $messageParent.messageType)
-												<li><a class="zibiaoqian" href="javascript:;" onclick="newGoTo("${messageChild.messageType}")">${messageChild.messageTypeName}</a></li>
-											#end
-										#end
-									</ul>
-									<script type="text/javascript">
-										function newGoTo(messageType){
-											var news = document.getElementsByClassName("news");
-											for(var i = 0;i < news.length;i++){
-												news[i].innerHTML = "";
-												news[i].title = "";
-											}
-											#foreach($messager in $messages)
-												if($messager.messageType == messageType){
-													for(var i = 0;i < news.length;i++){
-														if(news[i].title == ""){
-															news[i].innerHTML = "$messager.messageTitle";
-															news[i].title = "$messager.messageId";
-														}
-													}
-												}
-											#end
-										}
-									</script>
-						  		</li>
-						  	#end
-						#end
-						
-					
 						<li class="has-children">
-							<input type="checkbox" name ="group-3" id="group-3">
-							<label for="group-3">教室管理</label>
-					
-							<ul>
-								<li><a class="zibiaoqian" href="#0">Image</a></li>
-								<li><a class="zibiaoqian" href="#0">Image</a></li>
-							</ul>
+                            <a class="mulu" id="1" href="liebiao?messageType=1&&page=1">新闻聚焦</a>
 						</li>
-					
-						<li class="has-children">
-							<input type="checkbox" name ="group-4" id="group-4">
-							<label for="group-4">信息管理</label>
-					
-							<ul>
-								<li class="has-children">
-									<input type="checkbox" name ="sub-group-3" id="sub-group-3">
-									<label for="sub-group-3">Sub Group 3</label>
-					
-									<ul>
-										<li><a class="zibiaoqian" href="#0">Image</a></li>
-										<li><a class="zibiaoqian" href="#0">Image</a></li>
-									</ul>
-								</li>
-								<li><a class="zibiaoqian" href="#0">Image</a></li>
-								<li><a class="zibiaoqian" href="#0">Image</a></li>
-							</ul>
-							
-							<script type="text/javascript">
-								var zibiaoqians = document.getElementsByClassName("zibiaoqian");
-								for(var i = 0;i < zibiaoqians.length;i++){
-									zibiaoqians[i].onclick = function(){
-										for(var j = 0;j < zibiaoqians.length;j++){
-											zibiaoqians[j].style.color = "black";
-										}
-										this.style.color = "coral";
-									}
-								}
-							</script>
+
+                        <li class="has-children">
+                            <a class="mulu" id="2" href="liebiao?messageType=2&&page=1">学工通知</a>
 						</li>
-						
+
+                        <li class="has-children">
+                            <a class="mulu" id="3" href="liebiao?messageType=3&&page=1">党团快讯</a>
+                        </li>
+
+                        <li class="has-children">
+                            <a class="mulu" id="4" href="liebiao?messageType=4&&page=1">活动</a>
+                        </li>
 					</ul>
 				</div>
-				
 			</div>
 			<div id="juti">
 				<div id="biao"></div>
 				<div id="tiao">
 					<ul>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick="news()">1111</a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()">2222</a></li>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick="news()">1111</a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()">2222</a></li>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="dan"><a class="news" href="javascript:;" onclick=".news()"></a></li>
-					  	<li class="shuang"><a class="news" href="javascript:;" onclick="news()"></a></li>
-					  	<li class="dan"><a class="news" id="zuihou" href="javascript:;" onclick="news()"></a></li>    <!--15-->
+					  	<li class="dan"><a class="news"  name="zuiqian" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>
+					  	<li class="shuang"><a class="news" href=""></a></li>
+					  	<li class="dan"><a class="news" href=""></a></li>    <!--15-->
 					</ul>
 				</div>
 				<div id="yeshu">
 					<div id="kong">
-						<button id="shangyiye" onclick="shang()">上一页</button>
-						<script type="text/javascript">
-				            function shang(){
-				                var zuihouId = document.getElementById("zuihou").title;
-				                var news = document.getElementsByClassName("news");
-				                for(var i = 0;i < news.length;i++){
-				                    news[i].innerHTML = "";
-				                    news[i].title = "";
-				                }
-				                $(function(){
-				                    #foreach($messager in $messages)
-				                        if('$messager.messageId' == zuihouId){
-				                            var type = '$messager.messageType';
-				                        }
-				                    #end
-				                    #foreach($message in $messages)
-				                        if('$message.messageType' == type || '$message.messageId' <= zuihouId - 15 || '$message.messageId' > zuihouId - 30){
-				                            for(var i = 0;i < news.length;i++){
-				                                if(news[i].title == ""){
-				                                    news[i].innerHTML = "$message.messageTitle";
-				                                    news[i].title = "$message.messageId";
-				                                }
-				                            }
-				                        }
-				                    #end
-				                });
-				            }
-				        </script>
-						<button id="xiayiye" onclick="xia()">下一页</button>
-						<script type="text/javascript">
-				            function xia(){
-				                var zuihouId = document.getElementById("zuihou").title;
-				                var news = document.getElementsByClassName("news");
-				                for(var i = 0;i < news.length;i++){
-				                    news[i].innerHTML = "";
-				                    news[i].title = "";
-				                }
-				                $(function(){
-				                    #foreach($messager in $messages)
-				                        if('$messager.messageId' == zuihouId){
-				                            var type = '$messager.messageType';
-				                        }
-				                    #end
-				                    #foreach($message in $messages)
-				                        if('$message.messageType' == type || '$message.messageId' <= zuihouId + 15 || '$message.messageId' >= zuihouId + 1){
-				                            for(var i = 0;i < news.length;i++){
-				                                if(news[i].title == ""){
-				                                    news[i].innerHTML = "$message.messageTitle";
-				                                    news[i].title = "$message.messageId";
-				                                }
-				                            }
-				                        }
-				                    #end
-				                });
-				            }
-				        </script>
+						<button id="shangyiye"><a id="shangyiyea" href="">上一页</a></button>
+						<button id="xiayiye"><a id="xiayiyea" href="">下一页</a></button>
 						<form>
-							<input id="shuru" type="text" value="输入页数">
-							<script type="text/javascript">
-								var shuru = document.getElementById("shuru");
-								shuru.onclick = function(){
-									shuru.value = "";
-									shuru.style.color = "black";
-								}
-							</script>
+							<input id="shuru" type="number">
 						</form> 
-						<button onclick="main.tiao()">跳转</button>
-						<script type="text/javascript">
-							function tiao(){
-								var zuihouId = document.getElementById("zuihou").title;
-								var news = document.getElementsByClassName("news");
-								var value = document.getElementById("shuru").value;
-								for(var i = 0;i < news.length;i++){
-									news[i].innerHTML = "";
-									news[i].title = "";
-								}
-								$(function(){
-									#foreach($messager in $messages)
-					                        if('$messager.messageId' == zuihouId){
-					                            var type = '$messager.messageType';
-					                        }
-					                    #end
-				                    #foreach($message in $messages)
-				                        if('$message.messageType' == type || '$message.messageId' <= value*15 || '$message.messageId' > value*15-15){
-				                            for(var i = 0;i < news.length;i++){
-				                                if(news[i].title == ""){
-				                                    news[i].innerHTML = "$message.messageTitle";
-				                                    news[i].title = "$message.messageId";
-				                                }
-				                            }
-				                        }
-				                    #end
-								})
-							}
-						</script>
+						<button id="tiaozhuan"><a id="tiaozhuana" href="">跳转</a></button>
+						<p id="numberPage"></p>
 					</div>
 					
 				</div>
 			</div>
 		</div>
 		<div class="footer">
-##			#parse("common/footer.vm")
-			此处为footer
+			#parse("common/footer.vm")
+
 		</div>
-		<script type="text/javascript" src="../../../js/common/jquery.min.js"></script>
-		<script type="text/javascript" src="../../../js/main/news/main.js"></script>
+		#*<script type="text/javascript" src="../../../js/common/jquery.min.js"></script>
+		<script type="text/javascript" src="../../../js/main/news/main.js"></script>*#
+
+        <script type="text/javascript">
+            window.onload=function () {
+                var page =$page;
+                var messageType = new Array();
+                var messageType1 = new Array();
+                var messageType2 = new Array();
+                var messageType3 = new Array();
+                var messageType4 = new Array();
+                var ma = 0 ,ma1 = 0 ,ma2 = 0 , ma3 = 0 ,ma4 = 0;
+                var allPage = 0;
+                #foreach($message in $messages)
+                    messageType[ma] = $message.id;
+                    ma++;
+					if($message.messageType == 1){
+						messageType1[ma1] = $message.id;
+                    	ma1++;
+                    }else if($message.messageType == 2){
+						messageType2[ma2] = $message.id;
+                    	ma2++;
+                	}else if($message.messageType == 3){
+						messageType3[ma3] = $message.id;
+						ma3++;
+					}else{
+						messageType4[ma4] = $message.id;
+						ma4++;
+                	}
+				#end
+
+                var news = document.getElementsByClassName("news");
+                if($messageType == 0){
+                    allPage = parseInt(messageType.length/15)+1;
+                    for (var a = (page-1)*15;a<messageType.length;a++){
+						#foreach($message in $messages)
+                            if($message.id == messageType[a]){
+                            news[a].innerHTML = '$message.messageTitle';
+                            news[a].id = $message.id;
+                            news[a].href = "index?id="+$message.id;
+                        }
+						#end
+                    }
+                }else{
+                    var mulu = document.getElementsByClassName("mulu");
+                    for(var x = 0;x<mulu.length;x++){
+                        if(mulu[x].id == $messageType){
+                            for(var y = 0;y<mulu.length;y++){
+                                mulu[y].style.color = "black";
+                            }
+                            mulu[x].style.color = "coral";
+                        }
+                    }
+                    if($messageType == 1){
+                        allPage = parseInt(messageType1.length/15)+1;
+                        for (var a = (page-1)*15;a<messageType1.length;a++){
+							#foreach($message in $messages)
+                                if($message.id == messageType1[a]){
+                                news[a].innerHTML = '$message.messageTitle';
+                                news[a].id = $message.id;
+                                news[a].href = "index?id="+$message.id;
+                            	}
+							#end
+						}
+                    }else 	if($messageType == 2){
+                        allPage = parseInt(messageType2.length/15)+1;
+                        for (var a = (page-1)*15;a<messageType2.length;a++){
+							#foreach($message in $messages)
+                                if($message.id == messageType2[a]){
+                                news[a].innerHTML = '$message.messageTitle';
+                                news[a].id = $message.id;
+                                news[a].href = "index?id="+$message.id;
+                            }
+							#end
+                        }
+					}else 	if($messageType == 3){
+                        allPage = parseInt(messageType3.length/15)+1;
+                        for (var a = (page-1)*15;a<messageType3.length;a++){
+							#foreach($message in $messages)
+                                if($message.id == messageType3[a]){
+                                news[a].innerHTML = '$message.messageTitle';
+                                news[a].id = $message.id;
+                                news[a].href = "index?id="+$message.id;
+                            }
+							#end
+                        }
+                    }else 	if($messageType == 4){
+                        allPage = parseInt(messageType4.length/15)+1;
+                        for (var a = (page-1)*15;a<messageType4.length;a++){
+							#foreach($message in $messages)
+                                if($message.id == messageType4[a]){
+                                news[a].innerHTML = '$message.messageTitle';
+                                news[a].id = $message.id;
+                                news[a].href = "index?id="+$message.id;
+                            }
+							#end
+                        }
+                    }
+                }
+
+                /*shang,xia,tiao*/
+                var shangyiye = document.getElementById("shangyiye");
+                var shangyiyea = document.getElementById("shangyiyea");
+                var xiayiye = document.getElementById("xiayiye");
+                var xiayiyea = document.getElementById("xiayiyea");
+                var tiao = document.getElementById("tiao");
+				if(page <= 1){
+				    shangyiye.removeChild(shangyiyea);
+				    shangyiye.disabled = "flase";
+                    shangyiye.style.width = "100px";
+                    shangyiye.innerHTML="没有上一页";
+				}
+				if(page >= allPage){
+                    xiayiye.removeChild(xiayiyea);
+                    xiayiye.disabled = "flase";
+                    xiayiye.style.width = "100px";
+                    xiayiye.innerHTML="没有上一页";
+				}
+                var tiaozhuana = document.getElementById("tiaozhuana");
+				var shuru = document.getElementById("shuru").value;
+				if(shuru <= 1){
+				    shuru = 1;
+				}else if(shuru >= allPage){
+				    shuru = allPage;
+				}
+				tiaozhuana.href = "liebiao?messageType=$messageType&&page="+shuru;
+
+				var numberPage = document.getElementById("numberPage");
+                numberPage.innerHTML = "页眉：$page/"+allPage;
+            }
+        </script>
+
 	</body>
 </html>
 

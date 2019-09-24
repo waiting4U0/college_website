@@ -123,7 +123,7 @@ img{border:none}
 .news_rt{height: 210px;width: 100%;margin-bottom: 20px}
 .news_rd{height: 210px;width: 100%}
 .focusList{height: 160px;}
-.focusList p{height: 20%;margin:0;margin-left:15px;display:block;line-height:32px;font-size:15px;color: black;}
+.focusList .left_list{height: 20%;margin:0;margin-left:15px;display:block;line-height:32px;font-size:15px;color: black;}
 #time{float:right;margin-right:10px;color: #295279;}
 /*#newsTitle{
 	width:100%;

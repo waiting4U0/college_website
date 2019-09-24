@@ -60,12 +60,29 @@ public class IndexController {
 
 	@RequestMapping(value = "/news/index", method = { RequestMethod.GET })
 	public String newsindex(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+
+		System.out.println(request.getParameter("id"));
+		view.addAttribute("id",request.getParameter("id"));
+		view.addAttribute("messages", messageService.getMessagelist());
+		List<OpsFunction> functionData = PinContext.getFunctionData();
+//		//加载用户资源
+//		view.addAttribute("erp", pin);
+		view.addAttribute("functions", functionData);
 		return "news/index";
 	}
 
 
-	@RequestMapping(value = "/news/index2", method = { RequestMethod.GET })
-	public String newsindex2(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+	@RequestMapping(value = "/news/liebiao", method = { RequestMethod.GET })
+	public String newsliebiao(HttpServletRequest request, HttpServletResponse response, Model view) throws ParseException {
+		System.out.println(request.getParameter("messageType"));
+		view.addAttribute("messageType",request.getParameter("messageType"));
+		System.out.println(request.getParameter("page"));
+		view.addAttribute("page",request.getParameter("page"));
+		view.addAttribute("messages", messageService.getMessagelist());
+		List<OpsFunction> functionData = PinContext.getFunctionData();
+//		//加载用户资源
+//		view.addAttribute("erp", pin);
+		view.addAttribute("functions", functionData);
 		return "news/liebiao";
 	}
 

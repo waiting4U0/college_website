@@ -1,0 +1,23 @@
+<html>
+<head>
+
+
+</head>
+<body>
+
+<div class="focusList">
+    #foreach($user in $users)
+        #if($user.id != 0  )
+            <div class="left_list">
+
+                <a class="news_f" href="" title="${user.code}"
+                <span>${user.name}</span>
+                <p>${user.sex}</p>
+                </a>
+            </div>
+        #end
+    #end
+</div>
+</div>
+</body>
+</html>
