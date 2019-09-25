@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>studentView.html</title>
+		<link rel="stylesheet" type="text/css" href="../../../css/news/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../css/news/view.css"/>
+	</head>
+	<body>
+		<div id="head">
+			<div id="up"></div>
+			<div id="down">
+				<div id="left">
+					logo
+				</div>
+				<div id="right">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="center">
+			<div id="actionfontlist">
+				<div class="actionfonts" style="top: 28px;left: 230px;">
+					<p>你好</p>
+					<p>好呀</p>
+				</div>
+				<div class="actionfonts" style="top: 90px;left: 460px;">
+					<p>你好</p>
+					<p>好呀</p>
+				</div>
+				<div class="actionfonts" style="top: 28px;left: 680px;">
+					<p>你好</p>
+					<p>好呀</p>
+				</div>
+				<div class="actionfonts" style="top: 260px;left: 680px;">
+					<p>你好</p>
+					<p>好呀</p>
+				</div>
+				<div class="actionfonts" style="top: 180px;left: 910px;">
+					<p>你好</p>
+					<p>好呀</p>
+				</div>
+				<div class="actionfonts" style="top: 260px;left: 1130px;">
+					<p>你好</p>
+					<p>好呀</p>
+				</div>
+			</div>
+			<div id="actionlist">
+					<div class="actions action2s" style=" z-index: 3; top: -40px;left: -40px;">  <!--transform:rotate(20deg); 35 5 20 10 10-->
+					
+					</div>
+					<div class="actions action2s action3s" style=" z-index: 4;top: 20px;left: 190px;">
+						
+					</div>
+					<div class="actions action2s" style=" z-index: 5;top: -40px;left: 410px;">
+						
+					</div>
+					<div class="actions action2s action3s" style=" z-index: 6;top: 190px;left: 410px;">
+					
+					</div>
+					<div class="actions action2s" style=" z-index: 7;top: 110px;left: 640px;">
+						
+					</div>
+					<div class="actions action2s action3s" style=" z-index: 8;top: 190px;left: 860px;">
+						
+					</div>
+			</div>
+		</div>
+		
+		
+		<div id="footer">
+			<p>版权方：xxxxx</p>
+		</div>
+
+		<script src="../../assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+		<script src="/js/main/news/view.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

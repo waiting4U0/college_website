@@ -28,7 +28,7 @@ var Login = function () {
                 dataType: 'json',
                 success: function (data) {
                     if (data.code === 200) {
-                        window.location.href = "/loginsucceed";
+                        window.location.href = "/students/view";
                     } else {
                         loginFail(data.errorMsg);
                     }

@@ -8,7 +8,7 @@ To meet this goal, DataTables is developed with two distinct groups of users in 
 
 * You the developers using DataTables. For developers DataTables provides a wide array of options for how data should be obtained, displayed and acted upon, along with an extensive API for accessing and manipulating the table.
 
-* End users. For those using the interface DataTables presents, actions to get the most from the information contained in tables, such as sorting and filtering, along with paging and scrolling of the data in table, are easy to use, intuitive and fast.
+* End users. For those using the interface DataTables presents, actions to get the most from the message contained in tables, such as sorting and filtering, along with paging and scrolling of the data in table, are easy to use, intuitive and fast.
 
 
 ## Installation
@@ -40,7 +40,7 @@ A full list of the options available for DataTables are available in the [docume
 
 ## Documentation
 
-Full documentation of the DataTables options, API and pug-in interface are available on the [DataTables web-site](//datatables.net). The site also contains information on the wide variety of plug-ins that are available for DataTables, which can be used to enhance and customise your table even further.
+Full documentation of the DataTables options, API and pug-in interface are available on the [DataTables web-site](//datatables.net). The site also contains message on the wide variety of plug-ins that are available for DataTables, which can be used to enhance and customise your table even further.
 
 
 ## Support

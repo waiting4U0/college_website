@@ -1,0 +1,105 @@
+#head{
+	height: 100px;
+	width: 100%;
+}
+#head #up{
+	height: 10%;
+	width: 100%;
+	background-color: red;
+}
+#head #down{
+	height: 90%;
+	width: 100%;
+	background-color: sandybrown;
+}
+#head #down #left{
+	float: left;
+	margin-left: 300px;
+	margin-top: 20px;
+}
+#head #down #right{
+	float: left;
+}
+
+
+#center{
+	width: 1400px;
+	min-width: 1400px;
+	height: 460px;
+	background-color: silver;
+	margin: 0 auto;
+	padding-top: 100px;
+	position: relative;
+}
+#center #actionfontlist{
+	width: 1000px;
+	height: 440px;
+	margin: 0 auto;
+	z-index: 1;
+	position: absolute;
+}
+#center #actionfontlist .actionfonts{
+	width: 85px;
+	height: 85px;
+	font-size: 34px;
+	position: absolute;
+	text-align: center;
+}
+#center #actionfontlist .actionfonts p{
+	margin-bottom: 7px;
+	letter-spacing: 3px;
+}
+
+#center #actionlist{
+	width: 1000px;
+	height: 440px;
+	margin: 0 auto;
+	z-index: 2;
+	position: relative;
+}
+#center #actionlist #actionlistup{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#center #actionlist #actionlistdown{
+	width: 100%;
+	height: 50%;
+	position: relative;
+}
+#center #actionlist .actions{
+	width: 220px;
+	height: 219px;
+	background-image: url(../../img/齿轮111.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	
+}
+.action2s{
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+	animation: rotate 12s linear infinite;
+	animation-direction:alternate;
+	-webkit-animation-direction:alternate;
+	animation-fill-mode: forwards;
+}
+.action3s{
+	animation-delay:-12s;
+	-webkit-animation-delay:-12s;
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+to{transform: rotate(360deg)}
+}
+#center #actionlist #actionlistdown .actions{
+	float: right;
+}
+
+#footer{
+	height: 40px;
+	width: 100%;
+}
+#footer p{
+	margin-top: 20px;
+	text-align: center;
+}

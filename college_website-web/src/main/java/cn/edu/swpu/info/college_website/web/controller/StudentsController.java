@@ -53,6 +53,11 @@ public class StudentsController {
         return "students/studentsLogin";
     }
 
+    @RequestMapping(value = "/view", method = {RequestMethod.POST})
+    public String view() {
+        return "students/studentView";
+    }
+
     @RequestMapping(value = "/verify", method = {RequestMethod.POST})
     @ResponseBody
     public String loginVerify(HttpServletRequest httpServletRequest, Model view) {
