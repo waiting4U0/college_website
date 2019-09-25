@@ -11,16 +11,16 @@
     <div class="news_left">
         <div class="newsTitle" id="newsTitle1">
             <h2>新闻聚焦</h2>
-            <a href="news/liebiao?messageType=1&&page=1" name="news">更多&gt;</a>
+            <a href="news/liebiao?messageType=1&&page=1" target="view_frame" name="news">更多&gt;</a>
         </div>
         <div class="photoList">
             #foreach($message in $messages)
                 #if($message.messageType == 2)
                     <div class="left_list">
-                        <a class="news_photo" href="news/index?id=${message.id}" title="${message.messageTitle}">
+                        <a class="news_photo" href="news/index?id=${message.id}" target="view_frame" title="${message.messageTitle}">
                             <img src="${message.messageImg}" alt="">
                         </a>
-                        <a class="news_f" href="news/index?id=${message.id}" title="${message.messageTitle}"
+                        <a class="news_f" href="news/index?id=${message.id}" target="view_frame" title="${message.messageTitle}"
                         <span>${message.messageTitle}</span>
                         <p>${message.messageContent}</p>
                         </a>
@@ -33,96 +33,36 @@
         <div class="news_rt">
             <div class="newsTitle" id="newsTitle2">
                 <h2>学工通知</h2>
-                <a href="news/liebiao?messageType=2&&page=1">更多&gt;</a>
+                <a href="news/liebiao?messageType=2&&page=1" target="view_frame">更多&gt;</a>
             </div>
 
             <div class="focusList">
-                #*<p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>*#
-                    #foreach($message in $messages)
-                        #if($message.messageType == 3)
-                            <div class="left_list">
-                                <a class="news_f" href="news/index?id=${message.id}" title="${message.messageTitle}"
-                                <span>${message.messageTitle}</span>
-                                </a>
-                            </div>
-                        #end
+                #foreach($message in $messages)
+                    #if($message.messageType == 3)
+                        <div class="left_list">
+                            <a class="news_f" href="news/index?id=${message.id}" target="view_frame" title="${message.messageTitle}"
+                            <span>${message.messageTitle}</span>
+                            </a>
+                        </div>
                     #end
+                #end
             </div>
         </div>
         <div class="news_rd">
             <div class="newsTitle" id="newsTitle3">
                 <h2>党团快讯</h2>
-                <a href="news/liebiao?messageType=3&&page=1">更多&gt;</a>
+                <a href="news/liebiao?messageType=3&&page=1" target="view_frame">更多&gt;</a>
             </div>
             <div class="focusList">
-                #*<p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>
-                <p>
-                    <span><img src="/img/news_tip.png"></span>
-                    <span><a href="view?type=10&amp;id=19149" title="信息院组织开展春游踏青活动">
-                                信息院组织开展春游踏青活动...
-                             </a></span> <span></span> <span id="time">2019-03-25</span>
-                </p>*#
-                    #foreach($message in $messages)
-                        #if($message.messageType == 4)
-                            <div class="left_list">
-                                <a class="news_f" href="news/index?id=${message.id}" title="${message.messageTitle}"
-                                <span>${message.messageTitle}</span>
-                                </a>
-                            </div>
-                        #end
+                #foreach($message in $messages)
+                    #if($message.messageType == 4)
+                        <div class="left_list">
+                            <a class="news_f" href="news/index?id=${message.id}" target="view_frame" title="${message.messageTitle}"
+                            <span>${message.messageTitle}</span>
+                            </a>
+                        </div>
                     #end
+                #end
             </div>
         </div>
     </div>

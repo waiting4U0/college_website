@@ -16,7 +16,7 @@
 		<div class="top">
 			#*#parse("common/head.vm")*#
 			#parse("common/top.vm")
-			#parse("common/menu.vm")
+			#*#parse("common/menu.vm")*#
 		</div>
 
 		
@@ -82,7 +82,15 @@
                         var messageCreateDate = '$message.createDate'   //新闻时间
 
                         new_biaoti.innerHTML = messageTitle;
-                        biao.innerHTML = messageType;
+                        if(messageType == 1){
+                            biao.innerHTML = "新闻聚焦";
+                        }else if(messageType == 2){
+                            biao.innerHTML = "学工通知";
+                        }else if(messageType == 3){
+                            biao.innerHTML = "党团快讯";
+                        }else if(messageType == 4){
+                            biao.innerHTML = "活动";
+                        }
                         wtu.src = messageImg;
                         wnei.innerHTML = messageContent;
                         shijian .innerHTML = messageCreateDate;

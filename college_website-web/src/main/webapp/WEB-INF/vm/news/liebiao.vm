@@ -14,7 +14,7 @@
 	</head>
 	<body>
 		<div class="top">
-			#parse("common/head.vm")
+			#*#parse("common/head.vm")*#
 			#parse("common/top.vm")
 			#*#parse("common/menu.vm")*#
 ##			此处为头部
