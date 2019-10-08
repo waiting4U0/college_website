@@ -76,26 +76,21 @@
     </div>
 
 </div>*#
-        <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
+        <div class="major_introduce" style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
             <div class="major">
-                <a href="#">·信息管理与信息系统:</a><br/>
-                <span>(Information Management and Information System，简称IMIS）是集信息技术与管理科学于一体、实践性和创新性很强的交叉学科。本专业旨在培养具备现代管理学理论基础、计算机科学技术知识及应用能力，掌握系统思想和信息系统分析与设计方法以及信息管理等方面的知识与能力，从事信息管理以及信息系统分析、设计、实施、管理和评价的复合型人才。其简称信息管理学或管理信息学，属于管理科学与工程范畴。</span>
+                <a onclick=goto("admissionEmployment/mis")>·信息管理与信息系统</a><br/>
             </div>
             <div class="major">
-                <a href="#">·光电信息科学与工程:</a><br/>
-                <span>光电信息科学与工程专业是根据教育部在2012年9月下发文件，将原属于电子信息科学类的光信息科学与技术、光电子技术科学专业与原属于电气信息类的信息显示与光电技术、光电信息工程、光电子材料与器件五个专业统一修订后的专业名称。</span>
+                <a onclick=goto("admissionEmployment/oeis")>·光电信息科学与工程</a><br/>
             </div>
             <div class="major">
-                <a href="#">·电子与计算机工程:</a><br/>
-                <span>电子与计算机工程专业是教育部的特设专业，结合电气工程和计算机科学，具有很好的发展前景。电子与计算机工程专业是将软件设计与硬件设计一体化，并结合电力电子学的一门专业。</span>
+                <a onclick=goto("admissionEmployment/ece")>·电子与计算机工程</a><br/>
             </div>
             <div class="major">
-                <a href="#">·数字媒体:</a><br/>
-                <span>数字媒体属于工学学科门类，是指以二进制数的形式记录、处理、传播、获取过程的信息载体，这些载体包括数字化的文字、图形、图像、声音、视频影像和动画等感觉媒体，和表示这些感觉媒体的表示媒体（编码）等，通称为逻辑媒体，以及存储、传输、显示逻辑媒体的实物媒体。</span>
+                <a onclick=goto("admissionEmployment/dm1")>·数字媒体</a><br/>
             </div>
             <div class="major">
-                <a href="#">·电气工程及其自动化:</a><br/>
-                <span>电气工程及其自动化涉及电力电子技术，计算机技术，电机电器技术，信息与网络控制技术，机电一体化技术等诸多领域，是一门综合性较强的学科，其主要特点是强弱电结合，机电结合，软硬件结合，电工技术与电子技术相结合，元件与系统相结合，使学生获得电工电子、系统控制、电气控制、电力系统自动化、电气自动化装置及计算机应用技术等领域的基本技能。</span>
+                <a onclick=goto("admissionEmployment/eea")>·电气工程及其自动化</a><br/>
             </div>
         </div>
 
@@ -110,4 +105,5 @@
     <!-- END PAGE LEVEL PLUGINS -->
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="/js/common/ajaxfileupload.js" type="text/javascript"></script>
+    <script src="/js/main/admissionEmployment.js" type="text/javascript"></script>
 

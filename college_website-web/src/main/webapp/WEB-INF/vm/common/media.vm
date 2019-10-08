@@ -1,0 +1,134 @@
+<link href="/../assets/admin/layout/css/main3.css" rel="stylesheet" type="text/css"/>
+<body>
+<div class="sjmt">
+    <div class="wid1220">
+        <div class="zs-top">
+            <div class="title-1"><img src="images/sjmt.jpg">
+                <h3>社交<font style="font-size: 12px; color: #ac2426; padding-bottom: 0px; padding-top: 0px; padding-left: 5px; padding-right: 5px">●</font>媒体</h3><span>SOCIALIZATION &amp; MEDIA</span> </div>
+            <div class="sjmt-title"><!--#begineditable name="社交媒体title-图片列表" viewid="164303" tagname="社交媒体title-图片列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->    <ul>
+                <li onmouseover="selectSwtich('',this,'ccc',1-1,'sj-current')" href="javascript:void(0)" class="">
+                    <a href="" onclick="_addDynClicks(&quot;wbimage&quot;, 1342812653, 30064)" target="_blank"><img src="images/wx.png"></a>
+                </li>
+                <li onmouseover="selectSwtich('',this,'ccc',2-1,'sj-current')" href="javascript:void(0)" class="">
+                    <a href="http://weibo.com/u/3243026514?c=spr_qdhz_bd_baidusmt_weibo_s&amp;nick=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6" onclick="_addDynClicks(&quot;wbimage&quot;, 1342812653, 30063)" target="_blank"><img src="images/wb.png"></a>
+                </li>
+                <li onmouseover="selectSwtich('',this,'ccc',3-1,'sj-current')" href="javascript:void(0)" class="sj-current">
+                    <a href="http://news.shu.edu.cn/index/mtgz.htm" onclick="_addDynClicks(&quot;wbimage&quot;, 1342812653, 30066)" target="_blank"><img src="images/xj.png"></a>
+                </li>
+            </ul>
+                <!--#endeditable--></div></div>
+        <div class="sjmt-con">
+            <div id="ccc0" class="wb-con" style="display: none;"><!--#begineditable name="微博-图片列表" viewid="164304" tagname="社交媒体图-图片列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->
+
+                <div class="sjmt-txt-left">
+
+                    <div class="wb-pic"><img src="images/x001.jpg"></div>
+                    <h3>风景如画</h3>
+                </div>
+
+
+                <!--#endeditable-->
+                <div class="sjmt-txt-right"><!--#begineditable name="微博-标题列表" viewid="164305" tagname="社交媒体-标题列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><ul>
+                    <li>
+                        <a href="https://mp.weixin.qq.com/s/Cib_Yef-zXiTv4NihAdggg" target="_blank">
+                            <div class="wb-title">
+                                <img src="images/wxtb.jpg">上海大学2020年硕士研究生招生简章正式公布
+
+                            </div>
+                            <div class="wb-zy">
+                                9月12日，上海大学2020年硕士研究生招生简章正式公布。
+                            </div>
+                            <div class="wb-date">2019-09-13</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://mp.weixin.qq.com/s?__biz=MzA3MzU5NTE1OA==&amp;mid=2806779504&amp;idx=1&amp;sn=a22cdbc992f5ebb89bd13d75f14bffcd&amp;chksm=bdb40e098ac3871f6f56f741d687515333e6e5ae2134ca6047290ec6e0080ff247b0e0737265&amp;token=6298" target="_blank">
+                            <div class="wb-title">
+                                <img src="images/wxtb.jpg">以立德树人之初心 担重教兴学之使命！我校隆重举行庆祝第35个...
+
+                            </div>
+                            <div class="wb-zy">
+                                9月11日下午，上海大学庆祝第35个教师节表彰大会在校本部图书馆报告厅举行，校领导成旦红、刘昌胜、欧阳华、吴明红、汪小帆、苟燕楠、胡大伟、曹为民，中国工程院院士孙晋良、中国科学院院士张统一等出席会议，部分老领导、中层干部、获奖人员、教师代表和学生代表近400多人参加了会议。
+                            </div>
+                            <div class="wb-date">2019-09-12</div>
+                        </a>
+                    </li>
+
+                </ul><script>_showDynClickBatch(['dynclicks_u20_66362','dynclicks_u20_66302'],[66362,66302],"wbnews", 1342812653)</script>
+                    <!--#endeditable--></div></div>
+            <div id="ccc1" class="wb-con" style="display: none"><!--#begineditable name="微信-图片列表" viewid="164318" tagname="社交媒体图1-图片列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->
+
+                <div class="sjmt-txt-left">
+
+                    <div class="wb-pic"><img src="images/aa.jpg"></div>
+                    <h3>校园-风景</h3>
+                </div>
+
+
+                <!--#endeditable-->
+                <div class="sjmt-txt-right"><!--#begineditable name="微信-标题列表" viewid="164319" tagname="社交媒体1-标题列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><ul>
+                    <li>
+                        <a href="https://weibo.com/3243026514/I6LoFq7I8" target="_blank">
+                            <div class="wb-title">
+                                <img src="images/wbtb.jpg">#高校月饼大赏#
+                            </div>
+                            <div class="wb-zy">
+                                #高校月饼大赏#
+                            </div>
+                            <div class="wb-date">2019-09-16</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://weibo.com/3243026514/I6k8FaJse" target="_blank">
+                            <div class="wb-title">
+                                <img src="images/wbtb.jpg">2019年教师节致上海大学全体教师的一封信
+                            </div>
+                            <div class="wb-zy">
+                                2019年教师节致上海大学全体教师的一封信
+                            </div>
+                            <div class="wb-date">2019-09-10</div>
+                        </a>
+                    </li>
+
+                </ul><script>_showDynClickBatch(['dynclicks_u22_66386','dynclicks_u22_66385'],[66386,66385],"wbnews", 1342812653)</script>
+                    <!--#endeditable--></div></div>
+            <div id="ccc2" class="wb-con" style="display: block;"><!--#begineditable name="媒体-图片列表" viewid="164322" tagname="社交媒体图3-图片列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""-->
+
+                <div class="sjmt-txt-left">
+
+                    <div class="wb-pic"><img src="images/meiti.jpg"></div>
+                    <h3>美丽的校园</h3>
+                </div>
+
+
+                <!--#endeditable-->
+                <div class="sjmt-txt-right"><!--#begineditable name="媒体-标题列表" viewid="164323" tagname="社交媒体3-标题列表" action="" layout="" contype="" stylesysid="" template="" tplstyle="" clone="0" istemp=""--><ul>
+                    <li>
+                        <a href="http://paper.people.com.cn/rmrb/html/2019-09/16/nw.D110000renmrb_20190916_1-07.htm" target="_blank">
+                            <div class="wb-title">
+                                <img src="images/xjtb.jpg">人民日报：开学季，讲好这堂“思政大课”
+                            </div>
+                            <div class="wb-zy">
+                                连日来，全国高校广泛开展“青春告白祖国”系列活动，以教育部7月份部署开展的“小我融入大我，青春献给祖国”主题实践活动为切入点，各地各高校学生通过分享实践体验和成果收获，将社会实践中的所见所闻、所思所感“讲出来”“拍出来”“演出来”，生动展现当代大学生的爱国情感、强国志向、报国行为。
+                            </div>
+                            <div class="wb-date">2019-09-16</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="http://epaper.gmw.cn/gmrb/html/2019-09/16/nw.D110000gmrb_20190916_7-01.htm" target="_blank">
+                            <div class="wb-title">
+                                <img src="images/xjtb.jpg">光明日报：脚步丈量大地 青春献给祖国
+                            </div>
+                            <div class="wb-zy">
+                                秋天，对大地而言，注定是丰收的季节。这个9月，对刚刚结束暑期社会实践返校的大学生而言，也注定是收获不凡的时刻。
+                            </div>
+                            <div class="wb-date">2019-09-16</div>
+                        </a>
+                    </li>
+
+                </ul><script>_showDynClickBatch(['dynclicks_u24_66359','dynclicks_u24_66358'],[66359,66358],"wbnews", 1342812653)</script>
+                    <!--#endeditable--></div></div></div><!----------sjmt-con---------></div></div>
+</body>

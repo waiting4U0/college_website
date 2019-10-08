@@ -105,7 +105,90 @@ img{border:none}
 .inform li a:hover{ color:#3170d0;}*/
 
 
-.news_box{width: 80%;margin: 20px auto;min-width: 1200px}
+.news{
+	width: 100%;
+	height: auto;
+}
+.newsContainer
+{
+	width: 1280px;
+	margin: auto;
+	padding: 40px 0;
+}
+.colum.focusnews{
+	width: 1279px;
+	margin-right: 50px;
+}
+.icon.icon-xwjj{
+	/*background: url(/assets/admin/layout/img/jdxw.png)*/
+}
+.icon.icon-zhxw {
+	/*background: url(../img/zhxw.png)*/
+}
+.icon {
+	float: left;
+	width: 45px;
+	height: 28px;
+	margin-right: 10px;
+}
+i, em, b {
+	font-style: normal;
+	display: block;
+	line-height: 20px;
+}
+.colum{
+	float: left;
+}
+.newsTitle{
+	padding-bottom: 18px;
+	border-bottom: 3px solid #ccc;
+	margin-bottom: 30px;
+	height: 30px;
+	line-height: 25px;
+}
+
+.cn{
+	font-size: 24px;
+}
+.en{
+	font-size: 20px;
+	color:gray;
+}
+.more {
+	color: grey;
+	float: right;
+	text-transform: Uppercase;
+	font-size: 14px;
+}
+a {
+	color: red;
+}
+.card{
+	position: relative;
+	box-shadow: 0px 0px 0px 0px #fff,
+	0px 0px 0px 0px #fff,
+	0px 0px 0px 0px #fff,
+	0px 3px 2px #e7e7e7;
+}
+.card{
+	width: 345px;
+	display: inline-block;
+	overflow: hidden;
+	height: 284px;
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	cursor: pointer;
+}
+a {
+	color: #333;
+}
+a {
+	text-decoration: none;
+}
+
+/*.news_box{width: 80%;margin: 20px auto;min-width: 1200px}
 .news_left{width: 45%;float: left;}
 .newsTitle{width:100%;height: 50px;margin-top: 10px;overflow: hidden;}
 #newsTitle1{height: 50px;line-height: 30px;border-bottom: 3px solid #eeaf79;}
@@ -124,7 +207,7 @@ img{border:none}
 .news_rd{height: 210px;width: 100%}
 .focusList{height: 160px;}
 .focusList .left_list{height: 20%;margin:0;margin-left:15px;display:block;line-height:32px;font-size:15px;color: black;}
-#time{float:right;margin-right:10px;color: #295279;}
+#time{float:right;margin-right:10px;color: #295279;}*/
 /*#newsTitle{
 	width:100%;
 	height: 50px;
@@ -231,24 +314,6 @@ img{border:none}
 }*/
 
 /*图片链接*/
-.imageLinks_box{height: 402px;margin-top:20px;background-image:url(../img/imageLinks.jpg); background-repeat:no-repeat;}
-.imageLinks_c{width: 1400px;margin: 0 auto;}
-.imageLinks_box_left{height: 90%;width:50%;float: left;}
-.imageLinks_box_left_f{height: 30px;width:100px;line-height: 30px;margin: 0 auto;}
-.imageLinks_c h2{font-size: 24px;}
-.imageLinks_box_left_v{padding-left:50px;height: 310px;width: 100%;margin-top: 20px}
-.imageLinks_box_left_v video{height: 90%;width: 90%;}
-.imageLinks_box_right{height: 90%;width:50%;float: left;}
-.imageLinks_box_right_f{height: 30px;width:120px;line-height: 30px;margin: 0 auto;}
-.imageLinks_box_right_p{height: 310px;padding-left:100px;width: 100%;margin-top: 20px}
-.image{height: 135px;width: 200px;float:left;margin-bottom:30px;margin-right: 100px;border-bottom:5px solid white;border-right:5px solid white;}
-#image1{background-image: url("../img/linkss1.jpg");background-repeat:no-repeat;}
-#image2{background-image: url("../img/linkss2.jpg");background-repeat:no-repeat;}
-#image3{background-image: url("../img/linkss3.jpg");background-repeat:no-repeat;}
-#image4{background-image: url("../img/linkss4.jpg");background-repeat:no-repeat;}
-.image_font{margin-top:100px;height: 32px;width:196px;background-color:rgba(0,0,0,0.5);}
-.imageLinks_box_up a{color: black}
-.imageLinks_box_up a:hover{color: #91bbc2}
 /*focus end*/
 /*热点链接*/
 .rdlink{ height:54px; background-color:#fff;}
@@ -475,7 +540,7 @@ h3{ clear:both; font-size:18px; line-height:50px; display: block;}
 
 .neirong_box{width: 100%;margin: 20px auto;}
 .nleft{width: 45%;float: left;}
-.newsTitle{width:100%;height: 30px;margin-top: 10px;overflow: hidden;}
+.newsTitle{width:100%;height: 45px;margin-top: 10px;overflow: hidden;}
 #nTitle1{height: 30px;line-height: 20px;border-bottom: 2px solid #eeaf79;}
 #nTitle2{height: 30px;line-height: 20px;border-bottom: 2px solid #eeaf79;}
 #nTitle3{height: 30px;line-height: 20px;border-bottom: 2px solid #eeaf79;}
@@ -486,7 +551,9 @@ h3{ clear:both; font-size:18px; line-height:50px; display: block;}
 .nphoto{float: left;height:60px;width:60px;margin-left: 5px;margin-top: 20px;margin-right: 10px}
 .nf{float: left;width: 200px;height: 133px;line-height: 30px}
 .nf a{font-size: 17px;}
-
+.biaoti{
+	padding-top: 23px;
+}
 .nright{width: 45%;float: right}
 .nrt{height: 210px;width: 100%;margin-bottom: 20px}
 .nrd{height: 210px;width: 100%}

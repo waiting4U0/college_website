@@ -1,6 +1,7 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
-<link rel="stylesheet" type="text/css"
-      href="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+<link rel="stylesheet" type="text/css" alt=""
+href="../../assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css"/>
+
 <link rel="stylesheet" type="text/css" href="../../assets/global/plugins/select2/select2.css"/>
 <link rel="stylesheet" type="text/css"
       href="../../assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css"/>
@@ -8,7 +9,7 @@
       href="../../assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
 
 <div class="list_top_img">
-    <img src="../../assets/admin/layout/img/f1_banner.jpg" alt="">
+    <img src="../../assets/admin/layout/img/f1_banner.jpg"
 </div>
 <div class="list m1200 cleafix">
     <div class="list_link fl">
