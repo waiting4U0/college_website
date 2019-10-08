@@ -6,9 +6,9 @@ body{ background-color:white;}
 .top_c{width: 1400px;margin: 0 auto}
 .top_c .logo img{display:block;  margin-left:180px; margin-top:20px; float:left;}
 .top_r{float: right;height: 100px;width: 600px}
-.top_r .search{ width:252px; height:36px; background-color:#fff; /*border:1px #ccc solid; border-radius:18px !important;*/ float:right; overflow:hidden; margin-top:50px; margin-right:130px;}
-.top_r .search .text{ width:204px; height:36px; background-color:#fff; text-indent:20px; color:#333;    /*border-radius: 18px;outline: none;border: 1px solid #ccc;padding-left: 20px;position: absolute;*/}
-.top_r .search .submit{ height:30px;margin-top:3px;margin-left:5px; background-color:#fff;}
+.top_r .search{ /*width:252px; height:36px;*/float:right; overflow:hidden; margin-top:50px; margin-right:130px;}
+.top_r .search .text{ width:204px; height:40px;text-indent:20px; color:#333;    /*border-radius: 18px;outline: none;border: 1px solid #ccc;padding-left: 20px;position: absolute;*/}
+.top_r .search .submit{ height:30px;margin-top:3px;margin-left:5px;}
 
 
 /*导航栏*/

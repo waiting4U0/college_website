@@ -27,13 +27,13 @@
     <div class="bd">
         <ul>
             <li #*style="background-color: rgb(183, 159, 255);*#">
-            <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner1.jpg"/></a>
+                <a href="#" target="_blank"><img src="../../../assets/admin/layout/img/banner1.jpg"/></a>
             </li>
             <li #*style="background-color: rgb(56, 29, 140);"*#>
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner2.jpg"/></a>
+                <a href="#" target="_blank"><img src="../../../assets/admin/layout/img/banner2.jpg"/></a>
             </li>
             <li #*style="background-color: rgb(56, 42, 186);"*#>
-                <a href="#" target="_blank"><img src="../../pictureIn?subpath=banner/banner3.jpg"/></a>
+                <a href="#" target="_blank"><img src="../../../assets/admin/layout/img/banner3.jpg"/></a>
             </li>
         </ul>
     </div>
