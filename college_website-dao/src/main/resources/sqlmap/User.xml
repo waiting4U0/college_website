@@ -6,7 +6,7 @@
     <!-- user_info 所有查询列 -->
     <sql id="QUERY_COLUMN_LIST">
 		<![CDATA[
-        id, name,code,password,telephoneNumber,email,sex,role,create_date AS createDate, modify_date AS modifyDate
+        id, name, code, password, telephone_number as telephoneNumber, email, sex, role, status, create_date AS createDate, modify_date AS modifyDate
         ]]>
 	</sql>
 
@@ -25,9 +25,11 @@
             <if test="code != null and code != ''"><![CDATA[AND code = #{code}]]></if>
             <if test="email != null and email != ''"><![CDATA[AND email = #{email}]]></if>
             <if test="password != null and password != ''"><![CDATA[AND password = #{password}]]></if>
-            <if test="telephone_number != null and telephone_number != ''"><![CDATA[AND telephone_number = #{telephoneNumber}]]></if>
+            <if test="telephoneNumber != null and telephoneNumber != ''">
+                <![CDATA[AND telephone_number = #{telephoneNumber}]]></if>
             <if test="sex != null and sex != ''"><![CDATA[AND sex = #{sex}]]></if>
             <if test="role != null and role != ''"><![CDATA[AND role = #{role}]]></if>
+            <if test="status != null and status != ''"><![CDATA[AND status = #{status}]]></if>
             <if test="createDate != null and createDate != ''"><![CDATA[AND create_date = #{createDate}]]></if>
             <if test="modifyDate != null and modifyDate != ''"><![CDATA[AND modify_date = #{modifyDate}]]></if>
         </where>
@@ -44,24 +46,44 @@
     <!-- 更新列字段,只要不为NULL则更新,除开主键列 -->
     <sql id="UPDATE_COLUMN_SET">
         <set>
-
-            <if test="name != null "><![CDATA[AND name = #{name}]]></if>
-            <if test="code != null  "><![CDATA[AND code = #{code}]]></if>
-            <if test="email != null  "><![CDATA[AND email = #{email}]]></if>
-            <if test="password != null  "><![CDATA[AND password = #{password}]]></if>
-            <if test="telephone_number != null "><![CDATA[AND telephone_number = #{telephoneNumber}]]></if>
-            <if test="sex != null "><![CDATA[AND sex = #{sex}]]></if>
-            <if test="role != null "><![CDATA[AND role = #{role}]]></if>
-            <if test="createDate != null "><![CDATA[AND create_date = #{createDate}]]></if>
-            <if test="modifyDate != null "><![CDATA[AND modify_date = #{modifyDate}]]></if>
+            <if test="name != null "><![CDATA[name = #{name},]]></if>
+            <if test="code != null  "><![CDATA[code = #{code},]]></if>
+            <if test="password != null  "><![CDATA[password = #{password},]]></if>
+            <if test="telephoneNumber != null "><![CDATA[telephone_number = #{telephoneNumber},]]></if>
+            <if test="email != null  "><![CDATA[email = #{email},]]></if>
+            <if test="sex != null "><![CDATA[sex = #{sex},]]></if>
+            <if test="role != null "><![CDATA[role = #{role},]]></if>
+            <if test="status != null "><![CDATA[status = #{status},]]></if>
+            <if test="createDate != null "><![CDATA[create_date = #{createDate},]]></if>
+            <if test="modifyDate != null "><![CDATA[modify_date = #{modifyDate},]]></if>
         </set>
     </sql>
 
     <!-- 插入user_info记录 -->
     <insert id="insertEntry" parameterType="user">
 		<![CDATA[
-        INSERT INTO user (id, name,code, password,telephone_number,email,create_date, modify_date)
-        VALUES (#{id}, #{name},#{code}, #{password},#{telephoneNumber}, #{email},#{createDate}, #{modifyDate} )
+        INSERT INTO user (id,
+                          name,
+                          code,
+                          password,
+                          telephone_number,
+                          email,
+                          sex,
+                          role,
+                          status,
+                          create_date,
+                          modify_date)
+        VALUES (#{id},
+                #{name},
+                #{code},
+                #{password},
+                #{telephoneNumber},
+                #{email},
+                #{sex},
+                #{role},
+                #{status},
+                #{createDate},
+                #{modifyDate})
         ]]>
 	</insert>
 
@@ -79,16 +101,32 @@
     </delete>
 
     <!-- 删除,通过条件 -->
-    <update id="deleteByCondtion" parameterType="user">
+    <delete id="deleteByCondtion" parameterType="user">
         <![CDATA[DELETE FROM user]]>
         <include refid="QUERY_WHERE_CLAUSE"/>
-    </update>
+    </delete>
 
     <!-- 修改记录通过主键 -->
+    <!--<update id="updateByKey" parameterType="user">-->
+    <!--<![CDATA[UPDATE user]]>-->
+    <!--<include refid="UPDATE_COLUMN_SET"/>-->
+    <!--<![CDATA[WHERE code = #{code}]]>-->
+    <!--</update>-->
     <update id="updateByKey" parameterType="user">
-        <![CDATA[UPDATE user]]>
-        <include refid="UPDATE_COLUMN_SET"/>
-        <![CDATA[WHERE id = #{id}]]>
+        update user
+        <set>
+            name = #{name},
+            passWord = #{passWord},
+            telephone_number = #{telephoneNumber},
+            email = #{email},
+            sex = #{sex},
+            role = #{role},
+            status = #{status},
+            create_date = #{createDate},
+            modify_date = #{modifyDate}
+
+        </set>
+        where code= #{code}
     </update>
 
     <!-- 查询,通过主键IN(array) -->
@@ -120,9 +158,21 @@
 
     <!-- 其它SQL语句 -->
     <select id="selectOneByKey" resultType="user" parameterType="user">
-        SELECT id, name,code,password, telephone_number,Email,sex,role,create_date, modify_date
+        SELECT id,
+               name,
+               code,
+               password,
+               telephone_number,
+               Email,
+               sex,
+               role,
+               status,
+               create_date,
+               modify_date
         FROM user
-        where code = #{code} or telephone_number = #{telephoneNumber} or Email = #{email}
+        where code = #{code}
+           or telephone_number = #{telephoneNumber}
+           or Email = #{email}
     </select>
     <!-- 通过HistoryId修改 -->
     <!--<update id="updateByHistoryKey" parameterType="userInfo" >-->
@@ -130,5 +180,11 @@
     <!--<include refid="UPDATE_COLUMN_SET"/>-->
     <!--<![CDATA[WHERE user_info_id = #{historyId}]]>-->
     <!--</update>-->
-
+    <delete id="removeOneByCode" parameterType="java.lang.String">
+        <![CDATA[
+        DELETE
+        FROM user
+        WHERE code = #{code}
+        ]]>
+    </delete>
 </mapper>

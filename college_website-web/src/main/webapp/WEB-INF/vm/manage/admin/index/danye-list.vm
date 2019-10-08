@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>西南石油大学信息学院网站后台管理</title>
+        <script type="text/javascript" src="../../js/tinymce/js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="../../../js/tinymce/js/jquery.form.js"></script>
+	##    <script type="text/javascript" charset="utf-8" src="../../static/admin/js/common.js" ></script>
+        <link rel="stylesheet" type="text/css" href="../../static/admin/css/admin.css"/>
+        <link rel="stylesheet" href="../../static/admin/js/layui-v2.5.5/layui/css/layui.css" media="all">
+        <script type="text/javascript" charset="utf-8" src="../../static/admin/js/layui-v2.5.5/layui/layui.js" ></script>
+
+        <script>
+            // layui.use(['form', 'jquery', 'layer', 'dialog'], function() {
+            //     var $ = layui.jquery;
+            //
+            //     //修改状态
+            //     $('#table-list').on('click', '.table-list-status', function() {
+            //         var That = $(this);
+            //         var checkStatus = function () {
+            //             var status = That.attr('data-status');
+            //             var id = That.attr('teacher-id');
+            //             var formData = new FormData();
+            //             formData.append("id",id);
+            //             formData.append("status",status);
+            //             alert("教师id："+formData.get("id")+","+"教师状态："+formData.get("status"));
+            //         }
+            //         // formData.append("file", document.getElementsById("upImg").files[0]);
+            //         var status = That.attr('data-status');
+            //         //var id = That.attr('message-id');
+            //         // var id = That.parent().attr('data-id');
+            //         if(status == 0) {
+            //             That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('可用').attr('data-status', 1);
+            //             checkStatus();
+            //         } else if(status == 1) {
+            //             That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('冻结').attr('data-status', 2);
+            //             checkStatus();
+            //         }else if (status == 2 ){
+            //             That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('已删除').attr('data-status', 0);
+            //             checkStatus();
+            //         }
+            //     })
+            //
+            // });
+        </script>
+        <script>
+            layui.use(["table", "layer"], function () {
+                var $ = layui.$;
+                var table = layui.table;
+                var layer = layui.layer;
+
+                table.render({
+                    elem: '#test'
+                    , url: '/manage/getWebPageList.json'
+                    , toolbar: '#toolbarDemo'
+                    , title: '网页数据表'
+                    , totalRow: true
+                    , cols: [[
+                        {type: 'checkbox', fixed: 'left'}
+                        , {field: 'id', title: 'ID', width: 50, fixed: 'left', unresize: true, sort: true, totalRowText: '合计'}
+                        , {field: 'name', title: '网页名称', width: 120}
+                        , {field: 'url', title: '路径（请求接口）', width: 150}
+                        , {field: 'resourceKey', title: '资源文件', width: 80}
+                        , {field: 'createDate', title: '创建日期', width: 100,}
+                        , {field: 'modifyDate', title: '修改日期',width: 80}
+                        , {field: 'status', title: '状态', width: 100}
+                        , {fixed: 'right', title: '操作', toolbar: '#barDemo', width: 180}
+                    ]]
+                    , page: true
+                    , parseData: function (res) { //res 即为原始返回的数据
+                        //因为后端没有给传count，前端获取了数据总条数，然后赋值给count
+                        //res.count = res.data.length;
+                        // console.log(res);
+                        return {
+                            "code": 0, //解析接口状态
+                            "msg": "", //解析提示文本
+                            "count": res.count, //解析数据长度
+                            "data": res.data //解析数据列表
+                        };
+                    }
+                });
+                //监听单元格编辑
+                table.on('edit(test)', function (obj) {
+                    var value = obj.value //得到修改后的值,
+                            , data = obj.data //得到所在行所有键值
+                            , field = obj.field; //得到字段
+                   // console.log(obj);
+                    // layer.msg(title)
+                    $.ajax({
+                        url:"../message/uptate",
+                        data:{id:data.id , field:field,updateValue:value},
+                        type:"post",
+                        dataType:"json",
+                        success: function (result) {
+                            layer.msg('[ID: ' + data.id + '] ' + title + ' 字段更改为：' + value);
+                            //location.reload();
+                        }
+                    });
+                });
+                //监听表格复选框选择
+                // table.on('checkbox(demo)', function(obj){
+                //     console.log(obj)
+                // });
+                //监听工具条
+                table.on('tool(test)', function (obj) {
+                    var data = obj.data;
+                    //var checkStatus = table.checkStatus(obj.config.id);
+                    if (obj.event === 'detail') {
+                        layer.open({
+                            //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）
+                            type: 1, //类型，解析url
+                            closeBtn: 1, //关闭按钮是否显示 1显示0不显示
+                            //skin: 'layui-layer-rim',
+                            title: "预览页", //页面标题
+                            shadeClose: true, //点击遮罩区域是否关闭页面
+                            shade: 0.8,  //遮罩透明度
+                            area: ['90%', '90%'],  //弹出层页面比例
+                            content: ''
+                            //content: $('#showTest')//引用的弹出层的页面层的方式加载修改界面表单
+                        });
+                    } else if (obj.event === 'del') {
+
+                        var data = obj.data;
+                        var messageInfo1 = JSON.stringify(data);
+                        var messageInfo2 = JSON.parse(messageInfo1);
+                        var mid = "id=" + messageInfo2.id;
+                        $.ajax({
+                            url: "../message/remove",
+                            type: "POST",
+                            sync: true,  // 异步获取数据
+                            data: mid,
+                            success: function (msg) {
+
+                                if (msg.code === 200) {
+                                    //删除这一行
+                                    obj.del();
+                                    //关闭弹框
+                                    layer.close(index);
+                                    layer.msg("删除成功", {icon: 6});
+                                } else {
+                                    layer.msg("删除失败", {icon: 5});
+                                }
+                            }
+                        });
+                    } else if (obj.event === 'edit') {
+                        // var data = obj.data;
+                        // var messageInfo1 = JSON.stringify(data);
+                        // var messageInfo2 = JSON.parse(messageInfo1);
+                        // var changeStatus = "id=" + messageInfo2.id+"& status="+messageInfo2.status;
+                        // $.ajax({
+                        //     url: "../message/modify",
+                        //     type: "POST",
+                        //     //  sync: true,  // 异步获取数据
+                        //     data: changeStatus,
+                        //     success: function (msg) {
+                        //         if (msg.code === 200) {
+                        //             layer.close(index);
+                        //             layer.msg("修改成功", {icon: 6});
+                        //         } else {
+                        //             layer.msg("修改失败", {icon: 5});
+                        //         }
+                        //     }
+                        // });
+                        // //动态向表传递赋值可以参看文章进行修改界面的更新前数据的显示，当然也是异步请求的要数据的修改数据的获
+                        // setFormValue(data);
+                    }
+                });
+                table.on('toolbar(test)', function (obj) {
+                    var checkStatus = table.checkStatus(obj.config.id);
+                    switch (obj.event) {
+                        case 'getCheckData':
+                            var data = checkStatus.data;
+                            layer.alert(JSON.stringify(data));
+                            break;
+                        case 'getCheckLength':
+                            var data = checkStatus.data;
+                            layer.msg('选中了：' + data.length + ' 个');
+                            break;
+                        case 'add':
+                            var iframeObj = $(window.frameElement).attr('name');
+                            $('.addBtn').click(function() {
+                                var url=$(this).attr('data-url');
+                                //将iframeObj传递给父级窗口,执行操作完成刷新
+                                parent.page("文章添加", url, iframeObj, w = "90%", h = "90%");
+                                return false;
+
+                            });
+                            break;
+                        case 'delList':
+                            layer.msg('已删除:' + JSON.stringify(data));
+                            break;
+                    }
+                    ;
+                });
+
+                //iframe层查看详细信息
+
+            });
+        </script>
+
+        <script>
+            // layui.use(['form', 'jquery', 'layer', 'dialog'], function() {
+            //     var $ = layui.jquery;
+			//
+            //     //修改状态
+            //     $('#table-list').on('click', '.table-list-status', function() {
+            //         var That = $(this);
+            //         var status = That.attr('data-status');
+            //         var id = That.parent().attr('data-id');
+            //         if(status == 1) {
+            //             That.removeClass('layui-btn-normal').addClass('layui-btn-warm').html('隐藏').attr('data-status', 2);
+            //         } else if(status == 2) {
+            //             That.removeClass('layui-btn-warm').addClass('layui-btn-normal').html('显示').attr('data-status', 1);
+			//
+            //         }
+            //     })
+			//
+            // });
+        </script>
+
+	</head>
+
+	<body>
+    <script type="text/html" id="toolbarDemo">
+        <div class="layui-btn-container">
+            <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
+##            <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
+            <button class="layui-btn layui-btn-sm addBtn" data-url="danye-list/danye-add.vm" lay-event="add">增加</button>
+            <button class="layui-btn layui-btn-sm" lay-event="delList">批量删除</button>
+			<div class="layui-inline">
+                <input type="text" name="title" placeholder="请输入标题" autocomplete="off" class="layui-input" style="width: 200px;height: 30px;">
+            </div>
+            <button class="layui-btn layui-btn-sm" lay-event="search">搜索</button>
+        </div>
+    </script>
+    <table class="layui-hide" id="test" lay-filter="test"></table>
+    <script type="text/html" id="barDemo">
+        <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">预览</a>
+        <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    </script>
+
+
+	</body>
+
+</html>

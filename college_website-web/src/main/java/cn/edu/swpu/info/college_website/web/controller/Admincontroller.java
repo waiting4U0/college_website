@@ -26,11 +26,7 @@ public class Admincontroller {
         userService.updateUserInfo(user);
         return "manager/showuser";
     }
-    @RequestMapping("/deleteuser")
-    public String deletea(User user){
-        userService.remove(user);
-        return "manager/showuser";
-    }
+
     @RequestMapping("/showuser")
     public String show(HttpServletRequest request, HttpServletResponse response, Model view){
         List<User> userListdata = userService.selectUserInfoList(new User());

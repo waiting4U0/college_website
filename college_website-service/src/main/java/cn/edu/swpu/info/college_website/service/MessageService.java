@@ -11,7 +11,12 @@ public interface MessageService {
     List<Message> selectIndexMessagelist() throws ParseException;
     List<Message> getMessagelist();
 
-    Integer addOne(Message message);
+
+    //管理员操作，增删改查
+    String addOne(Message message);
+    String removeOne(long id);
+    String changeOne(long id, Integer status);
+    List<Message> findOne(Message message);
 
     String getMessageNameList();
 }

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Created by wangkun on 2019/3/16.
  */
-@Repository("userInfoDao")
+@Repository("userDao")
 public class UserDaoImpl extends BaseDaoImpl<User, Long> implements UserDao {
 
     private final static String NAMESPACE = "cn.edu.swpu.info.college_website.dao.UserDao.";
@@ -28,4 +28,17 @@ public class UserDaoImpl extends BaseDaoImpl<User, Long> implements UserDao {
         return this.selectOneByKey(userInfo);
     }
 
+
+
+    @Override
+    public long removeOneByCode(String code) {
+
+        long i = (long) this.delete(getNameSpace("removeOneByCode"),code);
+        return i;
+    }
+
+
+
+
+    public List<User> selectAllUsers(){ return this.selectEntryList(new User());}
 }

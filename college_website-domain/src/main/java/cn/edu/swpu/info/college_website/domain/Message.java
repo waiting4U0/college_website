@@ -4,7 +4,6 @@ package cn.edu.swpu.info.college_website.domain;
 import cn.edu.swpu.info.college_website.domain.base.BaseDomain;
 
 public class Message extends BaseDomain {
-
     @Override
     public String toString() {
         return "Message{" +
@@ -13,14 +12,40 @@ public class Message extends BaseDomain {
                 ", messageContent='" + messageContent + '\'' +
                 ", messageImg='" + messageImg + '\'' +
                 ", messageAddition='" + messageAddition + '\'' +
+                ", status=" + status +
+                ", messageSource='" + messageSource + '\'' +
                 '}';
     }
 
-    private String messageTitle;  //新闻标题
-    private long messageType;   //新闻类型
-    private String messageContent;    //新闻内容
-    private String messageImg;   //新闻图片
-    private String messageAddition;   //新闻
+    private String messageTitle;
+    private long messageType;
+    private String messageContent;
+    private String messageImg;
+    private String messageAddition;
+    private Integer status;
+    private String messageSource;
+//    private String keyword;
+
+
+
+
+    public String getMessageSource() {
+        return messageSource;
+    }
+
+    public void setMessageSource(String messageSource) {
+        this.messageSource = messageSource;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    //    private Image img;
 
 
     /**

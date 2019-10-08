@@ -1,29 +1,32 @@
 package cn.edu.swpu.info.college_website.domain;
 
 
-public class Role {
+import cn.edu.swpu.info.college_website.domain.base.BaseDomain;
 
-  private long id;
-  private String roleType;
+public class Role extends BaseDomain {
+
+
+  private String name;
+  private String description;
   private java.sql.Timestamp createDate;
   private java.sql.Timestamp modifyDate;
 
 
-  public long getId() {
-    return id;
+  public String getName() {
+    return name;
   }
 
-  public void setId(long id) {
-    this.id = id;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
-  public String getRoleType() {
-    return roleType;
+  public String getDescription() {
+    return description;
   }
 
-  public void setRoleType(String roleType) {
-    this.roleType = roleType;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 

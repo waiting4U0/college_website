@@ -2,6 +2,7 @@ package cn.edu.swpu.info.college_website.service.impl;
 
 import cn.edu.swpu.info.college_website.dao.MessageDao;
 import cn.edu.swpu.info.college_website.domain.Message;
+import cn.edu.swpu.info.college_website.domain.common.MessageTips;
 import cn.edu.swpu.info.college_website.domain.common.State;
 import cn.edu.swpu.info.college_website.service.MessageService;
 import com.alibaba.fastjson.JSONObject;
@@ -59,11 +60,6 @@ public class MessageServiceImpl implements MessageService {
 	}
 
 	@Override
-	public Integer addOne(Message message) {
-		return messageDao.insertEntry(message);
-	}
-
-	@Override
 	public String getMessageNameList() {
     	List<Message> messageList = messageDao.selectEntryList(new Message());
     	List<String> nameList = new LinkedList<>();
@@ -80,6 +76,60 @@ public class MessageServiceImpl implements MessageService {
 			return JSONObject.toJSONString(msg);
 		}
 	}
+	@Override
+	public String addOne(Message message) {
+		//System.out.println(message.getMessageImg());
+		MessageTips msg = MessageTips.success();
+		try {
+			if(message.equals(null)){
+				msg.setErrorMsg("添加失败");
+				msg.setCode(-1);
+			}else if(messageDao.insertEntry(message) == 1){
+				msg.setErrorMsg("添加成功");
+				msg.setCode(200);
+			}
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+
+		return JSONObject.toJSONString(msg);
+	}
+
+	@Override
+	public String changeOne(long id,Integer status) {
+		MessageTips msg = MessageTips.success();
+		Message message = new Message();
+		message.setId(id);
+		message.setStatus(status);
+		if(messageDao.updateByKey(message) == 0){
+			msg.setErrorMsg("修改失败");
+			msg.setCode(-1);
+		}else if(messageDao.updateByKey(message) == 1){
+			msg.setErrorMsg("修改成功");
+			msg.setCode(200);
+		}
+		return JSONObject.toJSONString(msg);
+	}
+	@Override
+	public String removeOne(long id) {
+		MessageTips msg = MessageTips.success();
+		Message message = new Message();
+		message.setId(id);
+		//System.out.println(id);
+		if (message.getId().equals(null)){
+			msg.setErrorMsg("删除失败");
+			msg.setCode(-1);
+		}else if(messageDao.deleteByKey(message)==1){
+			msg.setErrorMsg("删除成功");
+			msg.setCode(200);
+		}
+		return JSONObject.toJSONString(msg);
+	}
 
 
+
+	@Override
+	public List<Message> findOne(Message message) {
+		return messageDao.selectEntryList(message);
+	}
 }

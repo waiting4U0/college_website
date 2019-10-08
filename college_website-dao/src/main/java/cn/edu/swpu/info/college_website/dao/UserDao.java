@@ -15,5 +15,10 @@ public interface UserDao extends BaseDao<User, Long> {
     //public User login(User userInfo);
     //User selectUserByUsernameAndPassword(User userInfo);
     User selectUserByKey(User userInfo);
-
+    long removeOneByCode(String t);
+    /**
+     * 查询所有用户
+     * @return
+     */
+    List<User> selectAllUsers();
 }
