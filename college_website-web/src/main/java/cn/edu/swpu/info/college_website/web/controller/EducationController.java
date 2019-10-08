@@ -29,4 +29,12 @@ public class EducationController {
     public String training() {
         return "education/training";
     }
+    @RequestMapping(value = "/undergraduate", method = {RequestMethod.GET})
+    public String undergraduate() {
+        return "education/undergraduate";
+    }
+    @RequestMapping(value = "/undergraduate2", method = {RequestMethod.GET})
+    public String undergraduate2() {
+        return "education/undergraduate2";
+    }
 }

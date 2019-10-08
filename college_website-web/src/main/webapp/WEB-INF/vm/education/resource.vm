@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css"
       href="../../assets/global/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
 
+
 <div class="list_top_img">
     <img src="../../assets/admin/layout/img/f1_banner.jpg" alt="">
 </div>
@@ -14,7 +15,7 @@
     <div class="list_link fl">
         <h2>教育教学</h2>
         <ul>
-            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/education/training','')" title="人才培养概括">人才培养概括</a>
+            <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/education','')" title="人才培养概括">人才培养概括</a>
             </li>
             <li><a class="current" href="javascript:;" onclick="main.menuGoTo('/education/postgraduate','')"
                    title="本科生教学">本科生教学</a></li>
@@ -67,9 +68,15 @@
     </div>
 
 </div>*#
-        <div style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;">
-            大学生慕课
-            ，，，，
+        <div #*style="font-family: 黑体;line-height: 25px;letter-spacing: 5px;text-indent :40px;font-size: 18px;"*#>
+            <ul>
+                <li style="margin-bottom: 10px;">
+                    大学生慕课网站：<a href="https://www.icourse163.org/"><span class="small">https://www.icourse163.org/</span></a>
+                </li>
+                <li style="margin-bottom: 10px;">
+                    网易云课堂网站：<a href="https://study.163.com/?_trace_c_p_k2_=09fe381a33714715b271b4486ff1f3e8"><span class="small">https://study.163.com/?_trace_c_p_k2_=09fe381a33714715b271b4486ff1f3e8</span></a>
+                </li>
+            </ul>
         </div>
 
     </div>
