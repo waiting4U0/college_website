@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.m{
+				font-size:30px;
+				font:bolder '微软雅黑'; 
+				text-align:center;
+				padding-top:10px;
+				padding-bottom:10px;
+				border-bottom: 1px dotted #b6b6b6;
+			}
+			.content{
+				font:bolder '微软雅黑'; 
+				line-height: 30px;
+				text-indent: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="master">
+			<p class="m">研究生教育概况</p>
+			<p class="content">西南石油大学是国家建设高水平大学公派研究生项目高校。拥有5个一级学科博士学位授权学科，29个二级学科博士学位授权学科，20个一级学科硕士学位授权学科，88个二级学科硕士学位授权学科，7种硕士专业学位类别（包括工程硕士授权领域16个、工商管理硕士授权领域1个、翻译硕士授权领域1个、工程管理硕士授权领域1个、法律硕士授权领域1个、社会工作硕士授权领域1个、应用统计硕士授权领域1个）和8个高校教师在职攻读硕士学位授权学科。有4个博士后科研流动站，1个一级学科国家重点学科，3个二级学科国家重点学科，15个省部级重点学科。有博士生导师134人，全日制硕士研究生4037人，博士研究生700人。现有非全日制硕士研究生574人。</p>
+		</div>
+	</body>
+</html>
