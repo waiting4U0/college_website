@@ -6,7 +6,7 @@
     <!-- message 所有查询列 -->
     <sql id="QUERY_COLUMN_LIST">
 		<![CDATA[
-        id, message_title AS messageTitle, message_type AS messageType, message_content AS messageContent, message_img As messageImg, message_addition AS messageAddition, create_date AS createDate, modify_date AS modifyDate, status, message_source As messageSource
+        id, message_title AS messageTitle, message_type AS messageType, message_content AS messageContent, message_img As messageImg, message_addition AS messageAddition, create_date AS createDate, modify_date AS modifyDate, status
         ]]>
 	</sql>
 
@@ -29,8 +29,8 @@
             <if test="createDate != null and createDate != ''"><![CDATA[AND create_date = #{createDate}]]></if>
             <if test="modifyDate != null and modifyDate != ''"><![CDATA[AND modify_date = #{modifyDate}]]></if>
             <if test="status != null and status != ''"><![CDATA[AND status = #{status}]]></if>
-            <if test="messageSource != null and messageSource != ''">
-                <![CDATA[AND message_source = #{messageSource}]]></if>
+            <!--<if test="messageSource != null and messageSource != ''">-->
+                <!--<![CDATA[AND message_source = #{messageSource}]]></if>-->
         </where>
 
     </sql>
@@ -55,7 +55,7 @@
             <if test="createDate != null"><![CDATA[create_date = #{createDate},]]></if>
             <if test="modifyDate != null"><![CDATA[modify_date = #{modifyDate},]]></if>
             <if test="status != null"><![CDATA[status = #{status}]]></if>
-            <if test="messageSource != null"><![CDATA[message_source = #{messageSource}]]></if>
+            <!--<if test="messageSource != null"><![CDATA[message_source = #{messageSource}]]></if>-->
         </set>
     </sql>
 
@@ -70,8 +70,8 @@
                              message_addition,
                              create_date,
                              modify_date,
-                             status,
-                             message_source)
+                             status
+                             )
         VALUES (#{id},
                 #{messageTitle},
                 #{messageType},
